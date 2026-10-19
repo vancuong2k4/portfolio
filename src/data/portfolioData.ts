@@ -247,7 +247,7 @@ export const experiencesData: Experience[] = [
   {
     id: "exp-2",
     period: "2021 - 2023",
-    role: "Full-Stack & Mobile Developer",
+    role: " Intern Full-Stack & Mobile Developer",
     company: "Vanguard Digital Lab",
     companyUrl: "https://example.com",
     location: "TP. Hồ Chí Minh",
