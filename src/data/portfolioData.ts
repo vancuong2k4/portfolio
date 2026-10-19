@@ -1,9 +1,9 @@
 import type { Profile, Skill, Project, Experience, Education, Certificate, Testimonial } from '../types'
 
 export const profileData: Profile = {
-  name: "Nguyễn Văn An",
-  nickname: "Alex Nguyen",
-  role: "Senior Full-Stack & Mobile Developer",
+  name: "Trần Văn Cường",
+  nickname: "vancuong2k4",
+  role: " Full-Stack & Mobile Developer",
   titles: [
     "Full-Stack Web Architect",
     "React & React Native Specialist",
@@ -13,30 +13,30 @@ export const profileData: Profile = {
   ],
   shortBio: "Xây dựng các sản phẩm web & ứng dụng di động hiệu năng cao, trải nghiệm mượt mà từ ý tưởng đến quy mô hàng triệu người dùng.",
   aboutParagraphs: [
-    "Tôi là một Kỹ sư phần mềm Full-Stack với hơn 5 năm kinh nghiệm thực chiến trong việc thiết kế, xây dựng và tối ưu các hệ sinh thái ứng dụng web và di động hiện đại.",
+    "Tôi là một lập trình viên Full-Stack với hơn 1 năm kinh nghiệm thực chiến trong việc thiết kế, xây dựng và tối ưu các hệ sinh thái ứng dụng web và di động hiện đại.",
     "Thế mạnh của tôi nằm ở sự kết hợp giữa tư duy sản phẩm nhạy bén, kiến trúc backend chịu tải cao (Node.js/PostgreSQL/Docker) và kỹ năng frontend/mobile tỉ mỉ (React, Next.js, React Native, Tailwind CSS, TypeScript).",
     "Tôi luôn theo đuổi phương châm: Code sạch, kiến trúc dễ mở rộng, và tối đa hóa trải nghiệm của người dùng cuối."
   ],
   status: "Sẵn sàng đón nhận cơ hội mới (Full-time / Freelance)",
-  location: "Hà Nội / TP. Hồ Chí Minh (Hỗ trợ Remote)",
-  email: "alex.nguyen.dev@gmail.com",
-  phone: "+84 987 654 321",
-  github: "https://github.com/your-username",
-  linkedin: "https://linkedin.com/in/your-profile",
-  telegram: "https://t.me/your_telegram",
+  location: "TP. Hồ Chí Minh (Hỗ trợ Remote)",
+  email: "cuongtran190404@gmail.com",
+  phone: "+84 326 570 425",
+  github: "https://github.com/vancuong2k4",
+  linkedin: "https://linkedin.com/in/tranvancuong",
+  telegram: "https://t.me/vancuong",
   cvUrl: "#resume",
   stats: {
-    yearsExperience: 5,
-    projectsCompleted: 35,
-    technologiesMastered: 18,
-    commitsLastYear: 1420
+    yearsExperience: 1,
+    projectsCompleted: 20,
+    technologiesMastered: 14,
+    commitsLastYear: 222
   }
 }
 
 export const skillsData: Skill[] = [
   // Frontend
-  { name: "React / React 19", category: "frontend", iconName: "Atom", level: 95, highlight: true, description: "Hooks, Server Components, State Management" },
-  { name: "Next.js (App Router)", category: "frontend", iconName: "Globe", level: 92, highlight: true, description: "SSR, SSG, SEO, Edge Runtime" },
+  { name: "React", category: "frontend", iconName: "Atom", level: 95, highlight: true, description: "Hooks, Server Components, State Management" },
+  { name: "Next.js", category: "frontend", iconName: "Globe", level: 92, highlight: true, description: "SSR, SSG, SEO, Edge Runtime" },
   { name: "TypeScript", category: "frontend", iconName: "FileCode", level: 94, highlight: true, description: "Type Safety, Generics, OOP & Functional" },
   { name: "Tailwind CSS", category: "frontend", iconName: "Palette", level: 96, highlight: true, description: "Responsive, Modern UI, Custom Design System" },
   { name: "Vue.js / Nuxt", category: "frontend", iconName: "Layers", level: 82, description: "Composition API, Pinia, Component Architecture" },
@@ -75,7 +75,7 @@ export const projectsData: Project[] = [
     subtitle: "SaaS Platform với AI Analytics & Real-time Collaboration",
     description: "Hệ thống quản lý công việc và tự động hóa quy trình cho đội ngũ với trợ lý ảo AI và bảng điều khiển trực quan thời gian thực.",
     fullDescription: "Zenith Cloud là nền tảng quản trị công việc toàn diện theo kiến trúc Micro-frontend kết hợp Backend NestJS và PostgreSQL. Tích hợp AI phân tích năng suất, realtime collaborative board qua WebSocket và thanh toán Stripe đa tiền tệ.",
-    tags: ["React 19", "Next.js 15", "NestJS", "PostgreSQL", "Tailwind CSS", "OpenAI API", "Docker"],
+    tags: ["React", "Next.js", "NestJS", "PostgreSQL", "Tailwind CSS", "OpenAI API", "Docker"],
     metrics: "Tăng 45% năng suất đội ngũ, hỗ trợ 10,000+ active users",
     liveUrl: "https://example.com/demo-zenith",
     githubUrl: "https://github.com/your-username/zenith-cloud",
@@ -89,7 +89,7 @@ export const projectsData: Project[] = [
       "Tích hợp cổng thanh toán Stripe và webhook tự động kích hoạt tài khoản"
     ],
     architecture: [
-      "Frontend: Next.js 15 App Router, Tailwind CSS, Zustand, Shadcn UI",
+      "Frontend: Next.js App Router, Tailwind CSS, Zustand, Shadcn UI",
       "Backend: NestJS microservices, RabbitMQ message broker",
       "Database: PostgreSQL with Prisma ORM, Redis for caching & rate limiting",
       "DevOps: Docker containers, deployed on AWS ECS with GitHub Actions CI/CD"
@@ -241,7 +241,7 @@ export const experiencesData: Experience[] = [
       "Thiết kế Design System nội bộ bằng Tailwind CSS & React, đẩy nhanh tốc độ release tính năng mới thêm 30%.",
       "Thiết lập văn hóa code review, CI/CD tự động và quy chuẩn viết Unit/Integration Tests đạt độ phủ 85%."
     ],
-    technologies: ["React 19", "Next.js", "NestJS", "TypeScript", "PostgreSQL", "Docker", "AWS"]
+    technologies: ["React", "Next.js", "NestJS", "TypeScript", "PostgreSQL", "Docker", "AWS"]
   },
   {
     id: "exp-2",

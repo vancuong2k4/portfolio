@@ -5,8 +5,6 @@ import {
   FileDown, 
   Mail, 
   Send, 
-  Code2, 
-  Smartphone, 
   Layers, 
   Zap,
   CheckCircle2
@@ -171,18 +169,6 @@ export const Hero: React.FC = () => {
                   )}
                 </div>
               </div>
-
-              {/* Quick Tech Badges */}
-              <div className="flex items-center gap-2 text-xs font-mono text-zinc-600 dark:text-zinc-400">
-                <span className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">
-                  <Code2 className="w-3.5 h-3.5" />
-                  React 19 & Next.js
-                </span>
-                <span className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">
-                  <Smartphone className="w-3.5 h-3.5" />
-                  React Native
-                </span>
-              </div>
             </div>
 
           </div>
@@ -214,9 +200,6 @@ export const Hero: React.FC = () => {
                       developer.config.ts
                     </span>
                   </div>
-                  <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-800 font-medium">
-                    v2026.1
-                  </span>
                 </div>
 
                 {/* Code Snippet - High Contrast Technical Typography */}

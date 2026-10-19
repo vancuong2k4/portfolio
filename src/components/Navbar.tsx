@@ -71,8 +71,8 @@ export const Navbar: React.FC = () => {
             <Terminal className="w-4 h-4 stroke-[2.5]" />
           </div>
           <div className="flex flex-col">
-            <span className="font-bold text-base tracking-tight text-zinc-900 dark:text-white">
-              Alex Nguyen
+            <span className="font-bold text-base tracking-tight text-zinc-900 dark:text-white font-mono">
+              vancuong2k4
             </span>
             <span className="text-[10px] uppercase font-mono tracking-wider text-zinc-500 dark:text-zinc-400">
               Full-Stack & Mobile
