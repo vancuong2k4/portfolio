@@ -14,7 +14,7 @@ import { Footer } from './components/Footer'
 export const App: React.FC = () => {
   return (
     <ThemeProvider>
-      <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 selection:bg-indigo-500 selection:text-white transition-colors duration-300 relative overflow-x-hidden">
+      <div className="min-h-screen bg-white dark:bg-[#09090b] text-zinc-900 dark:text-zinc-100 selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black transition-colors duration-300 relative overflow-x-hidden">
         {/* Dynamic Background Effects */}
         <BackgroundEffects />
 

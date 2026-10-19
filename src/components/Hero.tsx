@@ -5,12 +5,11 @@ import {
   FileDown, 
   Mail, 
   Send, 
-  CheckCircle2, 
   Code2, 
   Smartphone, 
   Layers, 
   Zap,
-  Flame
+  CheckCircle2
 } from 'lucide-react'
 import { GithubIcon, LinkedinIcon } from './SocialIcons'
 import confetti from 'canvas-confetti'
@@ -24,11 +23,10 @@ export const Hero: React.FC = () => {
   // Typewriter effect
   useEffect(() => {
     const currentTitle = profileData.titles[titleIndex]
-    const typingSpeed = isDeleting ? 40 : 80
+    const typingSpeed = isDeleting ? 35 : 75
 
     const timer = setTimeout(() => {
       if (!isDeleting && displayText === currentTitle) {
-        // Pause before deleting
         setTimeout(() => setIsDeleting(true), 1800)
       } else if (isDeleting && displayText === '') {
         setIsDeleting(false)
@@ -50,7 +48,7 @@ export const Hero: React.FC = () => {
     const rect = e.currentTarget.getBoundingClientRect()
     const x = (e.clientX - rect.left) / rect.width - 0.5
     const y = (e.clientY - rect.top) / rect.height - 0.5
-    setMouseOffset({ x: x * 20, y: -y * 20 })
+    setMouseOffset({ x: x * 18, y: -y * 18 })
   }
 
   const handleMouseLeave = () => {
@@ -59,78 +57,79 @@ export const Hero: React.FC = () => {
 
   const handleDownloadCV = () => {
     confetti({
-      particleCount: 100,
-      spread: 80,
+      particleCount: 80,
+      spread: 70,
       origin: { y: 0.6 },
+      colors: ['#ffffff', '#a1a1aa', '#52525b', '#000000']
     })
   }
 
   return (
-    <section id="home" className="relative min-h-[92vh] flex items-center pt-24 pb-16 overflow-hidden">
+    <section id="home" className="relative min-h-[90vh] flex items-center pt-24 pb-16 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
           {/* Left Column: Text & CTAs */}
           <div className="lg:col-span-7 flex flex-col items-start text-left z-10">
             
-            {/* Status Pill */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-emerald-500/10 dark:bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 shadow-sm mb-6 animate-pulse">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 ring-4 ring-emerald-500/20" />
+            {/* Status Pill - Minimalist Monochrome */}
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-zinc-100 dark:bg-zinc-900/90 text-zinc-800 dark:text-zinc-300 border border-zinc-300 dark:border-zinc-800 shadow-sm mb-6">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 ring-2 ring-emerald-500/20" />
               <span>{profileData.status}</span>
             </div>
 
-            {/* Greeting & Name */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.15] mb-4">
+            {/* Greeting & Name - High Contrast Monochrome */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-zinc-900 dark:text-white leading-[1.12] mb-4">
               Xin chào, tôi là{' '}
-              <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 bg-clip-text text-transparent">
+              <span className="text-zinc-900 dark:text-white underline decoration-zinc-400 dark:decoration-zinc-600 underline-offset-8">
                 {profileData.name}
               </span>
             </h1>
 
             {/* Animated Typewriter Subheading */}
             <div className="h-10 sm:h-12 flex items-center mb-6">
-              <span className="text-xl sm:text-2xl lg:text-3xl font-semibold text-slate-700 dark:text-slate-300 font-mono flex items-center">
-                <span>&gt; </span>
-                <span className="text-indigo-600 dark:text-indigo-400 ml-2">{displayText}</span>
-                <span className="w-2.5 h-6 sm:h-7 bg-indigo-500 ml-1 inline-block animate-bounce" />
+              <span className="text-lg sm:text-2xl font-mono font-medium text-zinc-700 dark:text-zinc-300 flex items-center">
+                <span className="text-zinc-400 dark:text-zinc-500">&gt; </span>
+                <span className="text-black dark:text-white font-semibold ml-2">{displayText}</span>
+                <span className="w-2 h-5 sm:h-6 bg-black dark:bg-white ml-1 inline-block animate-pulse" />
               </span>
             </div>
 
             {/* Short Bio */}
-            <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed mb-8">
+            <p className="text-base sm:text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl leading-relaxed mb-8 font-normal">
               {profileData.shortBio}
             </p>
 
-            {/* Action Buttons */}
-            <div className="flex flex-wrap items-center gap-4 mb-10 w-full sm:w-auto">
+            {/* Action Buttons - High Contrast Black & White */}
+            <div className="flex flex-wrap items-center gap-3.5 mb-10 w-full sm:w-auto">
               <a
                 href="#projects"
-                className="flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-white bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 bg-[length:200%_auto] hover:bg-right transition-all duration-300 shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 hover:-translate-y-0.5 cursor-pointer"
+                className="flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-bold text-sm text-white dark:text-black bg-black dark:bg-white hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all duration-200 shadow-md shadow-black/10 dark:shadow-white/5 hover:-translate-y-0.5 cursor-pointer"
               >
                 <span>Xem Dự Án</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 stroke-[2.5]" />
               </a>
 
               <button
                 onClick={handleDownloadCV}
-                className="flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-slate-800 dark:text-slate-100 bg-white/80 dark:bg-slate-800/80 hover:bg-slate-100 dark:hover:bg-slate-700/80 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow hover:-translate-y-0.5 transition-all cursor-pointer"
+                className="flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-bold text-sm text-zinc-900 dark:text-zinc-200 bg-white dark:bg-zinc-900 hover:bg-zinc-100 dark:hover:bg-zinc-800 border border-zinc-300 dark:border-zinc-700/80 shadow-sm transition-all cursor-pointer hover:-translate-y-0.5"
               >
-                <FileDown className="w-4 h-4 text-indigo-500" />
+                <FileDown className="w-4 h-4 stroke-[2]" />
                 <span>Tải CV Cá Nhân</span>
               </button>
 
               <a
                 href="#contact"
-                className="flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                className="flex items-center justify-center px-5 py-3.5 rounded-xl font-semibold text-sm text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors"
               >
                 <span>Liên hệ ngay</span>
               </a>
             </div>
 
             {/* Social Links & Highlights */}
-            <div className="pt-6 border-t border-slate-200/80 dark:border-slate-800/80 w-full flex flex-wrap items-center justify-between gap-4">
+            <div className="pt-6 border-t border-zinc-200 dark:border-zinc-800/80 w-full flex flex-wrap items-center justify-between gap-4">
               <div className="flex items-center gap-3">
-                <span className="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                <span className="text-xs font-mono uppercase tracking-wider text-zinc-500">
                   Kết nối:
                 </span>
                 <div className="flex items-center gap-2">
@@ -139,7 +138,7 @@ export const Hero: React.FC = () => {
                     target="_blank"
                     rel="noreferrer"
                     aria-label="GitHub Profile"
-                    className="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+                    className="w-9 h-9 rounded-xl flex items-center justify-center text-zinc-700 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-900 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors border border-zinc-200 dark:border-zinc-800"
                   >
                     <GithubIcon className="w-4 h-4" />
                   </a>
@@ -148,16 +147,16 @@ export const Hero: React.FC = () => {
                     target="_blank"
                     rel="noreferrer"
                     aria-label="LinkedIn Profile"
-                    className="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 hover:bg-blue-600 hover:text-white transition-colors"
+                    className="w-9 h-9 rounded-xl flex items-center justify-center text-zinc-700 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-900 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors border border-zinc-200 dark:border-zinc-800"
                   >
                     <LinkedinIcon className="w-4 h-4" />
                   </a>
                   <a
                     href={`mailto:${profileData.email}`}
                     aria-label="Email Me"
-                    className="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 hover:bg-rose-500 hover:text-white transition-colors"
+                    className="w-9 h-9 rounded-xl flex items-center justify-center text-zinc-700 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-900 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors border border-zinc-200 dark:border-zinc-800"
                   >
-                    <Mail className="w-4 h-4" />
+                    <Mail className="w-4 h-4 stroke-[2]" />
                   </a>
                   {profileData.telegram && (
                     <a
@@ -165,22 +164,22 @@ export const Hero: React.FC = () => {
                       target="_blank"
                       rel="noreferrer"
                       aria-label="Telegram"
-                      className="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 hover:bg-sky-500 hover:text-white transition-colors"
+                      className="w-9 h-9 rounded-xl flex items-center justify-center text-zinc-700 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-900 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors border border-zinc-200 dark:border-zinc-800"
                     >
-                      <Send className="w-4 h-4" />
+                      <Send className="w-4 h-4 stroke-[2]" />
                     </a>
                   )}
                 </div>
               </div>
 
               {/* Quick Tech Badges */}
-              <div className="flex items-center gap-2 text-xs font-semibold text-slate-600 dark:text-slate-300">
-                <span className="flex items-center gap-1 px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700">
-                  <Code2 className="w-3.5 h-3.5 text-indigo-500" />
+              <div className="flex items-center gap-2 text-xs font-mono text-zinc-600 dark:text-zinc-400">
+                <span className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">
+                  <Code2 className="w-3.5 h-3.5" />
                   React 19 & Next.js
                 </span>
-                <span className="flex items-center gap-1 px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700">
-                  <Smartphone className="w-3.5 h-3.5 text-cyan-500" />
+                <span className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">
+                  <Smartphone className="w-3.5 h-3.5" />
                   React Native
                 </span>
               </div>
@@ -188,7 +187,7 @@ export const Hero: React.FC = () => {
 
           </div>
 
-          {/* Right Column: Creative 3D Interactive Showcase */}
+          {/* Right Column: Sleek Monochrome 3D Interactive Card */}
           <div className="lg:col-span-5 flex justify-center items-center">
             <div
               onMouseMove={handleMouseMove}
@@ -199,77 +198,77 @@ export const Hero: React.FC = () => {
               }}
               className="relative w-full max-w-md cursor-pointer select-none"
             >
-              {/* Outer Glow Halo */}
-              <div className="absolute -inset-1.5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-3xl blur-xl opacity-40 group-hover:opacity-60 transition duration-500" />
+              {/* Subtle ambient shadow (No rainbow colors) */}
+              <div className="absolute -inset-1 bg-gradient-to-b from-zinc-700/20 to-zinc-900/40 rounded-3xl blur-xl opacity-50" />
 
-              {/* Main 3D Card */}
-              <div className="relative rounded-2xl bg-white/90 dark:bg-slate-900/90 border border-slate-200/80 dark:border-slate-800 shadow-2xl p-6 backdrop-blur-xl">
+              {/* Main 3D Card - Deep Black & White */}
+              <div className="relative rounded-2xl bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 shadow-2xl p-6 backdrop-blur-xl">
                 
                 {/* Window Header */}
-                <div className="flex items-center justify-between pb-4 mb-4 border-b border-slate-200/60 dark:border-slate-800">
+                <div className="flex items-center justify-between pb-4 mb-4 border-b border-zinc-200 dark:border-zinc-800">
                   <div className="flex items-center gap-2">
-                    <span className="w-3 h-3 rounded-full bg-rose-500/80" />
-                    <span className="w-3 h-3 rounded-full bg-amber-500/80" />
-                    <span className="w-3 h-3 rounded-full bg-emerald-500/80" />
-                    <span className="text-xs font-mono text-slate-500 dark:text-slate-400 ml-2">
+                    <span className="w-3 h-3 rounded-full bg-zinc-300 dark:bg-zinc-700" />
+                    <span className="w-3 h-3 rounded-full bg-zinc-300 dark:bg-zinc-700" />
+                    <span className="w-3 h-3 rounded-full bg-zinc-300 dark:bg-zinc-700" />
+                    <span className="text-xs font-mono text-zinc-500 dark:text-zinc-400 ml-2">
                       developer.config.ts
                     </span>
                   </div>
-                  <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-500 dark:text-indigo-400 font-medium">
+                  <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-800 font-medium">
                     v2026.1
                   </span>
                 </div>
 
-                {/* Code Snippet */}
-                <div className="font-mono text-xs sm:text-sm leading-relaxed text-slate-800 dark:text-slate-200 space-y-1.5 mb-6">
-                  <p className="text-slate-400">// Khởi tạo Kỹ sư Phần mềm</p>
+                {/* Code Snippet - High Contrast Technical Typography */}
+                <div className="font-mono text-xs sm:text-sm leading-relaxed text-zinc-800 dark:text-zinc-200 space-y-1.5 mb-6">
+                  <p className="text-zinc-400 dark:text-zinc-500">// Khởi tạo Kỹ sư Phần mềm</p>
                   <p>
-                    <span className="text-pink-600 dark:text-pink-400">const</span>{' '}
-                    <span className="text-indigo-600 dark:text-indigo-400">developer</span> = &#123;
+                    <span className="text-zinc-500 dark:text-zinc-400 font-bold">const</span>{' '}
+                    <span className="text-zinc-900 dark:text-white font-semibold">developer</span> = &#123;
                   </p>
                   <p className="pl-4">
-                    <span className="text-slate-500 dark:text-slate-400">name:</span>{' '}
-                    <span className="text-emerald-600 dark:text-emerald-400">"{profileData.name}"</span>,
+                    <span className="text-zinc-500">name:</span>{' '}
+                    <span className="text-zinc-900 dark:text-zinc-100 font-medium">"{profileData.name}"</span>,
                   </p>
                   <p className="pl-4">
-                    <span className="text-slate-500 dark:text-slate-400">role:</span>{' '}
-                    <span className="text-emerald-600 dark:text-emerald-400">"Full-Stack & Mobile"</span>,
+                    <span className="text-zinc-500">role:</span>{' '}
+                    <span className="text-zinc-900 dark:text-zinc-100 font-medium">"Full-Stack & Mobile"</span>,
                   </p>
                   <p className="pl-4">
-                    <span className="text-slate-500 dark:text-slate-400">exp:</span>{' '}
-                    <span className="text-amber-600 dark:text-amber-400">{profileData.stats.yearsExperience}</span>,
+                    <span className="text-zinc-500">exp:</span>{' '}
+                    <span className="text-zinc-900 dark:text-white font-bold">{profileData.stats.yearsExperience}</span>,
                   </p>
                   <p className="pl-4">
-                    <span className="text-slate-500 dark:text-slate-400">loves:</span> [
-                    <span className="text-emerald-600 dark:text-emerald-400">"Clean Code"</span>,{' '}
-                    <span className="text-emerald-600 dark:text-emerald-400">"Speed"</span>,{' '}
-                    <span className="text-emerald-600 dark:text-emerald-400">"UX"</span>],
+                    <span className="text-zinc-500">loves:</span> [
+                    <span className="text-zinc-700 dark:text-zinc-300">"Clean Code"</span>,{' '}
+                    <span className="text-zinc-700 dark:text-zinc-300">"Speed"</span>,{' '}
+                    <span className="text-zinc-700 dark:text-zinc-300">"UX"</span>],
                   </p>
                   <p className="pl-4">
-                    <span className="text-slate-500 dark:text-slate-400">readyToWork:</span>{' '}
-                    <span className="text-blue-500">true</span>
+                    <span className="text-zinc-500">readyToWork:</span>{' '}
+                    <span className="text-emerald-500 font-semibold">true</span>
                   </p>
                   <p>&#125;;</p>
                 </div>
 
-                {/* Interactive Status & Live Metrics */}
-                <div className="grid grid-cols-2 gap-3 pt-3 border-t border-slate-200/60 dark:border-slate-800">
-                  <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-700/60">
-                    <div className="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400 mb-1">
-                      <Zap className="w-3.5 h-3.5 text-amber-500" />
+                {/* Status & Live Metrics */}
+                <div className="grid grid-cols-2 gap-3 pt-3 border-t border-zinc-200 dark:border-zinc-800">
+                  <div className="p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">
+                    <div className="flex items-center gap-1.5 text-xs text-zinc-500 dark:text-zinc-400 mb-1">
+                      <Zap className="w-3.5 h-3.5 text-zinc-400" />
                       <span>Dự án bàn giao</span>
                     </div>
-                    <div className="text-xl font-bold text-slate-900 dark:text-white">
+                    <div className="text-2xl font-black text-zinc-900 dark:text-white font-mono">
                       {profileData.stats.projectsCompleted}+
                     </div>
                   </div>
 
-                  <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-700/60">
-                    <div className="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400 mb-1">
-                      <Flame className="w-3.5 h-3.5 text-rose-500" />
+                  <div className="p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">
+                    <div className="flex items-center gap-1.5 text-xs text-zinc-500 dark:text-zinc-400 mb-1">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-zinc-400" />
                       <span>Năm kinh nghiệm</span>
                     </div>
-                    <div className="text-xl font-bold text-slate-900 dark:text-white">
+                    <div className="text-2xl font-black text-zinc-900 dark:text-white font-mono">
                       {profileData.stats.yearsExperience}+ Năm
                     </div>
                   </div>
@@ -277,25 +276,25 @@ export const Hero: React.FC = () => {
 
               </div>
 
-              {/* Floating Interactive Badge 1: Top Right */}
-              <div className="absolute -top-5 -right-5 px-3 py-2 rounded-xl bg-white/95 dark:bg-slate-800/95 border border-slate-200 dark:border-slate-700 shadow-xl flex items-center gap-2 transform hover:scale-105 transition-transform">
-                <div className="w-7 h-7 rounded-lg bg-indigo-500/10 text-indigo-500 flex items-center justify-center">
+              {/* Floating Badge 1: Top Right */}
+              <div className="absolute -top-4 -right-4 px-3.5 py-2 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-xl flex items-center gap-2.5 transform hover:scale-105 transition-transform">
+                <div className="w-7 h-7 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 flex items-center justify-center">
                   <Layers className="w-4 h-4" />
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-[10px] text-slate-400">Architecture</span>
-                  <span className="text-xs font-bold text-slate-800 dark:text-slate-200">Microservices & SSR</span>
+                  <span className="text-[10px] font-mono text-zinc-500">Architecture</span>
+                  <span className="text-xs font-bold text-zinc-900 dark:text-white">Microservices & SSR</span>
                 </div>
               </div>
 
-              {/* Floating Interactive Badge 2: Bottom Left */}
-              <div className="absolute -bottom-5 -left-5 px-3 py-2 rounded-xl bg-white/95 dark:bg-slate-800/95 border border-slate-200 dark:border-slate-700 shadow-xl flex items-center gap-2 transform hover:scale-105 transition-transform">
-                <div className="w-7 h-7 rounded-lg bg-emerald-500/10 text-emerald-500 flex items-center justify-center">
+              {/* Floating Badge 2: Bottom Left */}
+              <div className="absolute -bottom-4 -left-4 px-3.5 py-2 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-xl flex items-center gap-2.5 transform hover:scale-105 transition-transform">
+                <div className="w-7 h-7 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 flex items-center justify-center">
                   <CheckCircle2 className="w-4 h-4" />
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-[10px] text-slate-400">Chất lượng</span>
-                  <span className="text-xs font-bold text-slate-800 dark:text-slate-200">Pixel-Perfect UI</span>
+                  <span className="text-[10px] font-mono text-zinc-500">Chất lượng</span>
+                  <span className="text-xs font-bold text-zinc-900 dark:text-white">Pixel-Perfect UI</span>
                 </div>
               </div>
 

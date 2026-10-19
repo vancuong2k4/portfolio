@@ -1,6 +1,6 @@
 # Modern Creative Developer Portfolio (Web & Mobile)
 
-Trang Portfolio chuyên nghiệp, hiện đại và giàu tính tương tác dành cho Kỹ sư Phần mềm Full-Stack & Mobile. Được xây dựng với **React 19**, **TypeScript**, **Tailwind CSS v4**, **Framer Motion** và **Lucide Icons**.
+Trang Portfolio chuyên nghiệp, hiện đại và giàu tính tương tác. Được xây dựng với **React 19**, **TypeScript**, **Tailwind CSS v4**, **Framer Motion** và **Lucide Icons**.
 
 ---
 
@@ -56,12 +56,13 @@ src/
 
 ---
 
-## ✏️ Hướng dẫn tùy biến thông tin của bạn
+## ✏️ Hướng dẫn tùy biến thông tin :
 
-Bạn chỉ cần mở **duy nhất** file sau để thay đổi toàn bộ nội dung hiển thị trên trang web:
+chỉ cần mở **duy nhất** file sau để thay đổi toàn bộ nội dung hiển thị trên trang web:
 👉 `src/data/portfolioData.ts`
 
 Trong file này, bạn có thể thay thế:
+
 1. `profileData`: Họ tên, chức danh, đoạn giới thiệu ngắn, email, số điện thoại, địa chỉ, link GitHub, LinkedIn, Telegram.
 2. `skillsData`: Các công nghệ bạn sử dụng và mức độ thành thạo.
 3. `projectsData`: Tên dự án, ảnh bìa, công nghệ, link demo và link source code GitHub của bạn.
@@ -76,6 +77,7 @@ Trong file này, bạn có thể thay thế:
 
 1. **Đưa mã nguồn lên GitHub**:
    Mở terminal tại thư mục dự án và chạy:
+
    ```bash
    git init
    git add .
@@ -104,9 +106,9 @@ Trong file này, bạn có thể thay thế:
 1. Mở file `vite.config.ts`, thêm thuộc tính `base`:
    ```ts
    export default defineConfig({
-     base: '/portfolio/', // Thay 'portfolio' bằng tên repository trên GitHub
+     base: "/portfolio/", // Thay 'portfolio' bằng tên repository trên GitHub
      plugins: [react(), tailwindcss()],
-   })
+   });
    ```
 2. Cài package hỗ trợ deploy:
    ```bash
@@ -128,6 +130,7 @@ Trong file này, bạn có thể thay thế:
 ### Cách 3: Nhận tin nhắn từ Form liên hệ miễn phí (Không cần Server)
 
 Để form liên hệ trong mục "Liên Hệ" tự động gửi email thẳng vào Gmail của bạn mà không tốn 1 xu:
+
 1. Đăng ký tài khoản miễn phí tại [Web3Forms](https://web3forms.com) (nhận Access Key ngay lập tức không cần đăng ký phức tạp).
 2. Hoặc sử dụng [EmailJS](https://www.emailjs.com) (hỗ trợ 200 email gửi miễn phí mỗi tháng).
 3. Đặt Access Key vào form tại file `src/components/Contact.tsx`.
