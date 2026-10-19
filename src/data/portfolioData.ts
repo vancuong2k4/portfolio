@@ -3,7 +3,7 @@ import type { Profile, Skill, Project, Experience, Education, Certificate, Testi
 export const profileData: Profile = {
   name: "Trần Văn Cường",
   nickname: "vancuong2k4",
-  avatarUrl: "https://github.com/vancuong2k4.png",
+  avatarUrl: "/avatar.jpg",
   role: "Full-Stack & Mobile Developer",
   titles: [
     "Full-Stack Web Architect",
@@ -230,11 +230,11 @@ export const projectsData: Project[] = [
 export const experiencesData: Experience[] = [
   {
     id: "exp-1",
-    period: "2023 - Hiện tại",
-    role: "Senior Full-Stack Developer",
-    company: "TechNova Solutions",
-    companyUrl: "https://example.com",
-    location: "Hà Nội (Hybrid)",
+    period: "2023 - 2024",
+    role: "Intern Full-Stack Developer",
+    company: "Công ty TNHH HiAI",
+    companyUrl: "https://hiai.com",
+    location: "Thành phố Hồ Chí Minh (remote)",
     type: "Toàn thời gian",
     description: "Chịu trách nhiệm kiến trúc phần mềm và dẫn dắt đội ngũ kỹ sư 8 thành viên phát triển hệ sinh thái SaaS quy mô lớn.",
     achievements: [
@@ -263,10 +263,10 @@ export const experiencesData: Experience[] = [
   {
     id: "exp-3",
     period: "2019 - 2021",
-    role: "Junior Frontend Developer",
+    role: "Intern Frontend Developer",
     company: "PixelCraft Studio",
     companyUrl: "https://example.com",
-    location: "Hà Nội",
+    location: "TP. Hồ Chí Minh",
     type: "Toàn thời gian",
     description: "Tham gia xây dựng giao diện người dùng, landing pages và dashboard quản trị web tương tác cao.",
     achievements: [

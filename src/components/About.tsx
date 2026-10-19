@@ -69,7 +69,7 @@ export const About: React.FC = () => {
           
           {/* Left Column: Avatar Profile Showcase Card */}
           <div className="lg:col-span-4">
-            <div className="p-6 rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col items-center text-center group">
+            <div className="p-6 rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col items-center text-center">
               
               {/* Avatar Frame */}
               <div className="relative w-56 h-56 sm:w-64 sm:h-64 rounded-2xl overflow-hidden border-2 border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-950 mb-5 shadow-inner">
@@ -78,7 +78,7 @@ export const About: React.FC = () => {
                     src={profileData.avatarUrl}
                     alt={profileData.name}
                     onError={() => setImageError(true)}
-                    className="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-300 group-hover:scale-105"
+                    className="w-full h-full object-cover"
                   />
                 ) : (
                   <div className="w-full h-full flex flex-col items-center justify-center bg-zinc-100 dark:bg-zinc-950 text-zinc-400">
