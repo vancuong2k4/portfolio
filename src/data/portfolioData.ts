@@ -3,7 +3,8 @@ import type { Profile, Skill, Project, Experience, Education, Certificate, Testi
 export const profileData: Profile = {
   name: "Trần Văn Cường",
   nickname: "vancuong2k4",
-  role: " Full-Stack & Mobile Developer",
+  avatarUrl: "https://github.com/vancuong2k4.png",
+  role: "Full-Stack & Mobile Developer",
   titles: [
     "Full-Stack Web Architect",
     "React & React Native Specialist",
@@ -279,14 +280,14 @@ export const experiencesData: Experience[] = [
 export const educationData: Education[] = [
   {
     id: "edu-1",
-    period: "2015 - 2019",
-    degree: "Kỹ sư Công nghệ Thông tin (Khoa học Máy tính)",
-    institution: "Đại học Bách Khoa Hà Nội",
-    location: "Hà Nội, Việt Nam",
-    description: "Tốt nghiệp loại Giỏi. Chuyên sâu về Cấu trúc dữ liệu & Giải thuật, Kiến trúc phần mềm và Hệ quản trị cơ sở dữ liệu.",
+    period: "2022 - 2026",
+    degree: " Công nghệ Thông tin (Khoa học Máy tính)",
+    institution: "Đại học Văn Hiến",
+    location: "Tp.HCM, Việt Nam",
+    description: "Tốt nghiệp loại Khá. Chuyên sâu về Cấu trúc dữ liệu & Giải thuật, Kiến trúc phần mềm và Hệ quản trị cơ sở dữ liệu.",
     achievements: [
-      "GPA: 3.6 / 4.0",
-      "Giải Nhì cuộc thi Lập trình Olympic Tin học Sinh viên cấp trường",
+      "GPA: 3.1 / 4.0",
+      "Học bổng sinh viên ưu tú 2022-2023",
       "Đề tài tốt nghiệp: Xây dựng hệ thống phân tích dữ liệu lớn thời gian thực"
     ]
   }

@@ -1,6 +1,7 @@
 export interface Profile {
   name: string
   nickname: string
+  avatarUrl?: string
   role: string
   titles: string[]
   shortBio: string
