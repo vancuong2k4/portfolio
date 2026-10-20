@@ -9,7 +9,6 @@ import {
   Check, 
   MessageSquare, 
   Clock, 
-  ShieldCheck,
   CheckCircle2
 } from 'lucide-react'
 import confetti from 'canvas-confetti'
@@ -62,7 +61,7 @@ export const Contact: React.FC = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-zinc-100 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-800 mb-3">
-            <span>06. LIÊN HỆ TRỰC TIẾP</span>
+            <span>05. LIÊN HỆ TRỰC TIẾP</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-black text-zinc-900 dark:text-white tracking-tight">
             Kết Nối & Trao Đổi Công Việc
@@ -167,13 +166,7 @@ export const Contact: React.FC = () => {
               </div>
             </div>
 
-            {/* Free Hosting Notice */}
-            <div className="p-4 rounded-xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed flex items-start gap-2.5">
-              <ShieldCheck className="w-4 h-4 text-zinc-500 shrink-0 mt-0.5" />
-              <span>
-                Form liên hệ có thể tích hợp trực tiếp <strong>Web3Forms</strong> hoặc <strong>EmailJS</strong> (hoàn toàn miễn phí, tin nhắn bay thẳng về Gmail).
-              </span>
-            </div>
+
 
           </div>
 
