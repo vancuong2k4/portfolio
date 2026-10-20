@@ -53,7 +53,7 @@ export const Projects: React.FC = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-zinc-100 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-800 mb-3">
-            <span>// 03. DỰ ÁN & SẢN PHẨM</span>
+            <span>03. DỰ ÁN & SẢN PHẨM</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-black text-zinc-900 dark:text-white tracking-tight">
             Sản Phẩm & Hệ Thống Đã Xây Dựng

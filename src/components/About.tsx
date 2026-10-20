@@ -56,7 +56,7 @@ export const About: React.FC = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-zinc-100 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-800 mb-3">
-            <span>// 01. HỒ SƠ CÁ NHÂN</span>
+            <span>01. HỒ SƠ CÁ NHÂN</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-black text-zinc-900 dark:text-white tracking-tight">
             Về Bản Thân & Triết Lý Kỹ Thuật
@@ -169,11 +169,11 @@ export const About: React.FC = () => {
               </div>
               <div className="flex items-center gap-2.5 p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800">
                 <GraduationCap className="w-4 h-4 text-zinc-500 shrink-0" />
-                <span><strong>Học vấn:</strong> Kỹ sư ĐH Bách Khoa</span>
+                <span><strong>Học vấn:</strong> Đại học Văn Hiến</span>
               </div>
               <div className="flex items-center gap-2.5 p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800">
                 <Languages className="w-4 h-4 text-zinc-500 shrink-0" />
-                <span><strong>Ngôn ngữ:</strong> Tiếng Việt, Tiếng Anh (IELTS 7.0)</span>
+                <span><strong>Ngôn ngữ:</strong> Tiếng Việt, Tiếng Anh (B1)</span>
               </div>
               <div className="flex items-center gap-2.5 p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800">
                 <Briefcase className="w-4 h-4 text-zinc-500 shrink-0" />

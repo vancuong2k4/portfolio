@@ -327,7 +327,7 @@ export const testimonialsData: Testimonial[] = [
     role: "CTO / Head of Engineering",
     company: "TechNova Solutions",
     avatarGradient: "from-blue-500 to-indigo-600",
-    content: "An là một kỹ sư full-stack hiếm hoi có cả tư duy kiến trúc hệ thống vững vàng lẫn sự nhạy bén về trải nghiệm người dùng. Những giải pháp cậu ấy đưa ra luôn tối ưu, sạch sẽ và giải quyết triệt để vấn đề tải của sản phẩm."
+    content: "Van Cuong là một kỹ sư full-stack hiếm hoi có cả tư duy kiến trúc hệ thống vững vàng lẫn sự nhạy bén về trải nghiệm người dùng. Những giải pháp cậu ấy đưa ra luôn tối ưu, sạch sẽ và giải quyết triệt để vấn đề tải của sản phẩm."
   },
   {
     id: "test-2",
@@ -335,14 +335,14 @@ export const testimonialsData: Testimonial[] = [
     role: "Product Manager",
     company: "Vanguard Digital Lab",
     avatarGradient: "from-purple-500 to-pink-600",
-    content: "Làm việc cùng An là một trải nghiệm tuyệt vời. Cậu ấy không chỉ viết code nhanh mà còn chủ động đóng góp ý kiến để hoàn thiện tính năng sản phẩm tốt hơn cả bản thiết kế ban đầu."
+    content: "Làm việc cùng Van Cuong là một trải nghiệm tuyệt vời. Cậu ấy không chỉ viết code nhanh mà còn chủ động đóng góp ý kiến để hoàn thiện tính năng sản phẩm tốt hơn cả bản thiết kế ban đầu."
   },
   {
     id: "test-3",
     name: "Lê Hoàng Long",
-    role: "Senior Mobile Architect",
+    role: "intern Mobile Architect",
     company: "FinTech Global",
     avatarGradient: "from-emerald-500 to-teal-600",
-    content: "Khả năng tối ưu hiệu năng React Native và thiết kế animations của An thực sự đẳng cấp. Ứng dụng sau khi qua tay An mượt mà 60 FPS trên cả những thiết bị cấu hình thấp."
+    content: "Khả năng tối ưu hiệu năng React Native và thiết kế animations của Van Cuong thực sự đẳng cấp. Ứng dụng sau khi qua tay Van Cuong mượt mà 60 FPS trên cả những thiết bị cấu hình thấp."
   }
 ]
