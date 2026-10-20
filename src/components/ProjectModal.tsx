@@ -141,7 +141,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                 className="flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-xs text-zinc-800 dark:text-zinc-200 bg-zinc-100 dark:bg-zinc-900 hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-colors border border-zinc-200 dark:border-zinc-800"
               >
                 <GithubIcon className="w-4 h-4" />
-                <span>Source Code</span>
+                <span>Xem Source Code</span>
               </a>
             )}
 

@@ -32,10 +32,10 @@ interface FilterCategory {
 
 const filterCategories: FilterCategory[] = [
   { key: 'all', label: 'Tất Cả' },
-  { key: 'fullstack', label: 'Full-Stack SaaS' },
+  { key: 'fullstack', label: 'Full-Stack' },
   { key: 'mobile', label: 'Mobile Apps' },
   { key: 'frontend', label: 'Frontend & UI' },
-  { key: 'backend', label: 'Backend & APIs' },
+  { key: 'backend', label: 'Backend & AI' },
 ]
 
 export const Projects: React.FC = () => {
@@ -44,7 +44,12 @@ export const Projects: React.FC = () => {
 
   const filteredProjects = activeFilter === 'all'
     ? projectsData
-    : projectsData.filter(p => p.category === activeFilter)
+    : projectsData.filter(p => {
+        if (activeFilter === 'mobile') {
+          return p.category === 'mobile' || p.tags.some(t => t.toLowerCase().includes('react native') || t.toLowerCase().includes('mobile'))
+        }
+        return p.category === activeFilter
+      })
 
   return (
     <section id="projects" className="py-20 relative">

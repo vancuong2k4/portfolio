@@ -70,159 +70,159 @@ export const skillsData: Skill[] = [
 
 export const projectsData: Project[] = [
   {
-    id: "zenith-saas",
-    title: "Zenith Cloud - Nền tảng Quản trị Doanh nghiệp AI",
+    id: "smart-classroom",
+    title: "Smart Classroom - Điểm Danh Lớp Học Thông Minh",
     category: "fullstack",
-    subtitle: "SaaS Platform với AI Analytics & Real-time Collaboration",
-    description: "Hệ thống quản lý công việc và tự động hóa quy trình cho đội ngũ với trợ lý ảo AI và bảng điều khiển trực quan thời gian thực.",
-    fullDescription: "Zenith Cloud là nền tảng quản trị công việc toàn diện theo kiến trúc Micro-frontend kết hợp Backend NestJS và PostgreSQL. Tích hợp AI phân tích năng suất, realtime collaborative board qua WebSocket và thanh toán Stripe đa tiền tệ.",
-    tags: ["React", "Next.js", "NestJS", "PostgreSQL", "Tailwind CSS", "OpenAI API", "Docker"],
-    metrics: "Tăng 45% năng suất đội ngũ, hỗ trợ 10,000+ active users",
-    liveUrl: "https://example.com/demo-zenith",
-    githubUrl: "https://github.com/your-username/zenith-cloud",
+    subtitle: "Hệ thống điểm danh chống gian lận đa lớp: Dynamic QR, GPS Location & Wi-Fi IP",
+    description: "Hệ thống điểm danh thông minh chống gian lận kết hợp 3 lớp bảo mật: Dynamic QR Code tự động thay đổi sau 10s, định vị GPS sinh viên và xác thực dải IP Wi-Fi giảng đường.",
+    fullDescription: "Dự án Monorepo gồm Backend RESTful API (Node.js/Express, PostgreSQL, PostGIS, Redis), Web Dashboard cho Giảng viên & Quản trị viên (React, Vite, Tailwind CSS) và Mobile App cho Sinh viên quét mã QR (React Native). Hệ thống sử dụng PostGIS tính toán tọa độ GPS trong bán kính 50m, Redis lưu mã QR Token với TTL 10 giây và Docker Compose giúp đóng gói triển khai toàn bộ dịch vụ.",
+    tags: ["React", "React Native", "Node.js", "Express", "PostgreSQL", "PostGIS", "Redis", "Docker"],
+    metrics: "Bảo mật 3 lớp (QR + GPS + Wi-Fi), mã QR động 10s/lần",
+    liveUrl: "https://github.com/vancuong2k4/Smart-Classroom-Management-System#readme",
+    githubUrl: "https://github.com/vancuong2k4/Smart-Classroom-Management-System",
     featured: true,
     gradient: "from-blue-600 via-indigo-600 to-violet-600",
     iconName: "LayoutDashboard",
     features: [
-      "Bảng điều khiển Kanban thời gian thực với drag-and-drop mượt mà",
-      "Trợ lý AI tự động tóm tắt cuộc họp và phân công nhiệm vụ",
-      "Hệ thống phân quyền RBAC đa cấp độ (Admin, Manager, Member)",
-      "Tích hợp cổng thanh toán Stripe và webhook tự động kích hoạt tài khoản"
+      "Dynamic QR Code thời gian thực với Redis TTL 10 giây chống chụp màn hình chia sẻ",
+      "Xác thực tọa độ định vị GPS sinh viên bằng PostGIS với bán kính cho phép 50m quanh giảng đường",
+      "Kiểm tra dải IP mạng Wi-Fi trường học để đảm bảo sinh viên đang có mặt tại trường",
+      "Bảng điều khiển Giảng viên quản lý khóa học, danh sách điểm danh và thống kê chuyên cần"
     ],
     architecture: [
-      "Frontend: Next.js App Router, Tailwind CSS, Zustand, Shadcn UI",
-      "Backend: NestJS microservices, RabbitMQ message broker",
-      "Database: PostgreSQL with Prisma ORM, Redis for caching & rate limiting",
-      "DevOps: Docker containers, deployed on AWS ECS with GitHub Actions CI/CD"
+      "Monorepo: Cấu trúc backend, frontend-web, frontend-mobile tách biệt rõ ràng",
+      "Backend: Node.js (Express), PostgreSQL với PostGIS extension, Redis Cache",
+      "Frontend Web: React, Vite, Tailwind CSS, Lucide Icons",
+      "Mobile: React Native (Expo) quét camera QR siêu tốc độ và truy vấn Geolocation",
+      "DevOps: Docker Compose triển khai môi trường cơ sở dữ liệu và container"
     ]
   },
   {
-    id: "fitpulse-mobile",
-    title: "FitPulse - Ứng dụng Huấn luyện Thể thao Thông minh",
-    category: "mobile",
-    subtitle: "React Native & AI Computer Vision Fitness Tracker",
-    description: "Ứng dụng di động theo dõi lộ trình tập luyện cá nhân hóa, nhận diện động tác tập luyện qua camera và đồng bộ Apple Health / Google Fit.",
-    fullDescription: "FitPulse là ứng dụng di động đa nền tảng (iOS & Android) được xây dựng bằng React Native. Ứng dụng cung cấp bài tập cá nhân hóa dựa trên AI, theo dõi nhịp tim qua kết nối BLE (Bluetooth Low Energy) và cộng đồng giao lưu xã hội.",
-    tags: ["React Native", "Expo", "TypeScript", "Node.js", "Supabase", "HealthKit"],
-    metrics: "4.8★ trên App Store với hơn 25,000+ lượt tải",
-    liveUrl: "https://example.com/demo-fitpulse",
-    githubUrl: "https://github.com/your-username/fitpulse-mobile",
-    featured: true,
-    gradient: "from-emerald-500 via-teal-600 to-cyan-600",
-    iconName: "Activity",
-    features: [
-      "Hơn 300+ bài tập hoạt họa 3D chất lượng cao với hướng dẫn chi tiết",
-      "Đồng bộ hai chiều với Apple HealthKit và Google Health Connect",
-      "Chế độ ngoại tuyến (Offline-first) với WatermelonDB",
-      "Bảng xếp hạng bạn bè và thông báo đẩy (Push Notifications) giữ lửa tập luyện"
-    ],
-    architecture: [
-      "Client: React Native (Expo SDK 52), Reanimated 3, Redux Toolkit",
-      "Backend: Node.js serverless functions trên Supabase Edge",
-      "Storage: Supabase PostgreSQL & S3 media storage",
-      "Notifications: OneSignal push notification integration"
-    ]
-  },
-  {
-    id: "nova-ecommerce",
-    title: "Nova Fashion - Sàn Thương mại Điện tử Đa kênh",
+    id: "tvc-shop",
+    title: "TVC-Shop - Nền Tảng Thương Mại Điện Tử Minimalist",
     category: "fullstack",
-    subtitle: "Headless E-Commerce Siêu Tốc Độ & Trải nghiệm Mua sắm 3D",
-    description: "Sàn thương mại điện tử thời trang với công nghệ Headless Commerce, tốc độ load dưới 0.8s, tích hợp thử đồ AR và thanh toán VNPay, MoMo.",
-    fullDescription: "Giải pháp thương mại điện tử thế hệ mới giải quyết bài toán tải trang chậm của các shop online truyền thống. Điểm số Google Lighthouse đạt 99/100, hỗ trợ tìm kiếm ngữ nghĩa thông minh và giỏ hàng thời gian thực.",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Redis", "VNPay / MoMo API", "Stripe"],
-    metrics: "Tốc độ tải trang 0.8s, tỉ lệ chuyển đổi tăng 32%",
-    liveUrl: "https://example.com/demo-nova",
-    githubUrl: "https://github.com/your-username/nova-ecommerce",
+    subtitle: "Hệ thống bán hàng thời trang tối giản với React & Laravel RESTful API",
+    description: "Trang web thương mại điện tử chuyên bán các sản phẩm thời trang theo phong cách tối giản (Minimalist), tối ưu hóa tốc độ tải trang, giỏ hàng mượt mà và tích hợp Chatbot AI.",
+    fullDescription: "TVC-Shop được xây dựng với kiến trúc hiện đại: Frontend React (Vite, TailwindCSS) và Backend Laravel 8.x cung cấp RESTful APIs an toàn, chuẩn MVC. Hệ thống hỗ trợ quản lý sản phẩm nhiều biến thể (màu sắc, kích thước), giỏ hàng, đặt hàng, mã giảm giá (coupon), yêu thích (wishlist), đánh giá sản phẩm và tích hợp Google Gemini AI Chatbot tư vấn khách hàng tự động.",
+    tags: ["React", "Laravel", "PHP", "MySQL", "Tailwind CSS", "RESTful API", "Gemini AI"],
+    metrics: "Tải trang < 1s, tích hợp Chatbot Gemini AI hỗ trợ khách hàng",
+    liveUrl: "https://github.com/vancuong2k4/TVC-Shop#readme",
+    githubUrl: "https://github.com/vancuong2k4/TVC-Shop",
     featured: true,
     gradient: "from-amber-500 via-orange-600 to-rose-600",
     iconName: "ShoppingBag",
     features: [
-      "Tối ưu Core Web Vitals tối đa, hỗ trợ Incremental Static Regeneration (ISR)",
-      "Tích hợp cổng thanh toán nội địa (VNPay, MoMo) & quốc tế (Stripe, PayPal)",
-      "Bộ lọc sản phẩm đa tiêu chí tức thì (Faceted search) không giật lag",
-      "Hệ thống quản lý kho hàng và đồng bộ đơn hàng tự động"
+      "Giao diện thiết kế phong cách Minimalist (Trắng/Đen), font chữ sang trọng, chuẩn Responsive",
+      "Quản lý sản phẩm đa biến thể (màu sắc, size, tồn kho) và giỏ hàng thời gian thực",
+      "Tích hợp trợ lý ảo Google Gemini AI Chatbot giải đáp thắc mắc và gợi ý sản phẩm",
+      "Bảng quản trị Admin đầy đủ: quản lý danh mục, sản phẩm, đơn hàng và doanh thu"
     ],
     architecture: [
-      "Frontend: Next.js 14, Tailwind CSS, Framer Motion",
-      "Backend: Node.js / Express micro-api, Redis Cache",
-      "Database: MongoDB with Mongoose, MeiliSearch for lightning search"
+      "Frontend: React.js (Vite), Tailwind CSS, Context API quản lý state toàn cục",
+      "Backend: Laravel 8.x, Eloquent ORM, MySQL Database",
+      "Auth: Phân quyền Admin / Customer, hỗ trợ đăng nhập Google OAuth"
     ]
   },
   {
-    id: "omnichat-realtime",
-    title: "OmniChat - Hệ thống Hội thoại Doanh nghiệp Realtime",
+    id: "portfolio-website",
+    title: "Developer Portfolio - Hồ Sơ Kỹ Sư Công Nghệ Trực Tuyến",
+    category: "frontend",
+    subtitle: "Website Portfolio cá nhân Monochrome tối giản, hiệu năng cao trên React 19",
+    description: "Trang web Portfolio cá nhân hiện đại được xây dựng bằng React 19, TypeScript và Tailwind CSS v4, đạt điểm số Lighthouse tối ưu và kết nối tên miền riêng.",
+    fullDescription: "Portfolio cá nhân mang đậm phong cách kỹ thuật lập trình viên với bảng màu Monochrome (Trắng - Đen tối giản). Trang web được tối ưu hóa toàn diện về khả năng hiển thị, tương tác Dark/Light mode, hiệu ứng mượt mà, cấu trúc component chặt chẽ, tối ưu SEO, hỗ trợ form liên hệ bảo mật và triển khai tự động CI/CD qua GitHub và Vercel.",
+    tags: ["React 19", "TypeScript", "Tailwind CSS v4", "Vite", "Lucide Icons", "Vercel"],
+    metrics: "Google Lighthouse 99+, thời gian tải trang < 0.5s",
+    liveUrl: "https://vancuong-official.id.vn",
+    githubUrl: "https://github.com/vancuong2k4/portfolio",
+    featured: true,
+    gradient: "from-zinc-700 via-zinc-800 to-black",
+    iconName: "Layers",
+    features: [
+      "Ngôn ngữ thiết kế Monochrome tinh tế, độ tương phản cao, chuyển đổi Dark / Light theme tức thì",
+      "Đồng bộ trực tiếp mã nguồn với các dự án thực tế trên GitHub cá nhân",
+      "Form liên hệ trực tiếp với cơ chế xác thực dữ liệu và chống spam",
+      "Tối ưu hóa SEO, Open Graph và kết nối tên miền chính thức vancuong-official.id.vn"
+    ],
+    architecture: [
+      "Frontend: React 19, TypeScript, Vite, Tailwind CSS v4",
+      "State & Theme: React Context API lưu trạng thái Dark/Light mode trong LocalStorage",
+      "Hosting: Vercel Global Edge Network với chứng chỉ bảo mật SSL tự động"
+    ]
+  },
+  {
+    id: "edurag-ai",
+    title: "eduRAG - Hệ Thống Sinh Câu Hỏi Tự Động Bằng AI & RAG",
     category: "backend",
-    subtitle: "High-concurrency Real-time Chat Engine",
-    description: "Nền tảng chat và hỗ trợ khách hàng đa kênh với kiến trúc chịu tải hàng chục nghìn kết nối đồng thời qua WebSockets và Redis Cluster.",
-    fullDescription: "OmniChat cung cấp giải pháp liên lạc nội bộ và CSKH cho các tổ chức. Hệ thống mã hóa đầu cuối (E2EE), chia sẻ tập tin tức thì, cuộc gọi thoại WebRTC và bot tự động phản hồi 24/7.",
-    tags: ["Node.js", "Socket.io", "Redis", "WebRTC", "PostgreSQL", "Docker"],
-    metrics: "Xử lý 50,000+ tin nhắn/giây với độ trễ < 30ms",
-    liveUrl: "https://example.com/demo-omnichat",
-    githubUrl: "https://github.com/your-username/omnichat-engine",
-    featured: false,
-    gradient: "from-cyan-500 via-blue-600 to-indigo-700",
+    subtitle: "Ứng dụng AI thế hệ mới (Retrieval-Augmented Generation) sinh đề thi từ học liệu điện tử",
+    description: "Hệ thống ứng dụng công nghệ AI tiên tiến (RAG) để phân tích tài liệu học tập, giáo trình điện tử và tự động sinh câu hỏi kiểm tra, bài tập trắc nghiệm bám sát nội dung.",
+    fullDescription: "eduRAG giải quyết bài toán tốn thời gian trong việc tạo đề thi và ôn tập bài giảng. Hệ thống xử lý các tài liệu học tập định dạng PDF, DOCX, bẻ nhỏ văn bản (chunking), tạo Vector Embeddings và kết hợp LLM để tự động sinh ngân hàng câu hỏi trắc nghiệm đa cấp độ (Nhận biết, Thông hiểu, Vận dụng) kèm đáp án giải thích chi tiết.",
+    tags: ["Python", "FastAPI", "RAG", "LangChain", "Vector DB", "LLM", "OpenAI / Gemini"],
+    metrics: "Tự động hóa 100% quy trình sinh câu hỏi trắc nghiệm chuẩn xác",
+    liveUrl: "https://github.com/vancuong2k4/eduRAG#readme",
+    githubUrl: "https://github.com/vancuong2k4/eduRAG",
+    featured: true,
+    gradient: "from-purple-600 via-violet-600 to-indigo-700",
     iconName: "MessageSquare",
     features: [
-      "Kết nối liên tục hai chiều với cơ chế tự phục hồi kết nối (Auto reconnect)",
-      "Hỗ trợ cuộc gọi video / audio chất lượng cao qua WebRTC P2P",
-      "Mã hóa tin nhắn End-to-End Encryption (E2EE)",
-      "Lưu trữ lịch sử chat phân trang vô tận (Infinite scrolling)"
+      "Tiếp nhận và bóc tách nội dung từ tài liệu học liệu số (PDF, Word, Text)",
+      "Chuyển hóa văn bản thành Vector Embeddings và lưu trữ trong Vector Database",
+      "Tự động sinh câu hỏi trắc nghiệm 4 đáp án kèm lời giải chi tiết theo chuẩn RAG",
+      "Tùy biến mức độ khó và số lượng câu hỏi theo từng chương mục"
     ],
     architecture: [
-      "Socket Server: Node.js Cluster with Socket.io Redis Adapter",
-      "Database: ScyllaDB / PostgreSQL for message persistence",
-      "Media: AWS S3 + CloudFront CDN for encrypted attachments"
+      "AI Pipeline: LangChain, ChromaDB / FAISS Vector Store, Prompt Engineering",
+      "Backend API: Python FastAPI bất đồng bộ hiệu năng cao",
+      "LLMs: Tích hợp OpenAI GPT-4o / Google Gemini API"
     ]
   },
   {
-    id: "crypto-lens",
-    title: "CryptoLens - Bảng điều khiển Tài chính Web3 & DEX",
+    id: "datan-homestay",
+    title: "DatAn Homestay - Website Đặt Phòng & Dịch Vụ Du Lịch",
     category: "frontend",
-    subtitle: "Interactive Crypto Analytics & Portfolio Dashboard",
-    description: "Bảng theo dõi biến động thị trường tiền mã hóa thời gian thực, biểu đồ kỹ thuật TradingView và quản lý danh mục đầu tư thông minh.",
-    fullDescription: "Ứng dụng web hiển thị dữ liệu tài chính trực quan với đồ thị tương tác cao. Kết nối ví Web3 (Metamask, Phantom) để theo dõi số dư ví on-chain và cảnh báo biến động giá qua Telegram bot.",
-    tags: ["React", "TypeScript", "Ethers.js", "Chart.js", "Tailwind CSS"],
-    metrics: "Cập nhật dữ liệu giá thời gian thực với hơn 15 sàn giao dịch",
-    liveUrl: "https://example.com/demo-cryptolens",
-    githubUrl: "https://github.com/your-username/crypto-lens",
+    subtitle: "Website quảng bá không gian nghỉ dưỡng và đặt phòng du lịch trực tuyến",
+    description: "Website quảng bá và đặt phòng cho hệ thống Homestay Đất An với giao diện thân thiện, hình ảnh sắc nét, tương thích mọi thiết bị di động.",
+    fullDescription: "Dự án website dành cho du khách tìm hiểu và đặt phòng tại Đất An Homestay. Thiết kế giao diện thân thiện với hình ảnh trực quan, danh mục phòng đa dạng kèm bảng giá minh bạch, các tiện ích trải nghiệm (tiệc nướng BBQ, tour trải nghiệm sinh thái), bản đồ chỉ đường và form gửi yêu cầu đặt phòng nhanh chóng.",
+    tags: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "UI/UX", "GitHub Pages"],
+    metrics: "Tương thích 100% thiết bị di động, tải trang mượt mà",
+    liveUrl: "https://vancuong2k4.github.io/DatAnHomestay/",
+    githubUrl: "https://github.com/vancuong2k4/DatAnHomestay",
     featured: false,
-    gradient: "from-purple-600 via-pink-600 to-red-500",
-    iconName: "TrendingUp",
-    features: [
-      "Biểu đồ hình nến tương tác đầy đủ chỉ báo (RSI, MACD, MA)",
-      "Kết nối ví Web3 đa chuỗi (Ethereum, BSC, Solana, Polygon)",
-      "Tính toán lãi/lỗ (P&L) tự động theo thời gian thực",
-      "Giao diện Dark Mode chuẩn tài chính hiện đại"
-    ],
-    architecture: [
-      "Frontend: React with Vite, Tailwind CSS, Lucide Icons",
-      "Data Feed: Binance WebSocket Streams & CoinGecko API"
-    ]
-  },
-  {
-    id: "foodie-delivery",
-    title: "Foodie Express - Ứng dụng Giao đồ ăn & Định vị Trực tiếp",
-    category: "mobile",
-    subtitle: "React Native Food Delivery App with Live Driver GPS",
-    description: "Ứng dụng đặt món ăn với bản đồ tracking tài xế trực tiếp theo thời gian thực, tích hợp tìm kiếm thông minh và thanh toán không tiền mặt.",
-    fullDescription: "Hệ thống bao gồm ứng dụng cho khách hàng và ứng dụng cho tài xế. Tối ưu hóa thuật toán định vị GPS để tiết kiệm pin tối đa, cập nhật lộ trình di chuyển mượt mà trên bản đồ Google Maps.",
-    tags: ["React Native", "Google Maps API", "Node.js", "Firebase", "Redux"],
-    metrics: "Định vị mượt mà 60 FPS, độ chính xác GPS sai số < 5m",
-    liveUrl: "https://example.com/demo-foodie",
-    githubUrl: "https://github.com/your-username/foodie-express",
-    featured: false,
-    gradient: "from-yellow-500 via-amber-600 to-red-600",
+    gradient: "from-emerald-600 via-teal-600 to-cyan-600",
     iconName: "Navigation",
     features: [
-      "Bản đồ tương tác với icon tài xế di chuyển mượt mà theo góc xoay",
-      "Hệ thống gợi ý món ăn theo vị trí và thói quen sở thích",
-      "Thông báo trạng thái đơn hàng: Đang chuẩn bị -> Đang giao -> Đã tới nơi",
-      "Đánh giá và tip tài xế tiện lợi"
+      "Bộ sưu tập hình ảnh không gian phòng và tiện ích nghỉ dưỡng chất lượng cao",
+      "Bảng thông tin chi tiết từng loại phòng kèm biểu phí và chính sách phụ thu rõ ràng",
+      "Form liên hệ đặt chỗ trực tuyến tích hợp gọi điện và nhắn tin tư vấn nhanh",
+      "Bố cục Responsive tối ưu cho du khách sử dụng smartphone khi đi du lịch"
     ],
     architecture: [
-      "Mobile: React Native, React Native Maps, Reanimated",
-      "Backend: Firebase Cloud Functions & Firestore Realtime DB"
+      "Frontend: HTML5 Semantic, CSS3 hiện đại (Flexbox/Grid), JavaScript",
+      "Hosting: GitHub Pages triển khai liên tục từ nhánh main"
+    ]
+  },
+  {
+    id: "travel-ngocdieu",
+    title: "Ngọc Diệu Travel - Cổng Thông Tin & Đặt Tour Miền Tây",
+    category: "frontend",
+    subtitle: "Nền tảng đặt tour du lịch sinh thái, khám phá sông nước Đồng bằng Sông Cửu Long",
+    description: "Website du lịch chuyên nghiệp giới thiệu các tour khám phá Miền Tây sông nước, tích hợp xem lịch trình chi tiết, ưu đãi mùa vụ và đăng ký tài khoản.",
+    fullDescription: "Dự án website du lịch phục vụ du khách khám phá các tỉnh Miền Tây Nam Bộ. Hệ thống bao gồm trang chủ giới thiệu tour nổi bật, trang chi tiết lịch trình từng ngày, mục ưu đãi khuyến mãi mùa vụ, hệ thống đăng nhập/đăng ký tài khoản và form đăng ký tour du lịch sông nước.",
+    tags: ["HTML5", "CSS3", "JavaScript", "Web Design", "Responsive", "GitHub Pages"],
+    metrics: "Đầy đủ lịch trình tour đa điểm đến, bộ lọc chương trình ưu đãi",
+    liveUrl: "https://vancuong2k4.github.io/travel-ngocdieu/",
+    githubUrl: "https://github.com/vancuong2k4/travel-ngocdieu",
+    featured: false,
+    gradient: "from-blue-500 via-cyan-600 to-teal-500",
+    iconName: "TrendingUp",
+    features: [
+      "Trang chi tiết lịch trình tour theo từng ngày và từng điểm tham quan đặc sắc",
+      "Chuyên mục khuyến mãi cập nhật các gói tour giảm giá theo mùa",
+      "Giao diện đăng ký, đăng nhập tài khoản thành viên trực quan",
+      "Tích hợp bản đồ chỉ dẫn và biểu mẫu đặt tour linh hoạt"
+    ],
+    architecture: [
+      "Frontend: HTML5, CSS3, JavaScript tương tác mượt mà",
+      "Hosting: GitHub Pages với tốc độ phản hồi nhanh"
     ]
   }
 ]
