@@ -31,7 +31,7 @@ interface FilterCategory {
 }
 
 const filterCategories: FilterCategory[] = [
-  { key: 'all', label: 'Tất Cả' },
+  { key: 'all', label: 'All Projects' },
   { key: 'fullstack', label: 'Full-Stack' },
   { key: 'mobile', label: 'Mobile Apps' },
   { key: 'frontend', label: 'Frontend & UI' },
@@ -58,13 +58,13 @@ export const Projects: React.FC = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-zinc-100 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-800 mb-3">
-            <span>03. DỰ ÁN & SẢN PHẨM</span>
+            <span>03. FEATURED PROJECTS</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-black text-zinc-900 dark:text-white tracking-tight">
-            Sản Phẩm & Hệ Thống Đã Xây Dựng
+            Featured Systems & Products
           </h2>
           <p className="mt-3 text-zinc-600 dark:text-zinc-400 text-base max-w-xl mx-auto">
-            Các giải pháp phần mềm hoàn chỉnh, chú trọng vào trải nghiệm mượt mà, tốc độ xử lý và kiến trúc có khả năng chịu tải.
+            Full-cycle software engineering solutions emphasizing seamless user experiences, lightning performance, and scalable architecture.
           </p>
           <div className="w-12 h-1 bg-zinc-400 dark:bg-zinc-700 mx-auto mt-4 rounded-full" />
         </div>
@@ -165,7 +165,7 @@ export const Projects: React.FC = () => {
                       onClick={() => setSelectedProject(project)}
                       className="inline-flex items-center gap-1.5 text-xs font-bold text-zinc-900 dark:text-white hover:underline cursor-pointer transition-transform"
                     >
-                      <span>Chi tiết dự án</span>
+                      <span>Project Details</span>
                       <ArrowUpRight className="w-3.5 h-3.5 stroke-[2.5]" />
                     </button>
 

@@ -78,7 +78,7 @@ export const Hero: React.FC = () => {
 
             {/* Greeting & Name - High Contrast Monochrome */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-zinc-900 dark:text-white leading-[1.12] mb-4">
-              Xin chào, tôi là{' '}
+              Hi, I'm{' '}
               <span className="text-zinc-900 dark:text-white underline decoration-zinc-400 dark:decoration-zinc-600 underline-offset-8">
                 {profileData.name}
               </span>
@@ -104,7 +104,7 @@ export const Hero: React.FC = () => {
                 href="#projects"
                 className="flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-bold text-sm text-white dark:text-black bg-black dark:bg-white hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all duration-200 shadow-md shadow-black/10 dark:shadow-white/5 hover:-translate-y-0.5 cursor-pointer"
               >
-                <span>Xem Dự Án</span>
+                <span>View Projects</span>
                 <ArrowRight className="w-4 h-4 stroke-[2.5]" />
               </a>
 
@@ -113,14 +113,14 @@ export const Hero: React.FC = () => {
                 className="flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-bold text-sm text-zinc-900 dark:text-zinc-200 bg-white dark:bg-zinc-900 hover:bg-zinc-100 dark:hover:bg-zinc-800 border border-zinc-300 dark:border-zinc-700/80 shadow-sm transition-all cursor-pointer hover:-translate-y-0.5"
               >
                 <FileDown className="w-4 h-4 stroke-[2]" />
-                <span>Tải CV Cá Nhân</span>
+                <span>Download Resume</span>
               </button>
 
               <a
                 href="#contact"
                 className="flex items-center justify-center px-5 py-3.5 rounded-xl font-semibold text-sm text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors"
               >
-                <span>Liên hệ ngay</span>
+                <span>Contact Me</span>
               </a>
             </div>
 
@@ -128,7 +128,7 @@ export const Hero: React.FC = () => {
             <div className="pt-6 border-t border-zinc-200 dark:border-zinc-800/80 w-full flex flex-wrap items-center justify-between gap-4">
               <div className="flex items-center gap-3">
                 <span className="text-xs font-mono uppercase tracking-wider text-zinc-500">
-                  Kết nối:
+                  Connect:
                 </span>
                 <div className="flex items-center gap-2">
                   <a
@@ -204,7 +204,7 @@ export const Hero: React.FC = () => {
 
                 {/* Code Snippet - High Contrast Technical Typography */}
                 <div className="font-mono text-xs sm:text-sm leading-relaxed text-zinc-800 dark:text-zinc-200 space-y-1.5 mb-6">
-                  <p className="text-zinc-400 dark:text-zinc-500">// Khởi tạo Kỹ sư Phần mềm</p>
+                  <p className="text-zinc-400 dark:text-zinc-500">// Initialize Software Engineer</p>
                   <p>
                     <span className="text-zinc-500 dark:text-zinc-400 font-bold">const</span>{' '}
                     <span className="text-zinc-900 dark:text-white font-semibold">developer</span> = &#123;
@@ -239,7 +239,7 @@ export const Hero: React.FC = () => {
                   <div className="p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">
                     <div className="flex items-center gap-1.5 text-xs text-zinc-500 dark:text-zinc-400 mb-1">
                       <Zap className="w-3.5 h-3.5 text-zinc-400" />
-                      <span>Dự án bàn giao</span>
+                      <span>Projects Delivered</span>
                     </div>
                     <div className="text-2xl font-black text-zinc-900 dark:text-white font-mono">
                       {profileData.stats.projectsCompleted}+
@@ -249,10 +249,10 @@ export const Hero: React.FC = () => {
                   <div className="p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">
                     <div className="flex items-center gap-1.5 text-xs text-zinc-500 dark:text-zinc-400 mb-1">
                       <CheckCircle2 className="w-3.5 h-3.5 text-zinc-400" />
-                      <span>Năm kinh nghiệm</span>
+                      <span>Years Experience</span>
                     </div>
                     <div className="text-2xl font-black text-zinc-900 dark:text-white font-mono">
-                      {profileData.stats.yearsExperience}+ Năm
+                      {profileData.stats.yearsExperience}+ Years
                     </div>
                   </div>
                 </div>
@@ -276,7 +276,7 @@ export const Hero: React.FC = () => {
                   <CheckCircle2 className="w-4 h-4" />
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-[10px] font-mono text-zinc-500">Chất lượng</span>
+                  <span className="text-[10px] font-mono text-zinc-500">Quality</span>
                   <span className="text-xs font-bold text-zinc-900 dark:text-white">Pixel-Perfect UI</span>
                 </div>
               </div>

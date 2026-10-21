@@ -47,7 +47,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           {/* Close button */}
           <button
             onClick={onClose}
-            aria-label="Đóng chi tiết dự án"
+            aria-label="Close project modal"
             className="absolute top-4 right-4 w-9 h-9 rounded-full bg-zinc-800 hover:bg-zinc-700 text-white flex items-center justify-center transition-colors cursor-pointer z-10 border border-zinc-700"
           >
             <X className="w-5 h-5 stroke-[2]" />
@@ -91,7 +91,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           {/* Full description */}
           <div>
             <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-zinc-400 mb-2">
-              Tổng quan dự án
+              Project Overview
             </h4>
             <p className="text-zinc-700 dark:text-zinc-300 text-base leading-relaxed">
               {project.fullDescription}
@@ -101,7 +101,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           {/* Key Features */}
           <div>
             <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-zinc-400 mb-3 flex items-center gap-1.5">
-              <span>Tính năng cốt lõi</span>
+              <span>Key Features</span>
             </h4>
             <ul className="space-y-2">
               {project.features.map((feat, idx) => (
@@ -118,12 +118,12 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             <div className="p-4 rounded-2xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800">
               <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-zinc-900 dark:text-zinc-200 mb-3 flex items-center gap-1.5">
                 <Layers className="w-4 h-4 text-zinc-500" />
-                <span>Kiến trúc & Công nghệ giải pháp</span>
+                <span>Architecture & Engineering Highlights</span>
               </h4>
               <ul className="space-y-2 text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 font-mono">
                 {project.architecture.map((arch, idx) => (
                   <li key={idx} className="flex items-start gap-2">
-                    <span className="text-zinc-400 font-bold">›</span>
+                    <span className="text-zinc-400 font-bold">•</span>
                     <span>{arch}</span>
                   </li>
                 ))}
@@ -141,7 +141,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                 className="flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-xs text-zinc-800 dark:text-zinc-200 bg-zinc-100 dark:bg-zinc-900 hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-colors border border-zinc-200 dark:border-zinc-800"
               >
                 <GithubIcon className="w-4 h-4" />
-                <span>Xem Source Code</span>
+                <span>Source Code</span>
               </a>
             )}
 
@@ -152,7 +152,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                 rel="noreferrer"
                 className="flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-xs text-white dark:text-black bg-black dark:bg-white hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all shadow-sm"
               >
-                <span>Trải Nghiệm Live Demo</span>
+                <span>Live Demo</span>
                 <ExternalLink className="w-4 h-4" />
               </a>
             )}

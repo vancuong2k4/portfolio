@@ -22,31 +22,31 @@ export const About: React.FC = () => {
   const pillars = [
     {
       icon: Zap,
-      title: "Hiệu Năng & Tốc Độ",
-      description: "Tối ưu hóa Core Web Vitals, giảm bundle size và tăng tốc độ phản hồi API dưới 100ms."
+      title: "High Performance & Speed",
+      description: "Optimizing Core Web Vitals, shrinking bundle sizes, and achieving sub-100ms API response times."
     },
     {
       icon: Smartphone,
-      title: "Đa Nền Tảng Liền Mạch",
-      description: "Xây dựng trải nghiệm nhất quán trên Web & Mobile (iOS / Android) với độ mượt mà 60 FPS."
+      title: "Seamless Cross-Platform",
+      description: "Delivering consistent, fluid 60 FPS user experiences across Web and Mobile (iOS / Android)."
     },
     {
       icon: ShieldCheck,
-      title: "Code Sạch & Dễ Mở Rộng",
-      description: "Áp dụng Clean Architecture, SOLID principles, viết unit test và typing chặt chẽ với TypeScript."
+      title: "Clean Code & Scalability",
+      description: "Applying Clean Architecture, SOLID principles, comprehensive testing, and strict TypeScript types."
     },
     {
       icon: Users,
-      title: "Tư Duy Sản Phẩm",
-      description: "Không chỉ viết code, tôi luôn hướng đến giải quyết bài toán kinh doanh và tạo giá trị thực cho người dùng."
+      title: "Product-Driven Mindset",
+      description: "Beyond writing code, prioritizing solving core business problems and creating tangible user value."
     }
   ]
 
   const statsList = [
-    { label: "Năm Kinh Nghiệm", value: `${profileData.stats.yearsExperience}+`, icon: Briefcase },
-    { label: "Dự Án Hoàn Thành", value: `${profileData.stats.projectsCompleted}+`, icon: Award },
-    { label: "Công Nghệ Làm Chủ", value: `${profileData.stats.technologiesMastered}+`, icon: Zap },
-    { label: "Commits Trong Năm", value: `${profileData.stats.commitsLastYear.toLocaleString()}+`, icon: Sparkles },
+    { label: "Years Experience", value: `${profileData.stats.yearsExperience}+`, icon: Briefcase },
+    { label: "Projects Completed", value: `${profileData.stats.projectsCompleted}+`, icon: Award },
+    { label: "Tech Mastered", value: `${profileData.stats.technologiesMastered}+`, icon: Zap },
+    { label: "Annual Commits", value: `${profileData.stats.commitsLastYear.toLocaleString()}+`, icon: Sparkles },
   ]
 
   return (
@@ -56,10 +56,10 @@ export const About: React.FC = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-zinc-100 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-800 mb-3">
-            <span>01. HỒ SƠ CÁ NHÂN</span>
+            <span>01. ABOUT ME</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-black text-zinc-900 dark:text-white tracking-tight">
-            Về Bản Thân & Triết Lý Kỹ Thuật
+            About Me & Engineering Philosophy
           </h2>
           <div className="w-12 h-1 bg-zinc-400 dark:bg-zinc-700 mx-auto mt-4 rounded-full" />
         </div>
@@ -92,7 +92,7 @@ export const About: React.FC = () => {
                 {/* Status Dot Overlay */}
                 <div className="absolute bottom-3 left-3 px-2.5 py-1 rounded-full text-[11px] font-mono font-medium bg-black/80 dark:bg-black/90 text-white backdrop-blur-md border border-white/10 flex items-center gap-1.5 shadow-md">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                  <span>Sẵn sàng nhận việc</span>
+                  <span>Available for work</span>
                 </div>
               </div>
 
@@ -107,10 +107,10 @@ export const About: React.FC = () => {
               {/* Quick Info Tags */}
               <div className="w-full flex flex-wrap justify-center gap-2 mb-5">
                 <span className="px-2.5 py-1 rounded-lg text-xs font-mono bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700/60">
-                  📍 TP. Hồ Chí Minh
+                  📍 Ho Chi Minh City
                 </span>
                 <span className="px-2.5 py-1 rounded-lg text-xs font-mono bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700/60">
-                  ⚡ 1+ Năm KN
+                  ⚡ 1+ Years Exp
                 </span>
               </div>
 
@@ -152,7 +152,7 @@ export const About: React.FC = () => {
             {/* Bio Narrative */}
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-zinc-900 dark:text-white">
-                Kỹ Sư Phần Mềm Đam Mê Sáng Tạo & Tối Ưu
+                Software Engineer Passionate About Innovation & Optimization
               </h3>
               {profileData.aboutParagraphs.map((p, idx) => (
                 <p key={idx} className="text-zinc-600 dark:text-zinc-400 leading-relaxed text-base">
@@ -165,19 +165,19 @@ export const About: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-zinc-700 dark:text-zinc-300">
               <div className="flex items-center gap-2.5 p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800">
                 <MapPin className="w-4 h-4 text-zinc-500 shrink-0" />
-                <span><strong>Địa điểm:</strong> {profileData.location}</span>
+                <span><strong>Location:</strong> {profileData.location}</span>
               </div>
               <div className="flex items-center gap-2.5 p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800">
                 <GraduationCap className="w-4 h-4 text-zinc-500 shrink-0" />
-                <span><strong>Học vấn:</strong> Đại học Văn Hiến</span>
+                <span><strong>Education:</strong> Van Hien University</span>
               </div>
               <div className="flex items-center gap-2.5 p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800">
                 <Languages className="w-4 h-4 text-zinc-500 shrink-0" />
-                <span><strong>Ngôn ngữ:</strong> Tiếng Việt, Tiếng Anh (B1)</span>
+                <span><strong>Languages:</strong> Vietnamese (Native), English (B1)</span>
               </div>
               <div className="flex items-center gap-2.5 p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800">
                 <Briefcase className="w-4 h-4 text-zinc-500 shrink-0" />
-                <span><strong>Mô hình:</strong> Hybrid / Remote</span>
+                <span><strong>Work Model:</strong> Hybrid / Remote</span>
               </div>
             </div>
 
@@ -211,7 +211,7 @@ export const About: React.FC = () => {
         {/* Bottom: 4 Value Pillars */}
         <div>
           <h3 className="text-xl font-bold text-zinc-900 dark:text-white text-center mb-8">
-            Giá Trị Cốt Lõi Mang Đến Cho Mọi Dự Án
+            Core Values Delivered To Every Project
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {pillars.map((pillar, idx) => {

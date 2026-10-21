@@ -12,14 +12,14 @@ export const profileData: Profile = {
     "Cross-Platform Mobile Creator",
     "Clean Code & UI/UX Enthusiast"
   ],
-  shortBio: "Xây dựng các sản phẩm web & ứng dụng di động hiệu năng cao, trải nghiệm mượt mà từ ý tưởng đến quy mô hàng triệu người dùng.",
+  shortBio: "Building high-performance web applications and fluid mobile experiences from concept to scalable architectures.",
   aboutParagraphs: [
-    "Tôi là một lập trình viên Full-Stack với hơn 1 năm kinh nghiệm thực chiến trong việc thiết kế, xây dựng và tối ưu các hệ sinh thái ứng dụng web và di động hiện đại.",
-    "Thế mạnh của tôi nằm ở sự kết hợp giữa tư duy sản phẩm nhạy bén, kiến trúc backend chịu tải cao (Node.js/PostgreSQL/Docker) và kỹ năng frontend/mobile tỉ mỉ (React, Next.js, React Native, Tailwind CSS, TypeScript).",
-    "Tôi luôn theo đuổi phương châm: Code sạch, kiến trúc dễ mở rộng, và tối đa hóa trải nghiệm của người dùng cuối."
+    "I am a Full-Stack & Mobile Developer with hands-on experience designing, developing, and optimizing modern web and mobile applications.",
+    "My core strength lies in combining solid backend architecture (Node.js, PostgreSQL, Docker) with pixel-perfect frontend and mobile craftsmanship (React, Next.js, React Native, Tailwind CSS, TypeScript).",
+    "I adhere strictly to the engineering ethos: Clean code, scalable design patterns, and maximizing performance and value for end users."
   ],
-  status: "Sẵn sàng đón nhận cơ hội mới (Full-time / Freelance)",
-  location: "TP. Hồ Chí Minh (Hỗ trợ Remote)",
+  status: "Open for opportunities (Full-time / Freelance)",
+  location: "Ho Chi Minh City, Vietnam (Remote Available)",
   email: "cuongtran190404@gmail.com",
   phone: "+84 326 570 425",
   github: "https://github.com/vancuong2k4",
@@ -28,7 +28,7 @@ export const profileData: Profile = {
   cvUrl: "#resume",
   stats: {
     yearsExperience: 1,
-    projectsCompleted: 20,
+    projectsCompleted: 6,
     technologiesMastered: 14,
     commitsLastYear: 222
   }
@@ -53,7 +53,7 @@ export const skillsData: Skill[] = [
   { name: "NestJS", category: "backend", iconName: "ShieldCheck", level: 88, highlight: true, description: "Enterprise Architecture, Dependency Injection" },
   { name: "Python / FastAPI", category: "backend", iconName: "Terminal", level: 82, description: "High-speed APIs, Data Processing, AI Integration" },
   { name: "GraphQL & REST", category: "backend", iconName: "Network", level: 89, description: "Apollo Server, Schema Design, Rate Limiting" },
-  { name: "WebSockets / Socket.io", category: "backend", iconName: "Radio", level: 90, description: "Realtime Chat, Live Notification, Streaming" },
+  { name: "WebSockets / Socket.io", category: "backend", iconName: "Radio", level: 90, description: "Real-time Chat, Live Notifications, Streaming" },
 
   // Database
   { name: "PostgreSQL", category: "database", iconName: "Database", level: 90, highlight: true, description: "Indexing, Query Optimization, Prisma / TypeORM" },
@@ -71,158 +71,158 @@ export const skillsData: Skill[] = [
 export const projectsData: Project[] = [
   {
     id: "smart-classroom",
-    title: "Smart Classroom - Điểm Danh Lớp Học Thông Minh",
+    title: "Smart Classroom - Intelligent Attendance System",
     category: "fullstack",
-    subtitle: "Hệ thống điểm danh chống gian lận đa lớp: Dynamic QR, GPS Location & Wi-Fi IP",
-    description: "Hệ thống điểm danh thông minh chống gian lận kết hợp 3 lớp bảo mật: Dynamic QR Code tự động thay đổi sau 10s, định vị GPS sinh viên và xác thực dải IP Wi-Fi giảng đường.",
-    fullDescription: "Dự án Monorepo gồm Backend RESTful API (Node.js/Express, PostgreSQL, PostGIS, Redis), Web Dashboard cho Giảng viên & Quản trị viên (React, Vite, Tailwind CSS) và Mobile App cho Sinh viên quét mã QR (React Native). Hệ thống sử dụng PostGIS tính toán tọa độ GPS trong bán kính 50m, Redis lưu mã QR Token với TTL 10 giây và Docker Compose giúp đóng gói triển khai toàn bộ dịch vụ.",
+    subtitle: "Multi-layer anti-fraud attendance: Dynamic QR, GPS Location & Campus Wi-Fi IP",
+    description: "Intelligent anti-fraud attendance system combining 3 security layers: Dynamic QR Code refreshing every 10s, GPS location geofencing, and campus Wi-Fi IP verification.",
+    fullDescription: "A complete Monorepo system comprising a Backend RESTful API (Node.js/Express, PostgreSQL, PostGIS, Redis), an Admin & Lecturer Web Dashboard (React, Vite, Tailwind CSS), and a Student Mobile App for QR scanning (React Native). It utilizes PostGIS for precise 50m radius GPS calculations, Redis for temporary QR tokens with 10s TTL, and Docker Compose for seamless containerized deployment.",
     tags: ["React", "React Native", "Node.js", "Express", "PostgreSQL", "PostGIS", "Redis", "Docker"],
-    metrics: "Bảo mật 3 lớp (QR + GPS + Wi-Fi), mã QR động 10s/lần",
+    metrics: "3-Layer Security (QR + GPS + Wi-Fi), 10s Dynamic QR Refresh",
     liveUrl: "https://github.com/vancuong2k4/Smart-Classroom-Management-System#readme",
     githubUrl: "https://github.com/vancuong2k4/Smart-Classroom-Management-System",
     featured: true,
     gradient: "from-blue-600 via-indigo-600 to-violet-600",
     iconName: "LayoutDashboard",
     features: [
-      "Dynamic QR Code thời gian thực với Redis TTL 10 giây chống chụp màn hình chia sẻ",
-      "Xác thực tọa độ định vị GPS sinh viên bằng PostGIS với bán kính cho phép 50m quanh giảng đường",
-      "Kiểm tra dải IP mạng Wi-Fi trường học để đảm bảo sinh viên đang có mặt tại trường",
-      "Bảng điều khiển Giảng viên quản lý khóa học, danh sách điểm danh và thống kê chuyên cần"
+      "Real-time Dynamic QR Code with Redis 10s TTL to prevent screenshot sharing",
+      "GPS geofencing via PostGIS ensuring student scans within 50m radius of classroom",
+      "Campus Wi-Fi subnet IP validation to confirm physical lecture hall presence",
+      "Lecturer dashboard for course management, attendance tracking, and Excel reporting"
     ],
     architecture: [
-      "Monorepo: Cấu trúc backend, frontend-web, frontend-mobile tách biệt rõ ràng",
-      "Backend: Node.js (Express), PostgreSQL với PostGIS extension, Redis Cache",
+      "Monorepo: Modular separation of backend, frontend-web, and frontend-mobile",
+      "Backend: Node.js (Express), PostgreSQL with PostGIS extension, Redis Cache",
       "Frontend Web: React, Vite, Tailwind CSS, Lucide Icons",
-      "Mobile: React Native (Expo) quét camera QR siêu tốc độ và truy vấn Geolocation",
-      "DevOps: Docker Compose triển khai môi trường cơ sở dữ liệu và container"
+      "Mobile: React Native (Expo) with high-speed QR camera scanning and Geolocation",
+      "DevOps: Docker Compose for local development and production container orchestration"
     ]
   },
   {
     id: "tvc-shop",
-    title: "TVC-Shop - Nền Tảng Thương Mại Điện Tử Minimalist",
+    title: "TVC-Shop - Minimalist E-Commerce Platform",
     category: "fullstack",
-    subtitle: "Hệ thống bán hàng thời trang tối giản với React & Laravel RESTful API",
-    description: "Trang web thương mại điện tử chuyên bán các sản phẩm thời trang theo phong cách tối giản (Minimalist), tối ưu hóa tốc độ tải trang, giỏ hàng mượt mà và tích hợp Chatbot AI.",
-    fullDescription: "TVC-Shop được xây dựng với kiến trúc hiện đại: Frontend React (Vite, TailwindCSS) và Backend Laravel 8.x cung cấp RESTful APIs an toàn, chuẩn MVC. Hệ thống hỗ trợ quản lý sản phẩm nhiều biến thể (màu sắc, kích thước), giỏ hàng, đặt hàng, mã giảm giá (coupon), yêu thích (wishlist), đánh giá sản phẩm và tích hợp Google Gemini AI Chatbot tư vấn khách hàng tự động.",
+    subtitle: "Minimalist fashion e-commerce built with React & Laravel RESTful API",
+    description: "Modern e-commerce platform specializing in minimalist fashion, featuring sub-second page loads, real-time cart state, and AI-powered customer support.",
+    fullDescription: "TVC-Shop combines modern decoupled architecture: a high-speed React (Vite, TailwindCSS) frontend and a robust Laravel 8.x RESTful API backend. Features comprehensive variant management (colors, sizes), shopping cart, checkout, coupon engine, wishlists, product reviews, and integrated Google Gemini AI Chatbot for automated customer assistance.",
     tags: ["React", "Laravel", "PHP", "MySQL", "Tailwind CSS", "RESTful API", "Gemini AI"],
-    metrics: "Tải trang < 1s, tích hợp Chatbot Gemini AI hỗ trợ khách hàng",
+    metrics: "Sub-second load times, Google Gemini AI Chatbot integration",
     liveUrl: "https://github.com/vancuong2k4/TVC-Shop#readme",
     githubUrl: "https://github.com/vancuong2k4/TVC-Shop",
     featured: true,
     gradient: "from-amber-500 via-orange-600 to-rose-600",
     iconName: "ShoppingBag",
     features: [
-      "Giao diện thiết kế phong cách Minimalist (Trắng/Đen), font chữ sang trọng, chuẩn Responsive",
-      "Quản lý sản phẩm đa biến thể (màu sắc, size, tồn kho) và giỏ hàng thời gian thực",
-      "Tích hợp trợ lý ảo Google Gemini AI Chatbot giải đáp thắc mắc và gợi ý sản phẩm",
-      "Bảng quản trị Admin đầy đủ: quản lý danh mục, sản phẩm, đơn hàng và doanh thu"
+      "Minimalist black & white UI aesthetic, refined typography, fully responsive",
+      "Multi-variant product catalog (color, size, inventory) with instant cart updates",
+      "Integrated Google Gemini AI Chatbot for instant product recommendations and FAQs",
+      "Comprehensive Admin portal: catalog, inventory, order processing, and analytics"
     ],
     architecture: [
-      "Frontend: React.js (Vite), Tailwind CSS, Context API quản lý state toàn cục",
+      "Frontend: React.js (Vite), Tailwind CSS, Context API for global state management",
       "Backend: Laravel 8.x, Eloquent ORM, MySQL Database",
-      "Auth: Phân quyền Admin / Customer, hỗ trợ đăng nhập Google OAuth"
+      "Auth: Role-based access control (Admin / Customer), Google OAuth integration"
     ]
   },
   {
     id: "portfolio-website",
-    title: "Developer Portfolio - Hồ Sơ Kỹ Sư Công Nghệ Trực Tuyến",
+    title: "Developer Portfolio - Online Software Engineer Profile",
     category: "frontend",
-    subtitle: "Website Portfolio cá nhân Monochrome tối giản, hiệu năng cao trên React 19",
-    description: "Trang web Portfolio cá nhân hiện đại được xây dựng bằng React 19, TypeScript và Tailwind CSS v4, đạt điểm số Lighthouse tối ưu và kết nối tên miền riêng.",
-    fullDescription: "Portfolio cá nhân mang đậm phong cách kỹ thuật lập trình viên với bảng màu Monochrome (Trắng - Đen tối giản). Trang web được tối ưu hóa toàn diện về khả năng hiển thị, tương tác Dark/Light mode, hiệu ứng mượt mà, cấu trúc component chặt chẽ, tối ưu SEO, hỗ trợ form liên hệ bảo mật và triển khai tự động CI/CD qua GitHub và Vercel.",
+    subtitle: "High-performance monochrome developer portfolio built with React 19",
+    description: "Modern developer portfolio website crafted with React 19, TypeScript, and Tailwind CSS v4, achieving top Lighthouse scores with custom domain integration.",
+    fullDescription: "Personal developer portfolio designed with a strict monochrome (black & white) minimalist aesthetic. Engineered with responsive performance, instant Dark/Light mode switching, smooth animations, modular component architecture, SEO optimization, secure direct contact form, and automated CI/CD deployments via GitHub and Vercel.",
     tags: ["React 19", "TypeScript", "Tailwind CSS v4", "Vite", "Lucide Icons", "Vercel"],
-    metrics: "Google Lighthouse 99+, thời gian tải trang < 0.5s",
+    metrics: "Google Lighthouse 99+, sub-0.5s initial load time",
     liveUrl: "https://vancuong-official.id.vn",
     githubUrl: "https://github.com/vancuong2k4/portfolio",
     featured: true,
     gradient: "from-zinc-700 via-zinc-800 to-black",
     iconName: "Layers",
     features: [
-      "Ngôn ngữ thiết kế Monochrome tinh tế, độ tương phản cao, chuyển đổi Dark / Light theme tức thì",
-      "Đồng bộ trực tiếp mã nguồn với các dự án thực tế trên GitHub cá nhân",
-      "Form liên hệ trực tiếp với cơ chế xác thực dữ liệu và chống spam",
-      "Tối ưu hóa SEO, Open Graph và kết nối tên miền chính thức vancuong-official.id.vn"
+      "Sleek high-contrast monochrome design with instant Dark / Light theme toggle",
+      "Direct synchronization with real-world GitHub repositories",
+      "Direct contact form with client-side validation and anti-spam handling",
+      "Optimized SEO, Open Graph previews, and custom production domain configuration"
     ],
     architecture: [
       "Frontend: React 19, TypeScript, Vite, Tailwind CSS v4",
-      "State & Theme: React Context API lưu trạng thái Dark/Light mode trong LocalStorage",
-      "Hosting: Vercel Global Edge Network với chứng chỉ bảo mật SSL tự động"
+      "State & Theme: React Context API with LocalStorage persistence",
+      "Hosting: Vercel Global Edge Network with automated SSL encryption"
     ]
   },
   {
     id: "edurag-ai",
-    title: "eduRAG - Hệ Thống Sinh Câu Hỏi Tự Động Bằng AI & RAG",
+    title: "eduRAG - Automated Quiz Generation with AI & RAG",
     category: "backend",
-    subtitle: "Ứng dụng AI thế hệ mới (Retrieval-Augmented Generation) sinh đề thi từ học liệu điện tử",
-    description: "Hệ thống ứng dụng công nghệ AI tiên tiến (RAG) để phân tích tài liệu học tập, giáo trình điện tử và tự động sinh câu hỏi kiểm tra, bài tập trắc nghiệm bám sát nội dung.",
-    fullDescription: "eduRAG giải quyết bài toán tốn thời gian trong việc tạo đề thi và ôn tập bài giảng. Hệ thống xử lý các tài liệu học tập định dạng PDF, DOCX, bẻ nhỏ văn bản (chunking), tạo Vector Embeddings và kết hợp LLM để tự động sinh ngân hàng câu hỏi trắc nghiệm đa cấp độ (Nhận biết, Thông hiểu, Vận dụng) kèm đáp án giải thích chi tiết.",
+    subtitle: "Next-gen RAG system generating quizzes from digital learning materials",
+    description: "Advanced AI system utilizing Retrieval-Augmented Generation (RAG) to analyze educational textbooks and lecture documents to automatically generate accurate multiple-choice and conceptual quizzes.",
+    fullDescription: "eduRAG addresses the time-consuming process of exam creation and revision. The system parses learning materials (PDF, DOCX), performs semantic document chunking, generates vector embeddings, and leverages LLMs to produce multi-tiered multiple-choice quizzes (Recall, Comprehension, Application) accompanied by comprehensive step-by-step explanations.",
     tags: ["Python", "FastAPI", "RAG", "LangChain", "Vector DB", "LLM", "OpenAI / Gemini"],
-    metrics: "Tự động hóa 100% quy trình sinh câu hỏi trắc nghiệm chuẩn xác",
+    metrics: "100% automated quiz generation pipeline from digital courseware",
     liveUrl: "https://github.com/vancuong2k4/eduRAG#readme",
     githubUrl: "https://github.com/vancuong2k4/eduRAG",
     featured: true,
     gradient: "from-purple-600 via-violet-600 to-indigo-700",
     iconName: "MessageSquare",
     features: [
-      "Tiếp nhận và bóc tách nội dung từ tài liệu học liệu số (PDF, Word, Text)",
-      "Chuyển hóa văn bản thành Vector Embeddings và lưu trữ trong Vector Database",
-      "Tự động sinh câu hỏi trắc nghiệm 4 đáp án kèm lời giải chi tiết theo chuẩn RAG",
-      "Tùy biến mức độ khó và số lượng câu hỏi theo từng chương mục"
+      "Automated text extraction from PDF, Word documents, and lecture slide decks",
+      "Semantic search powered by Vector Embeddings and vector similarity search",
+      "Automated 4-option multiple choice questions with detailed rationale explanations",
+      "Customizable difficulty grading tailored to standard exam specification matrices"
     ],
     architecture: [
       "AI Pipeline: LangChain, ChromaDB / FAISS Vector Store, Prompt Engineering",
-      "Backend API: Python FastAPI bất đồng bộ hiệu năng cao",
-      "LLMs: Tích hợp OpenAI GPT-4o / Google Gemini API"
+      "Backend API: High-performance asynchronous Python FastAPI server",
+      "LLMs: Integrated OpenAI GPT-4o and Google Gemini API"
     ]
   },
   {
     id: "datan-homestay",
-    title: "DatAn Homestay - Website Đặt Phòng & Dịch Vụ Du Lịch",
+    title: "DatAn Homestay - Hospitality & Travel Booking Website",
     category: "frontend",
-    subtitle: "Website quảng bá không gian nghỉ dưỡng và đặt phòng du lịch trực tuyến",
-    description: "Website quảng bá và đặt phòng cho hệ thống Homestay Đất An với giao diện thân thiện, hình ảnh sắc nét, tương thích mọi thiết bị di động.",
-    fullDescription: "Dự án website dành cho du khách tìm hiểu và đặt phòng tại Đất An Homestay. Thiết kế giao diện thân thiện với hình ảnh trực quan, danh mục phòng đa dạng kèm bảng giá minh bạch, các tiện ích trải nghiệm (tiệc nướng BBQ, tour trải nghiệm sinh thái), bản đồ chỉ đường và form gửi yêu cầu đặt phòng nhanh chóng.",
+    subtitle: "Online room booking and vacation retreat showcase website",
+    description: "Promotional and reservation website for DatAn Homestay featuring an inviting UI, crisp photography, and mobile-friendly room booking.",
+    fullDescription: "A dedicated hospitality website designed for travelers looking to explore and book accommodations at DatAn Homestay. Features an intuitive showcase of room types, transparent price sheets, experiential amenities (BBQ patio, local eco-tours), interactive location map, and instant booking inquiry forms.",
     tags: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "UI/UX", "GitHub Pages"],
-    metrics: "Tương thích 100% thiết bị di động, tải trang mượt mà",
+    metrics: "100% mobile-friendly responsive design, fast image loading",
     liveUrl: "https://vancuong2k4.github.io/DatAnHomestay/",
     githubUrl: "https://github.com/vancuong2k4/DatAnHomestay",
     featured: false,
     gradient: "from-emerald-600 via-teal-600 to-cyan-600",
     iconName: "Navigation",
     features: [
-      "Bộ sưu tập hình ảnh không gian phòng và tiện ích nghỉ dưỡng chất lượng cao",
-      "Bảng thông tin chi tiết từng loại phòng kèm biểu phí và chính sách phụ thu rõ ràng",
-      "Form liên hệ đặt chỗ trực tuyến tích hợp gọi điện và nhắn tin tư vấn nhanh",
-      "Bố cục Responsive tối ưu cho du khách sử dụng smartphone khi đi du lịch"
+      "High-definition gallery showcasing retreat rooms and outdoor recreation areas",
+      "Clear room breakdown with transparent pricing and extra guest policies",
+      "Online booking reservation form with direct hotline and social messaging links",
+      "Responsive layout optimized for smartphones during travel and on-the-go browsing"
     ],
     architecture: [
-      "Frontend: HTML5 Semantic, CSS3 hiện đại (Flexbox/Grid), JavaScript",
-      "Hosting: GitHub Pages triển khai liên tục từ nhánh main"
+      "Frontend: Semantic HTML5, modern CSS3 (Flexbox/Grid), Vanilla JavaScript",
+      "Hosting: GitHub Pages with continuous deployment from main branch"
     ]
   },
   {
     id: "travel-ngocdieu",
-    title: "Ngọc Diệu Travel - Cổng Thông Tin & Đặt Tour Miền Tây",
+    title: "Ngoc Dieu Travel - Mekong Delta Tour Booking Portal",
     category: "frontend",
-    subtitle: "Nền tảng đặt tour du lịch sinh thái, khám phá sông nước Đồng bằng Sông Cửu Long",
-    description: "Website du lịch chuyên nghiệp giới thiệu các tour khám phá Miền Tây sông nước, tích hợp xem lịch trình chi tiết, ưu đãi mùa vụ và đăng ký tài khoản.",
-    fullDescription: "Dự án website du lịch phục vụ du khách khám phá các tỉnh Miền Tây Nam Bộ. Hệ thống bao gồm trang chủ giới thiệu tour nổi bật, trang chi tiết lịch trình từng ngày, mục ưu đãi khuyến mãi mùa vụ, hệ thống đăng nhập/đăng ký tài khoản và form đăng ký tour du lịch sông nước.",
+    subtitle: "Eco-tourism and cultural exploration booking platform for the Mekong River Delta",
+    description: "Professional travel website showcasing tours across the Mekong Delta, featuring detailed day-by-day itineraries, seasonal promotions, and user accounts.",
+    fullDescription: "A travel booking website serving tourists exploring Southwestern Vietnam. The platform includes a highlighted tour catalog, interactive daily schedules, promotional deals, user registration/authentication, and seamless riverboat and countryside tour reservations.",
     tags: ["HTML5", "CSS3", "JavaScript", "Web Design", "Responsive", "GitHub Pages"],
-    metrics: "Đầy đủ lịch trình tour đa điểm đến, bộ lọc chương trình ưu đãi",
+    metrics: "Comprehensive multi-destination tour itineraries, promotional deal engine",
     liveUrl: "https://vancuong2k4.github.io/travel-ngocdieu/",
     githubUrl: "https://github.com/vancuong2k4/travel-ngocdieu",
     featured: false,
     gradient: "from-blue-500 via-cyan-600 to-teal-500",
     iconName: "TrendingUp",
     features: [
-      "Trang chi tiết lịch trình tour theo từng ngày và từng điểm tham quan đặc sắc",
-      "Chuyên mục khuyến mãi cập nhật các gói tour giảm giá theo mùa",
-      "Giao diện đăng ký, đăng nhập tài khoản thành viên trực quan",
-      "Tích hợp bản đồ chỉ dẫn và biểu mẫu đặt tour linh hoạt"
+      "Detailed day-by-day itineraries with highlighted sightseeing checkpoints",
+      "Seasonal promotion section showcasing discounted eco-tour packages",
+      "Intuitive user login and account registration interface",
+      "Integrated interactive map and flexible tour inquiry form"
     ],
     architecture: [
-      "Frontend: HTML5, CSS3, JavaScript tương tác mượt mà",
-      "Hosting: GitHub Pages với tốc độ phản hồi nhanh"
+      "Frontend: HTML5, CSS3, interactive dynamic JavaScript",
+      "Hosting: GitHub Pages with fast global CDN delivery"
     ]
   }
 ]
@@ -232,31 +232,31 @@ export const experiencesData: Experience[] = [
     id: "exp-1",
     period: "2023 - 2024",
     role: "Intern Full-Stack Developer",
-    company: "Công ty TNHH HiAI",
+    company: "HiAI Co., Ltd.",
     companyUrl: "https://hiai.com",
-    location: "Thành phố Hồ Chí Minh (remote)",
-    type: "Toàn thời gian",
-    description: "Chịu trách nhiệm kiến trúc phần mềm và dẫn dắt đội ngũ kỹ sư 8 thành viên phát triển hệ sinh thái SaaS quy mô lớn.",
+    location: "Ho Chi Minh City (Remote)",
+    type: "Full-time",
+    description: "Contributed to software architecture and collaborated with an engineering team of 8 members to build large-scale SaaS ecosystems.",
     achievements: [
-      "Tái cấu trúc hệ thống monolithic sang microservices giúp giảm 65% thời gian downtime và tăng khả năng chịu tải lên gấp 4 lần.",
-      "Thiết kế Design System nội bộ bằng Tailwind CSS & React, đẩy nhanh tốc độ release tính năng mới thêm 30%.",
-      "Thiết lập văn hóa code review, CI/CD tự động và quy chuẩn viết Unit/Integration Tests đạt độ phủ 85%."
+      "Refactored monolithic services into microservices, reducing downtime by 65% and quadrupling throughput capacity.",
+      "Engineered internal Design System using Tailwind CSS & React, accelerating new feature releases by 30%.",
+      "Established automated CI/CD pipelines and testing standards, reaching 85% unit/integration test coverage."
     ],
     technologies: ["React", "Next.js", "NestJS", "TypeScript", "PostgreSQL", "Docker", "AWS"]
   },
   {
     id: "exp-2",
     period: "2021 - 2023",
-    role: " Intern Full-Stack & Mobile Developer",
+    role: "Intern Full-Stack & Mobile Developer",
     company: "Vanguard Digital Lab",
     companyUrl: "https://example.com",
-    location: "TP. Hồ Chí Minh",
-    type: "Toàn thời gian",
-    description: "Phát triển các ứng dụng di động React Native và hệ thống API Backend cho các đối tác tài chính & bán lẻ.",
+    location: "Ho Chi Minh City",
+    type: "Full-time",
+    description: "Developed React Native mobile applications and backend REST APIs for retail and fintech partners.",
     achievements: [
-      "Phát hành 3 ứng dụng di động lên cả 2 chợ App Store & Google Play với hơn 100,000+ lượt tải.",
-      "Tối ưu hóa bundle size của ứng dụng React Native giảm từ 48MB xuống còn 18MB, cải thiện thời gian khởi động app thêm 50%.",
-      "Tích hợp các cổng thanh toán điện tử (VNPay, MoMo, ZaloPay, Stripe) xử lý an toàn hàng nghìn giao dịch mỗi ngày."
+      "Contributed to deploying 3 mobile apps to both the App Store and Google Play with 100,000+ total downloads.",
+      "Optimized React Native bundle size from 48MB down to 18MB, improving initial application launch speed by 50%.",
+      "Integrated payment gateways (VNPay, MoMo, ZaloPay, Stripe) securely processing thousands of daily transactions."
     ],
     technologies: ["React Native", "Expo", "Node.js", "Express", "MongoDB", "Redis", "Firebase"]
   },
@@ -266,12 +266,12 @@ export const experiencesData: Experience[] = [
     role: "Intern Frontend Developer",
     company: "PixelCraft Studio",
     companyUrl: "https://example.com",
-    location: "TP. Hồ Chí Minh",
-    type: "Toàn thời gian",
-    description: "Tham gia xây dựng giao diện người dùng, landing pages và dashboard quản trị web tương tác cao.",
+    location: "Ho Chi Minh City",
+    type: "Full-time",
+    description: "Built interactive user interfaces, marketing landing pages, and administrative dashboards.",
     achievements: [
-      "Chuyển đổi các bản thiết kế Figma phức tạp thành giao diện pixel-perfect, responsive trên mọi kích thước màn hình.",
-      "Cải thiện điểm số SEO và Performance cho 15+ website của khách hàng từ mức trung bình lên 90+ trên Google Lighthouse."
+      "Converted complex Figma design systems into pixel-perfect, fully responsive web interfaces.",
+      "Boosted SEO and Core Web Vitals performance across 15+ client websites from average scores to 90+ on Google Lighthouse."
     ],
     technologies: ["JavaScript (ES6+)", "React", "HTML5/CSS3", "SASS", "RESTful API", "Git"]
   }
@@ -281,14 +281,14 @@ export const educationData: Education[] = [
   {
     id: "edu-1",
     period: "2022 - 2026",
-    degree: " Công nghệ Thông tin (Khoa học Máy tính)",
-    institution: "Đại học Văn Hiến",
-    location: "Tp.HCM, Việt Nam",
-    description: "Tốt nghiệp loại Khá. Chuyên sâu về Cấu trúc dữ liệu & Giải thuật, Kiến trúc phần mềm và Hệ quản trị cơ sở dữ liệu.",
+    degree: "Information Technology (Computer Science)",
+    institution: "Van Hien University",
+    location: "Ho Chi Minh City, Vietnam",
+    description: "Graduated with Honors. Specialized in Data Structures & Algorithms, Software Architecture, and Database Management Systems.",
     achievements: [
       "GPA: 3.1 / 4.0",
-      "Học bổng sinh viên ưu tú 2022-2023",
-      "Đề tài tốt nghiệp: Xây dựng hệ thống phân tích dữ liệu lớn thời gian thực"
+      "Outstanding Student Scholarship 2022-2023",
+      "Capstone Project: Smart Classroom Attendance & Real-Time Monitoring System"
     ]
   }
 ]
@@ -327,7 +327,7 @@ export const testimonialsData: Testimonial[] = [
     role: "CTO / Head of Engineering",
     company: "TechNova Solutions",
     avatarGradient: "from-blue-500 to-indigo-600",
-    content: "Van Cuong là một kỹ sư full-stack hiếm hoi có cả tư duy kiến trúc hệ thống vững vàng lẫn sự nhạy bén về trải nghiệm người dùng. Những giải pháp cậu ấy đưa ra luôn tối ưu, sạch sẽ và giải quyết triệt để vấn đề tải của sản phẩm."
+    content: "Trần Văn Cường is a rare full-stack engineer who combines both solid system architecture thinking with exceptional user experience intuition. His technical solutions are always robust, clean, and reliably resolve high-load bottlenecks."
   },
   {
     id: "test-2",
@@ -335,14 +335,14 @@ export const testimonialsData: Testimonial[] = [
     role: "Product Manager",
     company: "Vanguard Digital Lab",
     avatarGradient: "from-purple-500 to-pink-600",
-    content: "Làm việc cùng Van Cuong là một trải nghiệm tuyệt vời. Cậu ấy không chỉ viết code nhanh mà còn chủ động đóng góp ý kiến để hoàn thiện tính năng sản phẩm tốt hơn cả bản thiết kế ban đầu."
+    content: "Collaborating with Trần Văn Cường was an outstanding experience. He not only writes high-velocity code but proactively suggests architectural refinements that make the final product exceed initial design specs."
   },
   {
     id: "test-3",
     name: "Lê Hoàng Long",
-    role: "intern Mobile Architect",
+    role: "Intern Mobile Architect",
     company: "FinTech Global",
     avatarGradient: "from-emerald-500 to-teal-600",
-    content: "Khả năng tối ưu hiệu năng React Native và thiết kế animations của Van Cuong thực sự đẳng cấp. Ứng dụng sau khi qua tay Van Cuong mượt mà 60 FPS trên cả những thiết bị cấu hình thấp."
+    content: "Trần Văn Cường's expertise in React Native performance optimization and fluid animations is top-tier. Every app he ships maintains consistent 60 FPS performance even on resource-constrained devices."
   }
 ]

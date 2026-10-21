@@ -35,7 +35,7 @@ export const Contact: React.FC = () => {
     
     if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
       setStatus('error')
-      setErrorMessage('Vui lòng điền đầy đủ Họ tên, Email và Nội dung tin nhắn.')
+      setErrorMessage('Please fill in your Name, Email, and Message.')
       return
     }
 
@@ -61,13 +61,13 @@ export const Contact: React.FC = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-zinc-100 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-800 mb-3">
-            <span>05. LIÊN HỆ TRỰC TIẾP</span>
+            <span>05. GET IN TOUCH</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-black text-zinc-900 dark:text-white tracking-tight">
-            Kết Nối & Trao Đổi Công Việc
+            Let's Connect & Collaborate
           </h2>
           <p className="mt-3 text-zinc-600 dark:text-zinc-400 text-base max-w-xl mx-auto">
-            Bạn đang cần tư vấn giải pháp kỹ thuật, triển khai dự án mới hay muốn tuyển dụng? Tôi luôn phản hồi nhanh chóng!
+            Have a project in mind, looking for engineering consultation, or considering full-time roles? Feel free to reach out anytime!
           </p>
           <div className="w-12 h-1 bg-zinc-400 dark:bg-zinc-700 mx-auto mt-4 rounded-full" />
         </div>
@@ -96,16 +96,16 @@ export const Contact: React.FC = () => {
 
                 <button
                   onClick={() => handleCopy(profileData.email, 'email')}
-                  aria-label="Sao chép địa chỉ email"
+                  aria-label="Copy email address"
                   className="p-2 rounded-lg text-zinc-500 hover:text-black dark:hover:text-white bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 transition-colors cursor-pointer"
-                  title="Sao chép email"
+                  title="Copy email"
                 >
                   {copiedField === 'email' ? <Check className="w-4 h-4 text-emerald-500" /> : <Copy className="w-4 h-4" />}
                 </button>
               </div>
               {copiedField === 'email' && (
                 <span className="text-xs font-mono font-semibold text-emerald-500 mt-2 block">
-                  ✓ Đã sao chép địa chỉ email!
+                  ✓ Email copied to clipboard!
                 </span>
               )}
             </div>
@@ -119,7 +119,7 @@ export const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="text-[11px] font-mono font-bold uppercase tracking-wider text-zinc-500">
-                      Điện thoại / Zalo
+                      Phone / WhatsApp
                     </h4>
                     <p className="text-sm sm:text-base font-bold text-zinc-900 dark:text-white">
                       {profileData.phone}
@@ -129,16 +129,16 @@ export const Contact: React.FC = () => {
 
                 <button
                   onClick={() => handleCopy(profileData.phone, 'phone')}
-                  aria-label="Sao chép số điện thoại"
+                  aria-label="Copy phone number"
                   className="p-2 rounded-lg text-zinc-500 hover:text-black dark:hover:text-white bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 transition-colors cursor-pointer"
-                  title="Sao chép số điện thoại"
+                  title="Copy phone number"
                 >
                   {copiedField === 'phone' ? <Check className="w-4 h-4 text-emerald-500" /> : <Copy className="w-4 h-4" />}
                 </button>
               </div>
               {copiedField === 'phone' && (
                 <span className="text-xs font-mono font-semibold text-emerald-500 mt-2 block">
-                  ✓ Đã sao chép số điện thoại!
+                  ✓ Phone number copied to clipboard!
                 </span>
               )}
             </div>
@@ -150,7 +150,7 @@ export const Contact: React.FC = () => {
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="text-[11px] font-mono font-bold uppercase tracking-wider text-zinc-500">Địa Điểm</h4>
+                  <h4 className="text-[11px] font-mono font-bold uppercase tracking-wider text-zinc-500">Location</h4>
                   <p className="text-sm font-semibold text-zinc-900 dark:text-zinc-200">{profileData.location}</p>
                 </div>
               </div>
@@ -160,8 +160,8 @@ export const Contact: React.FC = () => {
                   <Clock className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="text-[11px] font-mono font-bold uppercase tracking-wider text-zinc-500">Thời Gian Phản Hồi</h4>
-                  <p className="text-sm font-semibold text-zinc-900 dark:text-zinc-200">Thường phản hồi trong vòng 2 - 4 giờ</p>
+                  <h4 className="text-[11px] font-mono font-bold uppercase tracking-wider text-zinc-500">Response Time</h4>
+                  <p className="text-sm font-semibold text-zinc-900 dark:text-zinc-200">Usually responds within 2 - 4 hours</p>
                 </div>
               </div>
             </div>
@@ -175,18 +175,18 @@ export const Contact: React.FC = () => {
             <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-xl">
               <h3 className="text-2xl font-black text-zinc-900 dark:text-white mb-2 flex items-center gap-2">
                 <MessageSquare className="w-5 h-5" />
-                <span>Gửi Tin Nhắn Nhanh</span>
+                <span>Send a Quick Message</span>
               </h3>
               <p className="text-sm text-zinc-500 mb-8">
-                Điền thông tin vào form dưới đây, tôi sẽ liên hệ lại bạn sớm nhất có thể.
+                Fill in your details below and I will get back to you as soon as possible.
               </p>
 
               {status === 'success' && (
                 <div className="p-4 mb-6 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-700 text-zinc-900 dark:text-zinc-100 flex items-center gap-3">
                   <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0" />
                   <div>
-                    <h5 className="font-bold text-sm">Gửi tin nhắn thành công!</h5>
-                    <p className="text-xs mt-0.5 text-zinc-500 dark:text-zinc-400">Cảm ơn bạn đã liên hệ. Tôi sẽ phản hồi qua email trong thời gian sớm nhất.</p>
+                    <h5 className="font-bold text-sm">Message Sent Successfully!</h5>
+                    <p className="text-xs mt-0.5 text-zinc-500 dark:text-zinc-400">Thank you for reaching out. I'll reply via email shortly.</p>
                   </div>
                 </div>
               )}
@@ -201,11 +201,11 @@ export const Contact: React.FC = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-mono font-bold uppercase tracking-wider text-zinc-700 dark:text-zinc-300 mb-2">
-                      Họ và Tên *
+                      Full Name *
                     </label>
                     <input
                       type="text"
-                      placeholder="Nguyễn Văn A"
+                      placeholder="John Doe"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       required
@@ -215,11 +215,11 @@ export const Contact: React.FC = () => {
 
                   <div>
                     <label className="block text-xs font-mono font-bold uppercase tracking-wider text-zinc-700 dark:text-zinc-300 mb-2">
-                      Địa chỉ Email *
+                      Email Address *
                     </label>
                     <input
                       type="email"
-                      placeholder="email@example.com"
+                      placeholder="john@example.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       required
@@ -230,11 +230,11 @@ export const Contact: React.FC = () => {
 
                 <div>
                   <label className="block text-xs font-mono font-bold uppercase tracking-wider text-zinc-700 dark:text-zinc-300 mb-2">
-                    Tiêu đề / Chủ đề
+                    Subject
                   </label>
                   <input
                     type="text"
-                    placeholder="Hợp tác phát triển ứng dụng di động..."
+                    placeholder="Project collaboration, Mobile app development..."
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl bg-zinc-50 dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-800 text-zinc-900 dark:text-white text-sm focus:outline-none focus:border-black dark:focus:border-white transition-all font-mono"
@@ -243,11 +243,11 @@ export const Contact: React.FC = () => {
 
                 <div>
                   <label className="block text-xs font-mono font-bold uppercase tracking-wider text-zinc-700 dark:text-zinc-300 mb-2">
-                    Nội dung tin nhắn *
+                    Your Message *
                   </label>
                   <textarea
                     rows={4}
-                    placeholder="Hãy chia sẻ thông tin về dự án hoặc yêu cầu của bạn..."
+                    placeholder="Tell me about your project, timeline, or requirements..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     required
@@ -263,12 +263,12 @@ export const Contact: React.FC = () => {
                   {status === 'sending' ? (
                     <span className="flex items-center gap-2">
                       <span className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" />
-                      <span>Đang gửi tin nhắn...</span>
+                      <span>Sending message...</span>
                     </span>
                   ) : (
                     <>
                       <Send className="w-4 h-4 stroke-[2.2]" />
-                      <span>Gửi Tin Nhắn Ngay</span>
+                      <span>Send Message Now</span>
                     </>
                   )}
                 </button>

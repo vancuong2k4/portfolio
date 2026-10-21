@@ -9,12 +9,12 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { name: 'Trang Chủ', href: '#home' },
-  { name: 'Giới Thiệu', href: '#about' },
-  { name: 'Kỹ Năng', href: '#skills' },
-  { name: 'Dự Án', href: '#projects' },
-  { name: 'Kinh Nghiệm', href: '#experience' },
-  { name: 'Liên Hệ', href: '#contact' },
+  { name: 'Home', href: '#home' },
+  { name: 'About', href: '#about' },
+  { name: 'Skills', href: '#skills' },
+  { name: 'Projects', href: '#projects' },
+  { name: 'Experience', href: '#experience' },
+  { name: 'Contact', href: '#contact' },
 ]
 
 export const Navbar: React.FC = () => {
@@ -122,7 +122,7 @@ export const Navbar: React.FC = () => {
             className="flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-xl text-white dark:text-black bg-black dark:bg-white hover:bg-zinc-800 dark:hover:bg-zinc-200 shadow-sm transition-all cursor-pointer hover:-translate-y-0.5 active:translate-y-0"
           >
             <FileDown className="w-3.5 h-3.5 stroke-[2.5]" />
-            <span>Tải CV</span>
+            <span>Download CV</span>
           </button>
         </div>
 
@@ -180,7 +180,7 @@ export const Navbar: React.FC = () => {
               className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl text-xs font-bold text-white dark:text-black bg-black dark:bg-white shadow-sm"
             >
               <FileDown className="w-4 h-4 stroke-[2.5]" />
-              <span>Tải CV Cá Nhân</span>
+              <span>Download Resume</span>
             </button>
           </div>
         </div>

@@ -27,28 +27,28 @@ export const Footer: React.FC = () => {
               </span>
             </div>
             <p className="text-xs text-zinc-500 max-w-sm">
-              {profileData.role} — Thiết kế và xây dựng các sản phẩm số chất lượng cao với tinh thần thủ công & tối giản.
+              {profileData.role} — Crafting high-performance digital products with a minimalist engineering mindset.
             </p>
           </div>
 
           {/* Quick links */}
           <div className="flex flex-wrap items-center justify-center gap-6 text-xs font-mono font-medium text-zinc-500">
-            <a href="#home" className="hover:text-black dark:hover:text-white transition-colors">Trang Chủ</a>
-            <a href="#about" className="hover:text-black dark:hover:text-white transition-colors">Giới Thiệu</a>
-            <a href="#skills" className="hover:text-black dark:hover:text-white transition-colors">Kỹ Năng</a>
-            <a href="#projects" className="hover:text-black dark:hover:text-white transition-colors">Dự Án</a>
-            <a href="#experience" className="hover:text-black dark:hover:text-white transition-colors">Kinh Nghiệm</a>
-            <a href="#contact" className="hover:text-black dark:hover:text-white transition-colors">Liên Hệ</a>
+            <a href="#home" className="hover:text-black dark:hover:text-white transition-colors">Home</a>
+            <a href="#about" className="hover:text-black dark:hover:text-white transition-colors">About</a>
+            <a href="#skills" className="hover:text-black dark:hover:text-white transition-colors">Skills</a>
+            <a href="#projects" className="hover:text-black dark:hover:text-white transition-colors">Projects</a>
+            <a href="#experience" className="hover:text-black dark:hover:text-white transition-colors">Experience</a>
+            <a href="#contact" className="hover:text-black dark:hover:text-white transition-colors">Contact</a>
           </div>
 
           {/* Back to top button */}
           <div>
             <button
               onClick={scrollToTop}
-              aria-label="Cuộn lên đầu trang"
+              aria-label="Scroll to top"
               className="flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-mono font-bold text-zinc-700 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-900 hover:bg-zinc-200 dark:hover:bg-zinc-800 border border-zinc-200 dark:border-zinc-800 transition-all cursor-pointer"
             >
-              <span>Về đầu trang</span>
+              <span>Back to top</span>
               <ArrowUp className="w-3.5 h-3.5 stroke-[2.5]" />
             </button>
           </div>

@@ -19,10 +19,10 @@ export const Experience: React.FC = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-zinc-100 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-800 mb-3">
-            <span>04. LỘ TRÌNH KINH NGHIỆM</span>
+            <span>04. EXPERIENCE & EDUCATION</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-black text-zinc-900 dark:text-white tracking-tight">
-            Kinh Nghiệm Thực Chiến & Học Vấn
+            Professional Experience & Education
           </h2>
           <div className="w-12 h-1 bg-zinc-400 dark:bg-zinc-700 mx-auto mt-4 rounded-full" />
         </div>
@@ -39,7 +39,7 @@ export const Experience: React.FC = () => {
               }`}
             >
               <Briefcase className="w-4 h-4 stroke-[2]" />
-              <span>Kinh Nghiệm Thực Chiến</span>
+              <span>Work Experience</span>
             </button>
 
             <button
@@ -51,7 +51,7 @@ export const Experience: React.FC = () => {
               }`}
             >
               <GraduationCap className="w-4 h-4 stroke-[2]" />
-              <span>Học Vấn & Bằng Cấp</span>
+              <span>Education & Academic Background</span>
             </button>
           </div>
         </div>

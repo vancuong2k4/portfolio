@@ -55,11 +55,11 @@ interface CategoryOption {
 }
 
 const categories: CategoryOption[] = [
-  { key: 'all', label: 'Tất Cả' },
+  { key: 'all', label: 'All' },
   { key: 'frontend', label: 'Frontend' },
-  { key: 'mobile', label: 'Mobile App' },
+  { key: 'mobile', label: 'Mobile' },
   { key: 'backend', label: 'Backend & APIs' },
-  { key: 'database', label: 'Cơ Sở Dữ Liệu' },
+  { key: 'database', label: 'Databases' },
   { key: 'devops', label: 'DevOps & Cloud' },
 ]
 
@@ -77,13 +77,13 @@ export const Skills: React.FC = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-zinc-100 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-800 mb-3">
-            <span>02. KỸ NĂNG & CÔNG NGHỆ</span>
+            <span>02. SKILLS & TECHNOLOGIES</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-black text-zinc-900 dark:text-white tracking-tight">
-            Nền Tảng Công Nghệ Chuyên Sâu
+            Core Technical Stack
           </h2>
           <p className="mt-3 text-zinc-600 dark:text-zinc-400 text-base max-w-xl mx-auto">
-            Hệ sinh thái công nghệ được tối ưu hóa cho kiến trúc Web & Mobile hiện đại, tập trung vào hiệu năng cao và tính ổn định.
+            A modern engineering ecosystem optimized for high-performance web & mobile architectures, reliability, and scale.
           </p>
           <div className="w-12 h-1 bg-zinc-400 dark:bg-zinc-700 mx-auto mt-4 rounded-full" />
         </div>
@@ -150,7 +150,7 @@ export const Skills: React.FC = () => {
                 {/* Progress Level Bar - Minimalist Line */}
                 <div className="pt-2">
                   <div className="flex items-center justify-between text-xs mb-1.5 font-mono">
-                    <span className="text-zinc-500">Mức độ</span>
+                    <span className="text-zinc-500">Proficiency</span>
                     <span className="text-zinc-900 dark:text-white font-bold">{skill.level}%</span>
                   </div>
                   <div className="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
