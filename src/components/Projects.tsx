@@ -70,14 +70,14 @@ export const Projects: React.FC = () => {
         </div>
 
         {/* Filter Tabs - Monochrome */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-14">
+        <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mb-12 sm:mb-14">
           {filterCategories.map(cat => {
             const isActive = activeFilter === cat.key
             return (
               <button
                 key={cat.key}
                 onClick={() => setActiveFilter(cat.key)}
-                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all duration-200 cursor-pointer ${
+                className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl text-xs font-bold transition-all duration-200 cursor-pointer active:scale-95 ${
                   isActive
                     ? 'text-white bg-black dark:text-black dark:bg-white shadow-sm'
                     : 'text-zinc-600 dark:text-zinc-400 bg-zinc-100 dark:bg-zinc-900 hover:text-black dark:hover:text-white border border-zinc-200 dark:border-zinc-800'

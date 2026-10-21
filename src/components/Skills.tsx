@@ -89,14 +89,14 @@ export const Skills: React.FC = () => {
         </div>
 
         {/* Filter Categories - Monochrome Tabs */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
+        <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mb-12">
           {categories.map(cat => {
             const isActive = activeCategory === cat.key
             return (
               <button
                 key={cat.key}
                 onClick={() => setActiveCategory(cat.key)}
-                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all duration-200 cursor-pointer ${
+                className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl text-xs font-bold transition-all duration-200 cursor-pointer active:scale-95 ${
                   isActive
                     ? 'text-white bg-black dark:text-black dark:bg-white shadow-sm'
                     : 'text-zinc-600 dark:text-zinc-400 bg-zinc-100 dark:bg-zinc-900 hover:text-black dark:hover:text-white border border-zinc-200 dark:border-zinc-800'
@@ -109,13 +109,13 @@ export const Skills: React.FC = () => {
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-4">
           {filteredSkills.map((skill: Skill, idx: number) => {
             const IconComponent = iconMap[skill.iconName] || Code
             return (
               <div
                 key={idx}
-                className="group relative p-5 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:border-zinc-400 dark:hover:border-zinc-600 transition-all duration-200 flex flex-col justify-between"
+                className="group relative p-4 sm:p-5 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:border-zinc-400 dark:hover:border-zinc-600 transition-all duration-200 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-start justify-between mb-3">

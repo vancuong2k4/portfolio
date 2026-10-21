@@ -29,29 +29,30 @@ export const Experience: React.FC = () => {
 
         {/* Tab switchers */}
         <div className="flex justify-center mb-12">
-          <div className="inline-flex p-1.5 rounded-2xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">
+          <div className="inline-flex p-1.5 rounded-2xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 w-full max-w-sm sm:w-auto">
             <button
               onClick={() => setActiveTab('work')}
-              className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 cursor-pointer ${
+              className={`flex items-center justify-center gap-1.5 flex-1 sm:flex-none sm:px-5 px-3 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 cursor-pointer ${
                 activeTab === 'work'
                   ? 'text-white bg-black dark:text-black dark:bg-white shadow-sm'
                   : 'text-zinc-500 hover:text-black dark:hover:text-white'
               }`}
             >
-              <Briefcase className="w-4 h-4 stroke-[2]" />
-              <span>Work Experience</span>
+              <Briefcase className="w-4 h-4 stroke-[2] shrink-0" />
+              <span>Work</span>
             </button>
 
             <button
               onClick={() => setActiveTab('education')}
-              className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 cursor-pointer ${
+              className={`flex items-center justify-center gap-1.5 flex-1 sm:flex-none sm:px-5 px-3 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 cursor-pointer ${
                 activeTab === 'education'
                   ? 'text-white bg-black dark:text-black dark:bg-white shadow-sm'
                   : 'text-zinc-500 hover:text-black dark:hover:text-white'
               }`}
             >
-              <GraduationCap className="w-4 h-4 stroke-[2]" />
-              <span>Education & Academic Background</span>
+              <GraduationCap className="w-4 h-4 stroke-[2] shrink-0" />
+              <span className="hidden sm:inline">Education &amp; Academic Background</span>
+              <span className="sm:hidden">Education</span>
             </button>
           </div>
         </div>

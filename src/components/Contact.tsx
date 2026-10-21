@@ -25,7 +25,9 @@ export const Contact: React.FC = () => {
   const [errorMessage, setErrorMessage] = useState('')
 
   const handleCopy = (text: string, fieldName: string) => {
-    navigator.clipboard.writeText(text)
+    if (navigator?.clipboard?.writeText) {
+      navigator.clipboard.writeText(text).catch(() => {})
+    }
     setCopiedField(fieldName)
     setTimeout(() => setCopiedField(null), 2500)
   }
@@ -172,7 +174,7 @@ export const Contact: React.FC = () => {
 
           {/* Right Column: High Contrast Contact Form */}
           <div className="lg:col-span-7">
-            <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-xl">
+            <div className="p-6 sm:p-8 md:p-10 rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-xl">
               <h3 className="text-2xl font-black text-zinc-900 dark:text-white mb-2 flex items-center gap-2">
                 <MessageSquare className="w-5 h-5" />
                 <span>Send a Quick Message</span>
@@ -209,7 +211,7 @@ export const Contact: React.FC = () => {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       required
-                      className="w-full px-4 py-3 rounded-xl bg-zinc-50 dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-800 text-zinc-900 dark:text-white text-sm focus:outline-none focus:border-black dark:focus:border-white transition-all font-mono"
+                      className="w-full px-4 py-3 rounded-xl bg-zinc-50 dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-800 text-zinc-900 dark:text-white text-base sm:text-sm focus:outline-none focus:border-black dark:focus:border-white transition-all font-mono"
                     />
                   </div>
 
@@ -223,7 +225,7 @@ export const Contact: React.FC = () => {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       required
-                      className="w-full px-4 py-3 rounded-xl bg-zinc-50 dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-800 text-zinc-900 dark:text-white text-sm focus:outline-none focus:border-black dark:focus:border-white transition-all font-mono"
+                      className="w-full px-4 py-3 rounded-xl bg-zinc-50 dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-800 text-zinc-900 dark:text-white text-base sm:text-sm focus:outline-none focus:border-black dark:focus:border-white transition-all font-mono"
                     />
                   </div>
                 </div>
@@ -237,7 +239,7 @@ export const Contact: React.FC = () => {
                     placeholder="Project collaboration, Mobile app development..."
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-zinc-50 dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-800 text-zinc-900 dark:text-white text-sm focus:outline-none focus:border-black dark:focus:border-white transition-all font-mono"
+                    className="w-full px-4 py-3 rounded-xl bg-zinc-50 dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-800 text-zinc-900 dark:text-white text-base sm:text-sm focus:outline-none focus:border-black dark:focus:border-white transition-all font-mono"
                   />
                 </div>
 
@@ -251,14 +253,14 @@ export const Contact: React.FC = () => {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     required
-                    className="w-full px-4 py-3 rounded-xl bg-zinc-50 dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-800 text-zinc-900 dark:text-white text-sm focus:outline-none focus:border-black dark:focus:border-white transition-all resize-none font-mono"
+                    className="w-full px-4 py-3 rounded-xl bg-zinc-50 dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-800 text-zinc-900 dark:text-white text-base sm:text-sm focus:outline-none focus:border-black dark:focus:border-white transition-all resize-none font-mono"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={status === 'sending'}
-                  className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl font-bold text-sm text-white dark:text-black bg-black dark:bg-white hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all cursor-pointer disabled:opacity-60 shadow-md"
+                  className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl font-bold text-sm text-white dark:text-black bg-black dark:bg-white hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all cursor-pointer disabled:opacity-60 shadow-md active:scale-[0.99]"
                 >
                   {status === 'sending' ? (
                     <span className="flex items-center gap-2">

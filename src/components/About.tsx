@@ -69,20 +69,22 @@ export const About: React.FC = () => {
           
           {/* Left Column: Avatar Profile Showcase Card */}
           <div className="lg:col-span-4">
-            <div className="p-6 rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col items-center text-center">
+            <div className="p-5 sm:p-6 rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col items-center text-center">
               
-              {/* Avatar Frame */}
-              <div className="relative w-56 h-56 sm:w-64 sm:h-64 rounded-2xl overflow-hidden border-2 border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-950 mb-5 shadow-inner">
+              {/* Avatar Frame - Responsive sizing */}
+              <div className="relative w-48 h-48 sm:w-60 sm:h-60 rounded-2xl overflow-hidden border-2 border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-950 mb-5 shadow-inner">
                 {!imageError && profileData.avatarUrl ? (
                   <img
                     src={profileData.avatarUrl}
                     alt={profileData.name}
+                    loading="lazy"
+                    decoding="async"
                     onError={() => setImageError(true)}
                     className="w-full h-full object-cover"
                   />
                 ) : (
                   <div className="w-full h-full flex flex-col items-center justify-center bg-zinc-100 dark:bg-zinc-950 text-zinc-400">
-                    <User className="w-20 h-20 stroke-[1.5] mb-2 text-zinc-500" />
+                    <User className="w-16 h-16 sm:w-20 sm:h-20 stroke-[1.5] mb-2 text-zinc-500" />
                     <span className="font-mono text-xs uppercase font-bold text-zinc-400">
                       {profileData.nickname}
                     </span>
@@ -90,7 +92,7 @@ export const About: React.FC = () => {
                 )}
 
                 {/* Status Dot Overlay */}
-                <div className="absolute bottom-3 left-3 px-2.5 py-1 rounded-full text-[11px] font-mono font-medium bg-black/80 dark:bg-black/90 text-white backdrop-blur-md border border-white/10 flex items-center gap-1.5 shadow-md">
+                <div className="absolute bottom-2.5 left-2.5 sm:bottom-3 sm:left-3 px-2 sm:px-2.5 py-1 rounded-full text-[10px] sm:text-[11px] font-mono font-medium bg-black/85 dark:bg-black/90 text-white backdrop-blur-md border border-white/10 flex items-center gap-1.5 shadow-md">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                   <span>Available for work</span>
                 </div>
@@ -182,21 +184,21 @@ export const About: React.FC = () => {
             </div>
 
             {/* 4 Stat Cards in 4-column row */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 pt-2">
               {statsList.map((stat, idx) => {
                 const Icon = stat.icon
                 return (
                   <div
                     key={idx}
-                    className="p-4 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:border-zinc-400 dark:hover:border-zinc-600 transition-all duration-200 flex flex-col items-center text-center group"
+                    className="p-3.5 sm:p-4 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:border-zinc-400 dark:hover:border-zinc-600 transition-all duration-200 flex flex-col items-center text-center group"
                   >
-                    <div className="w-9 h-9 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 flex items-center justify-center mb-2 group-hover:scale-105 transition-transform">
+                    <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 flex items-center justify-center mb-2 group-hover:scale-105 transition-transform">
                       <Icon className="w-4 h-4 stroke-[2]" />
                     </div>
-                    <div className="text-2xl font-black text-zinc-900 dark:text-white mb-0.5 font-mono">
+                    <div className="text-xl sm:text-2xl font-black text-zinc-900 dark:text-white mb-0.5 font-mono">
                       {stat.value}
                     </div>
-                    <div className="text-[11px] font-medium text-zinc-500 dark:text-zinc-400">
+                    <div className="text-[10px] sm:text-[11px] font-medium text-zinc-500 dark:text-zinc-400">
                       {stat.label}
                     </div>
                   </div>

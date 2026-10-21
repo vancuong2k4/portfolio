@@ -26,6 +26,8 @@ export const Navbar: React.FC = () => {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
+      // Close mobile menu when user scrolls
+      setIsMobileMenuOpen(false)
 
       const sections = navItems.map(item => item.href.substring(1))
       const scrollPosition = window.scrollY + 120
@@ -150,9 +152,13 @@ export const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Drawer Menu */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden mt-2 mx-4 p-4 rounded-2xl bg-white/95 dark:bg-zinc-950/95 backdrop-blur-xl border border-zinc-200 dark:border-zinc-800 shadow-2xl flex flex-col gap-2">
+      {/* Mobile Drawer Menu — animated slide-down */}
+      <div
+        className={`md:hidden transition-all duration-200 ease-in-out overflow-hidden ${
+          isMobileMenuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0 pointer-events-none'
+        }`}
+      >
+        <div className="mt-2 mx-4 p-4 rounded-2xl bg-white/95 dark:bg-zinc-950/95 backdrop-blur-xl border border-zinc-200 dark:border-zinc-800 shadow-2xl flex flex-col gap-1">
           {navItems.map(item => {
             const sectionId = item.href.substring(1)
             const isActive = activeSection === sectionId
@@ -161,7 +167,7 @@ export const Navbar: React.FC = () => {
                 key={item.name}
                 href={item.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors ${
+                className={`px-4 py-3 rounded-xl text-sm font-semibold transition-colors ${
                   isActive
                     ? 'text-white bg-black dark:text-black dark:bg-white'
                     : 'text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-900'
@@ -177,14 +183,14 @@ export const Navbar: React.FC = () => {
                 setIsMobileMenuOpen(false)
                 handleDownloadCV()
               }}
-              className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl text-xs font-bold text-white dark:text-black bg-black dark:bg-white shadow-sm"
+              className="w-full flex items-center justify-center gap-2 py-3 rounded-xl text-xs font-bold text-white dark:text-black bg-black dark:bg-white shadow-sm cursor-pointer"
             >
               <FileDown className="w-4 h-4 stroke-[2.5]" />
               <span>Download Resume</span>
             </button>
           </div>
         </div>
-      )}
+      </div>
     </header>
   )
 }
