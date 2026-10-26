@@ -171,7 +171,7 @@ export const About: React.FC = () => {
               </div>
               <div className="flex items-center gap-2.5 p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800">
                 <GraduationCap className="w-4 h-4 text-zinc-500 shrink-0" />
-                <span><strong>Education:</strong> Van Hien University</span>
+                <span><strong>Education:</strong> Van Hien University (VHU)</span>
               </div>
               <div className="flex items-center gap-2.5 p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800">
                 <Languages className="w-4 h-4 text-zinc-500 shrink-0" />

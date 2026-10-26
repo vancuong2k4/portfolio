@@ -282,7 +282,7 @@ export const educationData: Education[] = [
     id: "edu-1",
     period: "2022 - 2026",
     degree: "Information Technology (Computer Science)",
-    institution: "Van Hien University",
+    institution: "Van Hien University (VHU)",
     location: "Ho Chi Minh City, Vietnam",
     description: "Graduated with Honors. Specialized in Data Structures & Algorithms, Software Architecture, and Database Management Systems.",
     achievements: [
