@@ -67,7 +67,7 @@ export const Experience: React.FC = () => {
                 <div className="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-white dark:bg-black border-4 border-black dark:border-white group-hover:scale-125 transition-transform shadow-sm" />
 
                 {/* Card */}
-                <div className="p-6 sm:p-7 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:border-zinc-400 dark:hover:border-zinc-600 transition-all duration-200">
+                <div className="p-5 sm:p-7 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:border-zinc-400 dark:hover:border-zinc-600 transition-all duration-200">
                   
                   {/* Header info */}
                   <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
@@ -133,7 +133,7 @@ export const Experience: React.FC = () => {
               <div key={edu.id} className="relative group">
                 <div className="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-white dark:bg-black border-4 border-black dark:border-white group-hover:scale-125 transition-transform shadow-sm" />
 
-                <div className="p-6 sm:p-7 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:border-zinc-400 dark:hover:border-zinc-600 transition-all duration-200">
+                <div className="p-5 sm:p-7 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:border-zinc-400 dark:hover:border-zinc-600 transition-all duration-200">
                   <div className="flex items-center gap-2 mb-3">
                     <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-mono font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700">
                       <Calendar className="w-3.5 h-3.5 text-zinc-600 dark:text-zinc-400 shrink-0" />

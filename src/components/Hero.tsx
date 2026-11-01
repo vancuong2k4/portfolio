@@ -103,10 +103,10 @@ export const Hero: React.FC = () => {
             </p>
 
             {/* Action Buttons - High Contrast Black & White */}
-            <div className="flex flex-wrap items-center gap-3 mb-10 w-full">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mb-10 w-full sm:w-auto">
               <a
                 href="#projects"
-                className="flex items-center justify-center gap-2 px-5 py-3 sm:px-6 sm:py-3.5 rounded-xl font-bold text-sm text-white dark:text-black bg-black dark:bg-white hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all duration-200 shadow-md shadow-black/10 dark:shadow-white/5 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
+                className="flex items-center justify-center gap-2 px-5 py-3.5 sm:py-3 sm:px-6 rounded-xl font-bold text-sm text-white dark:text-black bg-black dark:bg-white hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all duration-200 shadow-md shadow-black/10 dark:shadow-white/5 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer text-center"
               >
                 <span>View Projects</span>
                 <ArrowRight className="w-4 h-4 stroke-[2.5]" />
@@ -114,7 +114,7 @@ export const Hero: React.FC = () => {
 
               <button
                 onClick={handleDownloadCV}
-                className="flex items-center justify-center gap-2 px-5 py-3 sm:px-6 sm:py-3.5 rounded-xl font-bold text-sm text-zinc-900 dark:text-zinc-200 bg-white dark:bg-zinc-900 hover:bg-zinc-100 dark:hover:bg-zinc-800 border border-zinc-300 dark:border-zinc-700/80 shadow-sm transition-all cursor-pointer hover:-translate-y-0.5 active:translate-y-0"
+                className="flex items-center justify-center gap-2 px-5 py-3.5 sm:py-3 sm:px-6 rounded-xl font-bold text-sm text-zinc-900 dark:text-zinc-200 bg-white dark:bg-zinc-900 hover:bg-zinc-100 dark:hover:bg-zinc-800 border border-zinc-300 dark:border-zinc-700/80 shadow-sm transition-all cursor-pointer hover:-translate-y-0.5 active:translate-y-0 text-center"
               >
                 <FileDown className="w-4 h-4 stroke-[2]" />
                 <span>Download Resume</span>
@@ -122,7 +122,7 @@ export const Hero: React.FC = () => {
 
               <a
                 href="#contact"
-                className="flex items-center justify-center px-4 py-3 rounded-xl font-semibold text-sm text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors"
+                className="flex items-center justify-center px-4 py-3 rounded-xl font-semibold text-sm text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors text-center"
               >
                 <span>Contact Me</span>
               </a>

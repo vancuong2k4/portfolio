@@ -174,7 +174,7 @@ export const Contact: React.FC = () => {
 
           {/* Right Column: High Contrast Contact Form */}
           <div className="lg:col-span-7">
-            <div className="p-6 sm:p-8 md:p-10 rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-xl">
+            <div className="p-5 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-xl">
               <h3 className="text-2xl font-black text-zinc-900 dark:text-white mb-2 flex items-center gap-3">
                 <span className="w-8 h-8 rounded-lg bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-900 dark:text-white flex items-center justify-center shrink-0">
                   <MessageSquare className="w-4 h-4 stroke-[2.2]" />

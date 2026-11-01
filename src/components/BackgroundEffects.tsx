@@ -34,7 +34,7 @@ export const BackgroundEffects: React.FC = () => {
 
       {/* Top ambient spotlight in pure white / neutral */}
       <div 
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[400px] opacity-30 dark:opacity-20 blur-[130px]"
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1000px] h-[350px] sm:h-[400px] opacity-30 dark:opacity-20 blur-[130px] pointer-events-none"
         style={{
           background: 'radial-gradient(ellipse at 50% 0%, rgba(255,255,255,0.2) 0%, rgba(161,161,170,0.05) 50%, transparent 80%)',
         }}

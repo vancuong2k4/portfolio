@@ -83,7 +83,7 @@ export const Navbar: React.FC = () => {
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-1 bg-zinc-100/80 dark:bg-zinc-900/80 p-1.5 rounded-full border border-zinc-200/80 dark:border-zinc-800/80 backdrop-blur-md">
+        <nav className="hidden lg:flex items-center gap-1 bg-zinc-100/80 dark:bg-zinc-900/80 p-1.5 rounded-full border border-zinc-200/80 dark:border-zinc-800/80 backdrop-blur-md">
           {navItems.map(item => {
             const sectionId = item.href.substring(1)
             const isActive = activeSection === sectionId
@@ -104,7 +104,7 @@ export const Navbar: React.FC = () => {
         </nav>
 
         {/* Desktop Action Buttons */}
-        <div className="hidden md:flex items-center gap-2.5">
+        <div className="hidden lg:flex items-center gap-2.5">
           {/* Theme Toggle */}
           <button
             onClick={toggleTheme}
@@ -128,8 +128,8 @@ export const Navbar: React.FC = () => {
           </button>
         </div>
 
-        {/* Mobile Menu & Theme Toggle */}
-        <div className="flex md:hidden items-center gap-2">
+        {/* Mobile & Tablet Menu Toggle */}
+        <div className="flex lg:hidden items-center gap-2">
           <button
             onClick={toggleTheme}
             aria-label="Toggle Theme"
@@ -154,7 +154,7 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Drawer Menu — animated slide-down */}
       <div
-        className={`md:hidden transition-all duration-200 ease-in-out overflow-hidden ${
+        className={`lg:hidden transition-all duration-200 ease-in-out overflow-hidden ${
           isMobileMenuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0 pointer-events-none'
         }`}
       >
