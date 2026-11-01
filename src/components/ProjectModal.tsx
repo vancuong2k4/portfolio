@@ -67,7 +67,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
           {project.metrics && (
             <div className="relative z-10 inline-flex items-center gap-2 self-start px-3 py-1 rounded-lg bg-zinc-800/90 text-xs font-mono font-semibold text-zinc-200 border border-zinc-700 mt-3">
-              <Zap className="w-3.5 h-3.5 text-amber-400" />
+              <Zap className="w-3.5 h-3.5 text-blue-400" />
               <span>{project.metrics}</span>
             </div>
           )}
@@ -106,7 +106,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             <ul className="space-y-2">
               {project.features.map((feat, idx) => (
                 <li key={idx} className="flex items-start gap-2.5 text-sm text-zinc-700 dark:text-zinc-300">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-4 h-4 text-blue-500 dark:text-blue-400 shrink-0 mt-0.5" />
                   <span>{feat}</span>
                 </li>
               ))}
@@ -117,7 +117,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           {project.architecture && project.architecture.length > 0 && (
             <div className="p-4 rounded-2xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800">
               <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-zinc-900 dark:text-zinc-200 mb-3 flex items-center gap-1.5">
-                <Layers className="w-4 h-4 text-indigo-400" />
+                <Layers className="w-4 h-4 text-blue-500 dark:text-blue-400" />
                 <span>Architecture &amp; Engineering Highlights</span>
               </h4>
               <ul className="space-y-2 text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 font-mono">

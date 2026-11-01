@@ -50,7 +50,7 @@ export const Experience: React.FC = () => {
                   : 'text-zinc-500 hover:text-black dark:hover:text-white'
               }`}
             >
-              <GraduationCap className={`w-4 h-4 stroke-[2] shrink-0 ${activeTab === 'education' ? 'text-white dark:text-black' : 'text-indigo-500'}`} />
+              <GraduationCap className={`w-4 h-4 stroke-[2] shrink-0 ${activeTab === 'education' ? 'text-white dark:text-black' : 'text-blue-500'}`} />
               <span className="hidden sm:inline">Education &amp; Academic Background</span>
               <span className="sm:hidden">Education</span>
             </button>
@@ -91,7 +91,7 @@ export const Experience: React.FC = () => {
                     </span>
                     <span>•</span>
                     <span className="flex items-center gap-1">
-                      <MapPin className="w-3.5 h-3.5 text-rose-500 shrink-0" />
+                      <MapPin className="w-3.5 h-3.5 text-blue-500 dark:text-blue-400 shrink-0" />
                       {exp.location}
                     </span>
                   </div>
@@ -104,7 +104,7 @@ export const Experience: React.FC = () => {
                   <div className="space-y-2 mb-5">
                     {exp.achievements.map((ach, idx) => (
                       <div key={idx} className="flex items-start gap-2.5 text-sm text-zinc-700 dark:text-zinc-300">
-                        <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-4 h-4 text-blue-500 dark:text-blue-400 shrink-0 mt-0.5" />
                         <span>{ach}</span>
                       </div>
                     ))}
@@ -159,7 +159,7 @@ export const Experience: React.FC = () => {
                     <div className="space-y-2">
                       {edu.achievements.map((ach, idx) => (
                         <div key={idx} className="flex items-center gap-2.5 text-sm font-medium text-zinc-700 dark:text-zinc-300">
-                          <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
+                          <CheckCircle2 className="w-4 h-4 text-blue-500 dark:text-blue-400 shrink-0" />
                           <span>{ach}</span>
                         </div>
                       ))}

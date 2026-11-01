@@ -80,10 +80,10 @@ export const Contact: React.FC = () => {
           <div className="lg:col-span-5 space-y-4">
             
             {/* Email Card with 1-click copy */}
-            <div className="p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm transition-all duration-200 hover:border-red-500/30 group">
+            <div className="p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm transition-all duration-200 hover:border-blue-500/40 hover:shadow-[0_4px_20px_rgba(59,130,246,0.12)] group">
               <div className="flex items-start justify-between">
                 <div className="flex items-center gap-3.5">
-                  <div className="w-11 h-11 rounded-xl bg-red-500/10 dark:bg-red-500/15 border border-red-500/25 text-[#EA4335] flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
+                  <div className="w-11 h-11 rounded-xl bg-blue-500/10 dark:bg-blue-500/15 border border-blue-500/25 text-blue-600 dark:text-blue-400 flex items-center justify-center shadow-sm group-hover:scale-105 group-hover:bg-blue-500/20 transition-all">
                     <GmailIcon className="w-5 h-5" />
                   </div>
                   <div>
@@ -99,24 +99,24 @@ export const Contact: React.FC = () => {
                 <button
                   onClick={() => handleCopy(profileData.email, 'email')}
                   aria-label="Copy email address"
-                  className="p-2 rounded-lg text-zinc-500 hover:text-red-500 dark:hover:text-red-400 bg-zinc-100 dark:bg-zinc-800 hover:bg-red-500/10 dark:hover:bg-red-500/20 transition-colors cursor-pointer"
+                  className="p-2 rounded-lg text-zinc-500 hover:text-blue-500 dark:hover:text-blue-400 bg-zinc-100 dark:bg-zinc-800 hover:bg-blue-500/10 dark:hover:bg-blue-500/20 transition-colors cursor-pointer"
                   title="Copy email"
                 >
-                  {copiedField === 'email' ? <Check className="w-4 h-4 text-emerald-500" /> : <Copy className="w-4 h-4" />}
+                  {copiedField === 'email' ? <Check className="w-4 h-4 text-blue-500" /> : <Copy className="w-4 h-4" />}
                 </button>
               </div>
               {copiedField === 'email' && (
-                <span className="text-xs font-mono font-semibold text-emerald-500 mt-2 block">
+                <span className="text-xs font-mono font-semibold text-blue-500 mt-2 block">
                   ✓ Email copied to clipboard!
                 </span>
               )}
             </div>
 
             {/* Phone Card with 1-click copy */}
-            <div className="p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm transition-all duration-200 hover:border-emerald-500/30 group">
+            <div className="p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm transition-all duration-200 hover:border-blue-500/40 hover:shadow-[0_4px_20px_rgba(59,130,246,0.12)] group">
               <div className="flex items-start justify-between">
                 <div className="flex items-center gap-3.5">
-                  <div className="w-11 h-11 rounded-xl bg-emerald-500/10 dark:bg-emerald-500/15 border border-emerald-500/25 text-emerald-500 flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
+                  <div className="w-11 h-11 rounded-xl bg-blue-500/10 dark:bg-blue-500/15 border border-blue-500/25 text-blue-600 dark:text-blue-400 flex items-center justify-center shadow-sm group-hover:scale-105 group-hover:bg-blue-500/20 transition-all">
                     <Phone className="w-5 h-5 stroke-[2.2]" />
                   </div>
                   <div>
@@ -132,14 +132,14 @@ export const Contact: React.FC = () => {
                 <button
                   onClick={() => handleCopy(profileData.phone, 'phone')}
                   aria-label="Copy phone number"
-                  className="p-2 rounded-lg text-zinc-500 hover:text-emerald-500 dark:hover:text-emerald-400 bg-zinc-100 dark:bg-zinc-800 hover:bg-emerald-500/10 dark:hover:bg-emerald-500/20 transition-colors cursor-pointer"
+                  className="p-2 rounded-lg text-zinc-500 hover:text-blue-500 dark:hover:text-blue-400 bg-zinc-100 dark:bg-zinc-800 hover:bg-blue-500/10 dark:hover:bg-blue-500/20 transition-colors cursor-pointer"
                   title="Copy phone number"
                 >
-                  {copiedField === 'phone' ? <Check className="w-4 h-4 text-emerald-500" /> : <Copy className="w-4 h-4" />}
+                  {copiedField === 'phone' ? <Check className="w-4 h-4 text-blue-500" /> : <Copy className="w-4 h-4" />}
                 </button>
               </div>
               {copiedField === 'phone' && (
-                <span className="text-xs font-mono font-semibold text-emerald-500 mt-2 block">
+                <span className="text-xs font-mono font-semibold text-blue-500 mt-2 block">
                   ✓ Phone number copied to clipboard!
                 </span>
               )}
@@ -148,7 +148,7 @@ export const Contact: React.FC = () => {
             {/* Location & Availability Card */}
             <div className="p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm space-y-4">
               <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-xl bg-rose-500/10 dark:bg-rose-500/15 border border-rose-500/25 text-rose-500 flex items-center justify-center">
+                <div className="w-9 h-9 rounded-xl bg-blue-500/10 dark:bg-blue-500/15 border border-blue-500/25 text-blue-600 dark:text-blue-400 flex items-center justify-center">
                   <MapPin className="w-4 h-4 stroke-[2.2]" />
                 </div>
                 <div>
@@ -158,7 +158,7 @@ export const Contact: React.FC = () => {
               </div>
 
               <div className="flex items-center gap-3 pt-3 border-t border-zinc-100 dark:border-zinc-800">
-                <div className="w-9 h-9 rounded-xl bg-amber-500/10 dark:bg-amber-500/15 border border-amber-500/25 text-amber-500 flex items-center justify-center">
+                <div className="w-9 h-9 rounded-xl bg-blue-500/10 dark:bg-blue-500/15 border border-blue-500/25 text-blue-600 dark:text-blue-400 flex items-center justify-center">
                   <Clock className="w-4 h-4 stroke-[2.2]" />
                 </div>
                 <div>
@@ -176,7 +176,7 @@ export const Contact: React.FC = () => {
           <div className="lg:col-span-7">
             <div className="p-6 sm:p-8 md:p-10 rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-xl">
               <h3 className="text-2xl font-black text-zinc-900 dark:text-white mb-2 flex items-center gap-3">
-                <span className="w-8 h-8 rounded-lg bg-indigo-500/10 dark:bg-indigo-500/15 border border-indigo-500/25 text-indigo-500 flex items-center justify-center shrink-0">
+                <span className="w-8 h-8 rounded-lg bg-blue-500/10 dark:bg-blue-500/15 border border-blue-500/25 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0">
                   <MessageSquare className="w-4 h-4 stroke-[2.2]" />
                 </span>
                 <span>Send a Quick Message</span>
