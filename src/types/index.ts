@@ -11,7 +11,7 @@ export interface Profile {
   email: string
   phone: string
   github: string
-  linkedin: string
+  linkedin?: string
   telegram?: string
   cvUrl: string
   stats: {

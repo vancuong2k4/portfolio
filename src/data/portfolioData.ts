@@ -21,10 +21,8 @@ export const profileData: Profile = {
   status: "Open for opportunities (Full-time / Freelance)",
   location: "Ho Chi Minh City, Vietnam (Remote Available)",
   email: "cuongtran190404@gmail.com",
-  phone: "+84 326 570 425",
+  phone: "0326570425",
   github: "https://github.com/vancuong2k4",
-  linkedin: "https://linkedin.com/in/tranvancuong",
-  telegram: "https://t.me/vancuong",
   cvUrl: "#resume",
   stats: {
     yearsExperience: 1,

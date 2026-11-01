@@ -3,13 +3,12 @@ import { profileData } from '../data/portfolioData'
 import { 
   ArrowRight, 
   FileDown, 
-  Mail, 
-  Send, 
+  Phone, 
   Layers, 
   Zap,
   CheckCircle2
 } from 'lucide-react'
-import { GithubIcon, LinkedinIcon } from './SocialIcons'
+import { GithubIcon, GmailIcon } from './SocialIcons'
 import confetti from 'canvas-confetti'
 
 export const Hero: React.FC = () => {
@@ -142,36 +141,26 @@ export const Hero: React.FC = () => {
                     rel="noreferrer"
                     aria-label="GitHub Profile"
                     className="w-9 h-9 rounded-xl flex items-center justify-center text-zinc-700 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-900 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors border border-zinc-200 dark:border-zinc-800"
+                    title="GitHub Profile"
                   >
                     <GithubIcon className="w-4 h-4" />
                   </a>
                   <a
-                    href={profileData.linkedin}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label="LinkedIn Profile"
+                    href={`tel:${profileData.phone}`}
+                    aria-label="Call Phone"
                     className="w-9 h-9 rounded-xl flex items-center justify-center text-zinc-700 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-900 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors border border-zinc-200 dark:border-zinc-800"
+                    title={`Call: ${profileData.phone}`}
                   >
-                    <LinkedinIcon className="w-4 h-4" />
+                    <Phone className="w-4 h-4 stroke-[2]" />
                   </a>
                   <a
                     href={`mailto:${profileData.email}`}
                     aria-label="Email Me"
                     className="w-9 h-9 rounded-xl flex items-center justify-center text-zinc-700 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-900 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors border border-zinc-200 dark:border-zinc-800"
+                    title={`Gmail: ${profileData.email}`}
                   >
-                    <Mail className="w-4 h-4 stroke-[2]" />
+                    <GmailIcon className="w-4 h-4" />
                   </a>
-                  {profileData.telegram && (
-                    <a
-                      href={profileData.telegram}
-                      target="_blank"
-                      rel="noreferrer"
-                      aria-label="Telegram"
-                      className="w-9 h-9 rounded-xl flex items-center justify-center text-zinc-700 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-900 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors border border-zinc-200 dark:border-zinc-800"
-                    >
-                      <Send className="w-4 h-4 stroke-[2]" />
-                    </a>
-                  )}
                 </div>
               </div>
             </div>

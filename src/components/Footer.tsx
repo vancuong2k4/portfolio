@@ -1,7 +1,7 @@
 import React from 'react'
 import { profileData } from '../data/portfolioData'
-import { ArrowUp, Terminal, Mail, Send } from 'lucide-react'
-import { GithubIcon, LinkedinIcon } from './SocialIcons'
+import { ArrowUp, Terminal, Phone } from 'lucide-react'
+import { GithubIcon, GmailIcon } from './SocialIcons'
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -68,36 +68,26 @@ export const Footer: React.FC = () => {
               rel="noreferrer"
               aria-label="GitHub"
               className="hover:text-black dark:hover:text-white transition-colors"
+              title="GitHub Profile"
             >
               <GithubIcon className="w-4 h-4" />
             </a>
             <a
-              href={profileData.linkedin}
-              target="_blank"
-              rel="noreferrer"
-              aria-label="LinkedIn"
+              href={`tel:${profileData.phone}`}
+              aria-label="Phone"
               className="hover:text-black dark:hover:text-white transition-colors"
+              title={`Call: ${profileData.phone}`}
             >
-              <LinkedinIcon className="w-4 h-4" />
+              <Phone className="w-4 h-4 stroke-[2]" />
             </a>
             <a
               href={`mailto:${profileData.email}`}
               aria-label="Email"
               className="hover:text-black dark:hover:text-white transition-colors"
+              title={`Gmail: ${profileData.email}`}
             >
-              <Mail className="w-4 h-4 stroke-[2]" />
+              <GmailIcon className="w-4 h-4" />
             </a>
-            {profileData.telegram && (
-              <a
-                href={profileData.telegram}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Telegram"
-                className="hover:text-black dark:hover:text-white transition-colors"
-              >
-                <Send className="w-4 h-4 stroke-[2]" />
-              </a>
-            )}
           </div>
         </div>
 
