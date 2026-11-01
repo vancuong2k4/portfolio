@@ -40,10 +40,10 @@ export const BackgroundEffects: React.FC = () => {
         }}
       />
 
-      {/* Mouse interactive soft spotlight — only rendered on non-touch devices */}
+      {/* Mouse interactive soft spotlight — only rendered on non-touch devices with sm+ screen */}
       {!isTouch.current && (
         <div
-          className="absolute w-[600px] h-[600px] rounded-full blur-[140px] opacity-40 dark:opacity-25 -translate-x-1/2 -translate-y-1/2"
+          className="hidden sm:block absolute w-[500px] h-[500px] max-w-[100vw] rounded-full blur-[140px] opacity-40 dark:opacity-25 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
           style={{
             left: `${mousePos.x}%`,
             top: `${mousePos.y}%`,
