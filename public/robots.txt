@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vancuong-official.id.vn/sitemap.xml
+Sitemap: https://www.vancuong-official.id.vn/sitemap.xml
