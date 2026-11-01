@@ -63,7 +63,7 @@ export const skillsData: Skill[] = [
   { name: "Docker & Container", category: "devops", iconName: "Box", level: 87, highlight: true, description: "Multi-stage builds, Docker Compose, Microservices" },
   { name: "Git & GitHub Actions", category: "devops", iconName: "GitBranch", level: 94, description: "CI/CD Pipelines, Automated Testing, Branching Strategy" },
   { name: "AWS & Cloudflare", category: "devops", iconName: "Cloud", level: 84, description: "S3, EC2, CloudFront, Lambda, Edge Workers" },
-  { name: "Linux / Nginx", category: "devops", iconName: "Terminal", level: 85, description: "Server Configuration, Reverse Proxy, SSL" }
+  { name: "Linux / Nginx", category: "devops", iconName: "Nginx", level: 85, description: "Server Configuration, Reverse Proxy, SSL" }
 ]
 
 export const projectsData: Project[] = [
