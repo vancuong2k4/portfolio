@@ -19,8 +19,8 @@ export const Footer: React.FC = () => {
           {/* Brand */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <div className="flex items-center gap-2 mb-2">
-              <div className="w-8 h-8 rounded-lg bg-black dark:bg-white text-white dark:text-black flex items-center justify-center font-bold">
-                <Terminal className="w-4 h-4 stroke-[2.5]" />
+              <div className="w-8 h-8 rounded-lg bg-black dark:bg-white flex items-center justify-center font-bold">
+                <Terminal className="w-4 h-4 stroke-[2.5] text-emerald-400 dark:text-emerald-600" />
               </div>
               <span className="font-bold text-base text-zinc-900 dark:text-white">
                 {profileData.name}
@@ -46,10 +46,10 @@ export const Footer: React.FC = () => {
             <button
               onClick={scrollToTop}
               aria-label="Scroll to top"
-              className="flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-mono font-bold text-zinc-700 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-900 hover:bg-zinc-200 dark:hover:bg-zinc-800 border border-zinc-200 dark:border-zinc-800 transition-all cursor-pointer"
+              className="group flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-mono font-bold text-zinc-700 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-900 hover:bg-zinc-200 dark:hover:bg-zinc-800 border border-zinc-200 dark:border-zinc-800 transition-all cursor-pointer"
             >
               <span>Back to top</span>
-              <ArrowUp className="w-3.5 h-3.5 stroke-[2.5]" />
+              <ArrowUp className="w-3.5 h-3.5 stroke-[2.5] text-sky-500 group-hover:-translate-y-0.5 transition-transform" />
             </button>
           </div>
 
@@ -61,13 +61,13 @@ export const Footer: React.FC = () => {
             © {currentYear} {profileData.name}. All rights reserved.
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-4">
             <a
               href={profileData.github}
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub"
-              className="hover:text-black dark:hover:text-white transition-colors"
+              className="text-zinc-500 hover:text-black dark:hover:text-white transition-colors"
               title="GitHub Profile"
             >
               <GithubIcon className="w-4 h-4" />
@@ -75,15 +75,15 @@ export const Footer: React.FC = () => {
             <a
               href={`tel:${profileData.phone}`}
               aria-label="Phone"
-              className="hover:text-black dark:hover:text-white transition-colors"
+              className="text-zinc-500 hover:text-emerald-500 transition-colors"
               title={`Call: ${profileData.phone}`}
             >
-              <Phone className="w-4 h-4 stroke-[2]" />
+              <Phone className="w-4 h-4 stroke-[2.2]" />
             </a>
             <a
               href={`mailto:${profileData.email}`}
               aria-label="Email"
-              className="hover:text-black dark:hover:text-white transition-colors"
+              className="text-zinc-500 hover:text-[#EA4335] transition-colors"
               title={`Gmail: ${profileData.email}`}
             >
               <GmailIcon className="w-4 h-4" />

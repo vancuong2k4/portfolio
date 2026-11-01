@@ -25,6 +25,39 @@ const iconMap: Record<string, React.ElementType> = {
   Navigation
 }
 
+const projectColorMap: Record<string, { bg: string; text: string; border: string }> = {
+  LayoutDashboard: {
+    bg: "bg-blue-500/10 dark:bg-blue-500/20",
+    text: "text-blue-600 dark:text-blue-400",
+    border: "border-blue-500/30"
+  },
+  ShoppingBag: {
+    bg: "bg-amber-500/10 dark:bg-amber-500/20",
+    text: "text-amber-600 dark:text-amber-400",
+    border: "border-amber-500/30"
+  },
+  Navigation: {
+    bg: "bg-emerald-500/10 dark:bg-emerald-500/20",
+    text: "text-emerald-600 dark:text-emerald-400",
+    border: "border-emerald-500/30"
+  },
+  TrendingUp: {
+    bg: "bg-cyan-500/10 dark:bg-cyan-500/20",
+    text: "text-cyan-600 dark:text-cyan-400",
+    border: "border-cyan-500/30"
+  },
+  Activity: {
+    bg: "bg-violet-500/10 dark:bg-violet-500/20",
+    text: "text-violet-600 dark:text-violet-400",
+    border: "border-violet-500/30"
+  },
+  MessageSquare: {
+    bg: "bg-rose-500/10 dark:bg-rose-500/20",
+    text: "text-rose-600 dark:text-rose-400",
+    border: "border-rose-500/30"
+  }
+}
+
 interface FilterCategory {
   key: ProjectCategory
   label: string
@@ -93,6 +126,12 @@ export const Projects: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProjects.map((project: Project) => {
             const IconComponent = iconMap[project.iconName] || Layers
+            const colorTheme = projectColorMap[project.iconName] || {
+              bg: "bg-zinc-100 dark:bg-zinc-800",
+              text: "text-zinc-900 dark:text-white",
+              border: "border-zinc-200 dark:border-zinc-800"
+            }
+
             return (
               <div
                 key={project.id}
@@ -105,8 +144,8 @@ export const Projects: React.FC = () => {
                   
                   {/* Top Bar: Icon + Category Badge */}
                   <div className="relative z-10 flex items-center justify-between">
-                    <div className="w-11 h-11 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 flex items-center justify-center text-zinc-900 dark:text-white shadow-sm group-hover:scale-105 transition-transform">
-                      <IconComponent className="w-5 h-5 stroke-[2]" />
+                    <div className={`w-11 h-11 rounded-xl border flex items-center justify-center shadow-xs group-hover:scale-110 transition-transform ${colorTheme.bg} ${colorTheme.border} ${colorTheme.text}`}>
+                      <IconComponent className="w-5 h-5 stroke-[2.2]" />
                     </div>
                     {project.featured && (
                       <span className="px-2.5 py-0.5 rounded-md text-[10px] font-mono font-bold uppercase tracking-wider bg-black dark:bg-white text-white dark:text-black shadow-sm">
@@ -120,7 +159,7 @@ export const Projects: React.FC = () => {
                     <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-500">
                       {project.category}
                     </span>
-                    <h3 className="text-lg font-bold text-zinc-900 dark:text-white leading-snug line-clamp-1">
+                    <h3 className="text-lg font-bold text-zinc-900 dark:text-white leading-snug line-clamp-1 group-hover:text-black dark:group-hover:text-white">
                       {project.title}
                     </h3>
                   </div>
@@ -136,7 +175,7 @@ export const Projects: React.FC = () => {
                     {/* Performance / Impact Pill */}
                     {project.metrics && (
                       <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-zinc-50 dark:bg-zinc-800/80 text-zinc-800 dark:text-zinc-200 text-xs font-mono mb-4 border border-zinc-200 dark:border-zinc-700/60">
-                        <Zap className="w-3.5 h-3.5 text-zinc-500" />
+                        <Zap className="w-3.5 h-3.5 text-amber-500 shrink-0" />
                         <span className="line-clamp-1">{project.metrics}</span>
                       </div>
                     )}

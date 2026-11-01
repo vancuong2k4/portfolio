@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { profileData } from '../data/portfolioData'
 import { 
-  Mail, 
   Phone, 
   MapPin, 
   Send, 
@@ -11,6 +10,7 @@ import {
   Clock, 
   CheckCircle2
 } from 'lucide-react'
+import { GmailIcon } from './SocialIcons'
 import confetti from 'canvas-confetti'
 
 export const Contact: React.FC = () => {
@@ -80,11 +80,11 @@ export const Contact: React.FC = () => {
           <div className="lg:col-span-5 space-y-4">
             
             {/* Email Card with 1-click copy */}
-            <div className="p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm">
+            <div className="p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm transition-all duration-200 hover:border-red-500/30 group">
               <div className="flex items-start justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white flex items-center justify-center">
-                    <Mail className="w-5 h-5 stroke-[2]" />
+                <div className="flex items-center gap-3.5">
+                  <div className="w-11 h-11 rounded-xl bg-red-500/10 dark:bg-red-500/15 border border-red-500/25 text-[#EA4335] flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
+                    <GmailIcon className="w-5 h-5" />
                   </div>
                   <div>
                     <h4 className="text-[11px] font-mono font-bold uppercase tracking-wider text-zinc-500">
@@ -99,7 +99,7 @@ export const Contact: React.FC = () => {
                 <button
                   onClick={() => handleCopy(profileData.email, 'email')}
                   aria-label="Copy email address"
-                  className="p-2 rounded-lg text-zinc-500 hover:text-black dark:hover:text-white bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 transition-colors cursor-pointer"
+                  className="p-2 rounded-lg text-zinc-500 hover:text-red-500 dark:hover:text-red-400 bg-zinc-100 dark:bg-zinc-800 hover:bg-red-500/10 dark:hover:bg-red-500/20 transition-colors cursor-pointer"
                   title="Copy email"
                 >
                   {copiedField === 'email' ? <Check className="w-4 h-4 text-emerald-500" /> : <Copy className="w-4 h-4" />}
@@ -113,11 +113,11 @@ export const Contact: React.FC = () => {
             </div>
 
             {/* Phone Card with 1-click copy */}
-            <div className="p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm">
+            <div className="p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm transition-all duration-200 hover:border-emerald-500/30 group">
               <div className="flex items-start justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white flex items-center justify-center">
-                    <Phone className="w-5 h-5 stroke-[2]" />
+                <div className="flex items-center gap-3.5">
+                  <div className="w-11 h-11 rounded-xl bg-emerald-500/10 dark:bg-emerald-500/15 border border-emerald-500/25 text-emerald-500 flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
+                    <Phone className="w-5 h-5 stroke-[2.2]" />
                   </div>
                   <div>
                     <h4 className="text-[11px] font-mono font-bold uppercase tracking-wider text-zinc-500">
@@ -132,7 +132,7 @@ export const Contact: React.FC = () => {
                 <button
                   onClick={() => handleCopy(profileData.phone, 'phone')}
                   aria-label="Copy phone number"
-                  className="p-2 rounded-lg text-zinc-500 hover:text-black dark:hover:text-white bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 transition-colors cursor-pointer"
+                  className="p-2 rounded-lg text-zinc-500 hover:text-emerald-500 dark:hover:text-emerald-400 bg-zinc-100 dark:bg-zinc-800 hover:bg-emerald-500/10 dark:hover:bg-emerald-500/20 transition-colors cursor-pointer"
                   title="Copy phone number"
                 >
                   {copiedField === 'phone' ? <Check className="w-4 h-4 text-emerald-500" /> : <Copy className="w-4 h-4" />}
@@ -148,8 +148,8 @@ export const Contact: React.FC = () => {
             {/* Location & Availability Card */}
             <div className="p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm space-y-4">
               <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white flex items-center justify-center">
-                  <MapPin className="w-4 h-4" />
+                <div className="w-9 h-9 rounded-xl bg-rose-500/10 dark:bg-rose-500/15 border border-rose-500/25 text-rose-500 flex items-center justify-center">
+                  <MapPin className="w-4 h-4 stroke-[2.2]" />
                 </div>
                 <div>
                   <h4 className="text-[11px] font-mono font-bold uppercase tracking-wider text-zinc-500">Location</h4>
@@ -158,8 +158,8 @@ export const Contact: React.FC = () => {
               </div>
 
               <div className="flex items-center gap-3 pt-3 border-t border-zinc-100 dark:border-zinc-800">
-                <div className="w-9 h-9 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white flex items-center justify-center">
-                  <Clock className="w-4 h-4" />
+                <div className="w-9 h-9 rounded-xl bg-amber-500/10 dark:bg-amber-500/15 border border-amber-500/25 text-amber-500 flex items-center justify-center">
+                  <Clock className="w-4 h-4 stroke-[2.2]" />
                 </div>
                 <div>
                   <h4 className="text-[11px] font-mono font-bold uppercase tracking-wider text-zinc-500">Response Time</h4>
@@ -175,8 +175,10 @@ export const Contact: React.FC = () => {
           {/* Right Column: High Contrast Contact Form */}
           <div className="lg:col-span-7">
             <div className="p-6 sm:p-8 md:p-10 rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-xl">
-              <h3 className="text-2xl font-black text-zinc-900 dark:text-white mb-2 flex items-center gap-2">
-                <MessageSquare className="w-5 h-5" />
+              <h3 className="text-2xl font-black text-zinc-900 dark:text-white mb-2 flex items-center gap-3">
+                <span className="w-8 h-8 rounded-lg bg-indigo-500/10 dark:bg-indigo-500/15 border border-indigo-500/25 text-indigo-500 flex items-center justify-center shrink-0">
+                  <MessageSquare className="w-4 h-4 stroke-[2.2]" />
+                </span>
                 <span>Send a Quick Message</span>
               </h3>
               <p className="text-sm text-zinc-500 mb-8">
@@ -260,7 +262,7 @@ export const Contact: React.FC = () => {
                 <button
                   type="submit"
                   disabled={status === 'sending'}
-                  className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl font-bold text-sm text-white dark:text-black bg-black dark:bg-white hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all cursor-pointer disabled:opacity-60 shadow-md active:scale-[0.99]"
+                  className="w-full group flex items-center justify-center gap-2 py-3.5 rounded-xl font-bold text-sm text-white dark:text-black bg-black dark:bg-white hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all cursor-pointer disabled:opacity-60 shadow-md active:scale-[0.99]"
                 >
                   {status === 'sending' ? (
                     <span className="flex items-center gap-2">
@@ -269,7 +271,7 @@ export const Contact: React.FC = () => {
                     </span>
                   ) : (
                     <>
-                      <Send className="w-4 h-4 stroke-[2.2]" />
+                      <Send className="w-4 h-4 stroke-[2.2] text-zinc-400 group-hover:text-white dark:text-zinc-600 dark:group-hover:text-black group-hover:translate-x-0.5 transition-all" />
                       <span>Send Message Now</span>
                     </>
                   )}

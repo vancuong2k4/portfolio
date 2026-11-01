@@ -69,8 +69,8 @@ export const Navbar: React.FC = () => {
           href="#home"
           className="flex items-center gap-2.5 group cursor-pointer"
         >
-          <div className="w-9 h-9 rounded-xl bg-black dark:bg-white text-white dark:text-black flex items-center justify-center font-bold shadow-sm group-hover:scale-105 transition-transform duration-200 border border-zinc-800 dark:border-transparent">
-            <Terminal className="w-4 h-4 stroke-[2.5]" />
+          <div className="w-9 h-9 rounded-xl bg-black dark:bg-white flex items-center justify-center font-bold shadow-sm group-hover:scale-105 transition-transform duration-200 border border-zinc-800 dark:border-transparent">
+            <Terminal className="w-4 h-4 stroke-[2.5] text-emerald-400 dark:text-emerald-600" />
           </div>
           <div className="flex flex-col">
             <span className="font-bold text-base tracking-tight text-zinc-900 dark:text-white font-mono">
@@ -112,18 +112,18 @@ export const Navbar: React.FC = () => {
             className="w-9 h-9 rounded-xl flex items-center justify-center text-zinc-600 dark:text-zinc-400 bg-zinc-100 dark:bg-zinc-900 hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-colors border border-zinc-200 dark:border-zinc-800 cursor-pointer"
           >
             {theme === 'dark' ? (
-              <Sun className="w-4 h-4 text-zinc-300 transition-transform duration-300 hover:rotate-90" />
+              <Sun className="w-4 h-4 text-amber-400 transition-transform duration-300 hover:rotate-90" />
             ) : (
-              <Moon className="w-4 h-4 text-zinc-700 transition-transform duration-300 hover:-rotate-12" />
+              <Moon className="w-4 h-4 text-sky-500 transition-transform duration-300 hover:-rotate-12" />
             )}
           </button>
 
           {/* Resume Download Button - High Contrast Monochrome */}
           <button
             onClick={handleDownloadCV}
-            className="flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-xl text-white dark:text-black bg-black dark:bg-white hover:bg-zinc-800 dark:hover:bg-zinc-200 shadow-sm transition-all cursor-pointer hover:-translate-y-0.5 active:translate-y-0"
+            className="group flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-xl text-white dark:text-black bg-black dark:bg-white hover:bg-zinc-800 dark:hover:bg-zinc-200 shadow-sm transition-all cursor-pointer hover:-translate-y-0.5 active:translate-y-0"
           >
-            <FileDown className="w-3.5 h-3.5 stroke-[2.5]" />
+            <FileDown className="w-3.5 h-3.5 stroke-[2.5] text-sky-400 dark:text-sky-600 group-hover:translate-y-0.5 transition-transform" />
             <span>Download CV</span>
           </button>
         </div>
@@ -136,9 +136,9 @@ export const Navbar: React.FC = () => {
             className="w-9 h-9 rounded-lg flex items-center justify-center text-zinc-600 dark:text-zinc-400 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800"
           >
             {theme === 'dark' ? (
-              <Sun className="w-4 h-4 text-zinc-300" />
+              <Sun className="w-4 h-4 text-amber-400" />
             ) : (
-              <Moon className="w-4 h-4 text-zinc-700" />
+              <Moon className="w-4 h-4 text-sky-500" />
             )}
           </button>
 
@@ -185,7 +185,7 @@ export const Navbar: React.FC = () => {
               }}
               className="w-full flex items-center justify-center gap-2 py-3 rounded-xl text-xs font-bold text-white dark:text-black bg-black dark:bg-white shadow-sm cursor-pointer"
             >
-              <FileDown className="w-4 h-4 stroke-[2.5]" />
+              <FileDown className="w-4 h-4 stroke-[2.5] text-sky-400 dark:text-sky-600" />
               <span>Download Resume</span>
             </button>
           </div>
