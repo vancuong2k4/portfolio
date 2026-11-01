@@ -33,7 +33,7 @@ export const Contact: React.FC = () => {
     setTimeout(() => setCopiedField(null), 2500)
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     
     if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
@@ -42,19 +42,54 @@ export const Contact: React.FC = () => {
       return
     }
 
+    // Basic email format check
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailRegex.test(formData.email.trim())) {
+      setStatus('error')
+      setErrorMessage('Please enter a valid email address.')
+      return
+    }
+
     setStatus('sending')
     setErrorMessage('')
 
-    setTimeout(() => {
-      setStatus('success')
-      confetti({
-        particleCount: 80,
-        spread: 60,
-        origin: { y: 0.7 },
-        colors: ['#ffffff', '#a1a1aa', '#52525b', '#000000']
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || '4f8ed5c4-dd88-4bc4-8d23-b9a570391f9d',
+          name: formData.name.trim(),
+          email: formData.email.trim(),
+          subject: formData.subject.trim() || `New Portfolio Message from ${formData.name.trim()}`,
+          message: formData.message.trim(),
+          from_name: `${formData.name.trim()} (Portfolio Contact)`,
+          botcheck: ''
+        })
       })
-      setFormData({ name: '', email: '', subject: '', message: '' })
-    }, 1000)
+
+      const data = await response.json()
+
+      if (data.success) {
+        setStatus('success')
+        confetti({
+          particleCount: 80,
+          spread: 60,
+          origin: { y: 0.7 },
+          colors: ['#ffffff', '#a1a1aa', '#52525b', '#000000']
+        })
+        setFormData({ name: '', email: '', subject: '', message: '' })
+      } else {
+        setStatus('error')
+        setErrorMessage(data.message || 'Failed to send message. Please try again or reach out directly via email.')
+      }
+    } catch {
+      setStatus('error')
+      setErrorMessage('A network error occurred. Please try again or contact me directly via email/phone.')
+    }
   }
 
   return (
