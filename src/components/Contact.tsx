@@ -8,9 +8,10 @@ import {
   Check, 
   MessageSquare, 
   Clock, 
-  CheckCircle2
+  CheckCircle2,
+  ExternalLink
 } from 'lucide-react'
-import { GmailIcon } from './SocialIcons'
+import { GmailIcon, GithubIcon } from './SocialIcons'
 import confetti from 'canvas-confetti'
 
 export const Contact: React.FC = () => {
@@ -141,6 +142,48 @@ export const Contact: React.FC = () => {
               {copiedField === 'phone' && (
                 <span className="text-xs font-mono font-semibold text-emerald-500 mt-2 block">
                   ✓ Phone number copied to clipboard!
+                </span>
+              )}
+            </div>
+
+            {/* GitHub Card with 1-click copy & open link */}
+            <div className="p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm transition-all duration-200 hover:border-zinc-400 dark:hover:border-zinc-600 hover:shadow-md group">
+              <div className="flex items-start justify-between">
+                <a
+                  href={profileData.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-3.5 flex-1 min-w-0 group/link"
+                  title="Open GitHub Profile"
+                >
+                  <div className="w-11 h-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700/80 text-zinc-900 dark:text-white flex items-center justify-center shadow-xs group-hover:scale-105 group-hover:bg-black group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black group-hover:border-transparent transition-all duration-300 shrink-0">
+                    <GithubIcon className="w-5 h-5" />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-center gap-1.5">
+                      <h4 className="text-[11px] font-mono font-bold uppercase tracking-wider text-zinc-500">
+                        GitHub Profile
+                      </h4>
+                      <ExternalLink className="w-3 h-3 text-zinc-400 group-hover/link:text-black dark:group-hover/link:text-white transition-colors" />
+                    </div>
+                    <p className="text-sm sm:text-base font-bold text-zinc-900 dark:text-white truncate group-hover/link:underline">
+                      github.com/vancuong2k4
+                    </p>
+                  </div>
+                </a>
+
+                <button
+                  onClick={() => handleCopy(profileData.github, 'github')}
+                  aria-label="Copy GitHub profile link"
+                  className="p-2 rounded-lg text-zinc-500 hover:text-black dark:hover:text-white bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors cursor-pointer shrink-0 ml-2"
+                  title="Copy GitHub link"
+                >
+                  {copiedField === 'github' ? <Check className="w-4 h-4 text-emerald-500" /> : <Copy className="w-4 h-4" />}
+                </button>
+              </div>
+              {copiedField === 'github' && (
+                <span className="text-xs font-mono font-semibold text-emerald-500 mt-2 block">
+                  ✓ GitHub link copied to clipboard!
                 </span>
               )}
             </div>
