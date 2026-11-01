@@ -200,34 +200,34 @@ export const About: React.FC = () => {
 
             {/* Quick Details Badges */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-zinc-700 dark:text-zinc-300">
-              <div className="flex items-center gap-2.5 p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 hover:border-blue-500/40 hover:bg-blue-500/5 transition-all group">
-                <MapPin className="w-4 h-4 text-blue-500 dark:text-blue-400 group-hover:scale-110 transition-transform shrink-0" />
+              <div className="flex items-center gap-2.5 p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-600 hover:bg-zinc-100/80 dark:hover:bg-zinc-800/60 transition-all duration-200 group">
+                <MapPin className="w-4 h-4 text-zinc-900 dark:text-zinc-100 group-hover:scale-110 transition-transform shrink-0 stroke-[2.2]" />
                 <span><strong>Location:</strong> {profileData.location}</span>
               </div>
-              <div className="flex items-center gap-2.5 p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 hover:border-blue-500/40 hover:bg-blue-500/5 transition-all group">
-                <GraduationCap className="w-4 h-4 text-blue-500 dark:text-blue-400 group-hover:scale-110 transition-transform shrink-0" />
+              <div className="flex items-center gap-2.5 p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-600 hover:bg-zinc-100/80 dark:hover:bg-zinc-800/60 transition-all duration-200 group">
+                <GraduationCap className="w-4 h-4 text-zinc-900 dark:text-zinc-100 group-hover:scale-110 transition-transform shrink-0 stroke-[2.2]" />
                 <span><strong>Education:</strong> Van Hien University (VHU)</span>
               </div>
               <a
                 href={`tel:${profileData.phone}`}
-                className="flex items-center gap-2.5 p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 hover:border-blue-500/40 hover:bg-blue-500/5 transition-all group cursor-pointer"
+                className="flex items-center gap-2.5 p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-600 hover:bg-zinc-100/80 dark:hover:bg-zinc-800/60 transition-all duration-200 group cursor-pointer"
               >
-                <Phone className="w-4 h-4 text-blue-500 dark:text-blue-400 group-hover:scale-110 transition-transform shrink-0" />
+                <Phone className="w-4 h-4 text-zinc-900 dark:text-zinc-100 group-hover:scale-110 transition-transform shrink-0 stroke-[2.2]" />
                 <span><strong>Phone:</strong> <span className="font-mono text-zinc-900 dark:text-white font-semibold">{profileData.phone}</span></span>
               </a>
               <a
                 href={`mailto:${profileData.email}`}
-                className="flex items-center gap-2.5 p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 hover:border-blue-500/40 hover:bg-blue-500/5 transition-all group cursor-pointer"
+                className="flex items-center gap-2.5 p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-600 hover:bg-zinc-100/80 dark:hover:bg-zinc-800/60 transition-all duration-200 group cursor-pointer"
               >
-                <GmailIcon className="w-4 h-4 text-blue-500 dark:text-blue-400 group-hover:scale-110 transition-transform shrink-0" />
+                <GmailIcon className="w-4 h-4 text-zinc-900 dark:text-zinc-100 group-hover:scale-110 transition-transform shrink-0" />
                 <span className="truncate"><strong>Email:</strong> <span className="font-mono text-zinc-900 dark:text-white font-semibold">{profileData.email}</span></span>
               </a>
-              <div className="flex items-center gap-2.5 p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 hover:border-blue-500/40 hover:bg-blue-500/5 transition-all group">
-                <Languages className="w-4 h-4 text-blue-500 dark:text-blue-400 group-hover:scale-110 transition-transform shrink-0" />
+              <div className="flex items-center gap-2.5 p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-600 hover:bg-zinc-100/80 dark:hover:bg-zinc-800/60 transition-all duration-200 group">
+                <Languages className="w-4 h-4 text-zinc-900 dark:text-zinc-100 group-hover:scale-110 transition-transform shrink-0 stroke-[2.2]" />
                 <span><strong>Languages:</strong> Vietnamese (Native), English (B1)</span>
               </div>
-              <div className="flex items-center gap-2.5 p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 hover:border-blue-500/40 hover:bg-blue-500/5 transition-all group">
-                <Briefcase className="w-4 h-4 text-blue-500 dark:text-blue-400 group-hover:scale-110 transition-transform shrink-0" />
+              <div className="flex items-center gap-2.5 p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-600 hover:bg-zinc-100/80 dark:hover:bg-zinc-800/60 transition-all duration-200 group">
+                <Briefcase className="w-4 h-4 text-zinc-900 dark:text-zinc-100 group-hover:scale-110 transition-transform shrink-0 stroke-[2.2]" />
                 <span><strong>Work Model:</strong> Hybrid / Remote</span>
               </div>
             </div>
@@ -239,9 +239,9 @@ export const About: React.FC = () => {
                 return (
                   <div
                     key={idx}
-                    className="p-3.5 sm:p-4 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:border-blue-500/40 dark:hover:border-blue-500/40 hover:-translate-y-0.5 transition-all duration-200 flex flex-col items-center text-center group"
+                    className="p-3.5 sm:p-4 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:border-zinc-400 dark:hover:border-zinc-600 hover:-translate-y-0.5 transition-all duration-200 flex flex-col items-center text-center group"
                   >
-                    <div className="w-9 h-9 rounded-xl bg-blue-500/10 dark:bg-blue-500/15 border border-blue-500/20 text-blue-600 dark:text-blue-400 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                    <div className="w-9 h-9 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700/80 text-zinc-900 dark:text-white flex items-center justify-center mb-2 group-hover:scale-110 group-hover:bg-black group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black group-hover:border-transparent transition-all duration-300">
                       <Icon className="w-4 h-4 stroke-[2.2]" />
                     </div>
                     <div className="text-xl sm:text-2xl font-black text-zinc-900 dark:text-white mb-0.5 font-mono">
@@ -270,12 +270,12 @@ export const About: React.FC = () => {
               return (
                 <div
                   key={idx}
-                  className="group p-6 rounded-2xl bg-white dark:bg-zinc-900/70 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:-translate-y-1.5 hover:border-blue-500/40 hover:shadow-[0_4px_20px_rgba(59,130,246,0.12)] transition-all duration-300 flex flex-col"
+                  className="group p-6 rounded-2xl bg-white dark:bg-zinc-900/70 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:-translate-y-1.5 hover:border-zinc-400 dark:hover:border-zinc-600 hover:shadow-lg dark:hover:shadow-[0_8px_30px_rgba(0,0,0,0.4)] transition-all duration-300 flex flex-col"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-blue-500/10 dark:bg-blue-500/15 border border-blue-500/25 text-blue-600 dark:text-blue-400 flex items-center justify-center mb-4 shadow-xs transition-transform duration-300 group-hover:scale-110 group-hover:bg-blue-500/20">
+                  <div className="w-12 h-12 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700/80 text-zinc-900 dark:text-white flex items-center justify-center mb-4 shadow-xs transition-all duration-300 group-hover:scale-110 group-hover:bg-black group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black group-hover:border-transparent">
                     <Icon className="w-6 h-6 stroke-[2.2]" />
                   </div>
-                  <h4 className="text-base font-bold text-zinc-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                  <h4 className="text-base font-bold text-zinc-900 dark:text-white mb-2 group-hover:text-black dark:group-hover:text-white transition-colors">
                     {pillar.title}
                   </h4>
                   <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed flex-1">

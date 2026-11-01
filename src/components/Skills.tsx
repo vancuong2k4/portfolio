@@ -63,15 +63,12 @@ export const Skills: React.FC = () => {
           })}
         </div>
 
-        {/* Skills Grid - Vivid Tech Logos & Colored Hover Accents */}
+        {/* Skills Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-4">
           {filteredSkills.map((skill: Skill, idx: number) => {
             const meta = techMap[skill.iconName] || {
               Icon: Code,
               badgeBg: "bg-zinc-100 dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700",
-              barGradient: "from-zinc-400 to-zinc-200",
-              glowClass: "group-hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]",
-              hoverBorder: "group-hover:border-zinc-400",
               accentColor: "#FFFFFF"
             }
             const SkillIcon = meta.Icon
@@ -79,13 +76,13 @@ export const Skills: React.FC = () => {
             return (
               <div
                 key={idx}
-                className={`group relative p-4 sm:p-5 rounded-2xl bg-white dark:bg-zinc-900/90 border border-zinc-200 dark:border-zinc-800/80 shadow-sm transition-all duration-300 flex flex-col justify-between hover:-translate-y-1 ${meta.glowClass} ${meta.hoverBorder}`}
+                className="group relative p-4 sm:p-5 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm transition-all duration-300 flex flex-col justify-between hover:-translate-y-1 hover:border-zinc-400 dark:hover:border-zinc-600 hover:shadow-lg dark:hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)]"
               >
                 <div>
                   <div className="flex items-start justify-between mb-3.5">
                     <div className="flex items-center gap-3">
-                      {/* Vibrant Brand Icon Badge */}
-                      <div className={`w-11 h-11 rounded-xl flex items-center justify-center p-2 border shadow-xs transition-all duration-300 group-hover:scale-110 group-hover:rotate-2 ${meta.badgeBg}`}>
+                      {/* Brand Icon Badge */}
+                      <div className="w-11 h-11 rounded-xl flex items-center justify-center p-2 border border-zinc-200 dark:border-zinc-700/80 bg-zinc-100 dark:bg-zinc-800 shadow-xs transition-all duration-300 group-hover:scale-110 group-hover:bg-zinc-200 dark:group-hover:bg-zinc-700">
                         <SkillIcon className="w-6 h-6 shrink-0" />
                       </div>
                       <div>
@@ -99,14 +96,7 @@ export const Skills: React.FC = () => {
                     </div>
 
                     {skill.highlight && (
-                      <span 
-                        className="px-2 py-0.5 text-[10px] font-mono font-bold uppercase tracking-wider rounded-md border"
-                        style={{
-                          backgroundColor: `${meta.accentColor}15`,
-                          borderColor: `${meta.accentColor}40`,
-                          color: meta.accentColor
-                        }}
-                      >
+                      <span className="px-2 py-0.5 text-[10px] font-mono font-bold uppercase tracking-wider rounded-md border border-zinc-200 dark:border-zinc-700 bg-black text-white dark:bg-white dark:text-black shadow-xs">
                         Core
                       </span>
                     )}
@@ -119,20 +109,17 @@ export const Skills: React.FC = () => {
                   )}
                 </div>
 
-                {/* Progress Level Bar - Vivid Brand Colored Gradient */}
+                {/* Progress Level Bar - High Contrast Monochrome */}
                 <div className="pt-2">
                   <div className="flex items-center justify-between text-xs mb-1.5 font-mono">
                     <span className="text-zinc-500">Proficiency</span>
-                    <span 
-                      className="font-bold transition-colors"
-                      style={{ color: meta.accentColor }}
-                    >
+                    <span className="font-bold text-zinc-900 dark:text-white">
                       {skill.level}%
                     </span>
                   </div>
                   <div className="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
                     <div
-                      className={`h-full rounded-full bg-gradient-to-r ${meta.barGradient} transition-all duration-700 ease-out`}
+                      className="h-full rounded-full bg-black dark:bg-white transition-all duration-700 ease-out"
                       style={{ width: `${skill.level}%` }}
                     />
                   </div>

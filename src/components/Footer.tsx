@@ -46,10 +46,10 @@ export const Footer: React.FC = () => {
             <button
               onClick={scrollToTop}
               aria-label="Scroll to top"
-              className="group flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-mono font-bold text-zinc-700 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-900 hover:bg-zinc-200 dark:hover:bg-zinc-800 border border-zinc-200 dark:border-zinc-800 hover:border-blue-500/40 transition-all cursor-pointer"
+              className="group flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-mono font-bold text-zinc-700 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-900 hover:bg-zinc-200 dark:hover:bg-zinc-800 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-600 transition-all cursor-pointer"
             >
               <span>Back to top</span>
-              <ArrowUp className="w-3.5 h-3.5 stroke-[2.5] text-zinc-700 dark:text-zinc-300 group-hover:text-blue-500 group-hover:-translate-y-0.5 transition-all" />
+              <ArrowUp className="w-3.5 h-3.5 stroke-[2.5] text-zinc-700 dark:text-zinc-300 group-hover:text-black dark:group-hover:text-white group-hover:-translate-y-0.5 transition-all" />
             </button>
           </div>
 
@@ -75,7 +75,7 @@ export const Footer: React.FC = () => {
             <a
               href={`tel:${profileData.phone}`}
               aria-label="Phone"
-              className="text-zinc-500 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+              className="text-zinc-500 hover:text-black dark:hover:text-white transition-colors"
               title={`Call: ${profileData.phone}`}
             >
               <Phone className="w-4 h-4 stroke-[2]" />
@@ -83,7 +83,7 @@ export const Footer: React.FC = () => {
             <a
               href={`mailto:${profileData.email}`}
               aria-label="Email"
-              className="text-zinc-500 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+              className="text-zinc-500 hover:text-black dark:hover:text-white transition-colors"
               title={`Gmail: ${profileData.email}`}
             >
               <GmailIcon className="w-4 h-4" />

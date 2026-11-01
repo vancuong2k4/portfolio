@@ -148,7 +148,7 @@ export const Hero: React.FC = () => {
                   <a
                     href={`tel:${profileData.phone}`}
                     aria-label="Call Phone"
-                    className="w-9 h-9 rounded-xl flex items-center justify-center text-zinc-700 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-900 hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-500/40 border border-zinc-200 dark:border-zinc-800 transition-all"
+                    className="w-9 h-9 rounded-xl flex items-center justify-center text-zinc-700 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-900 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black hover:border-black dark:hover:border-white border border-zinc-200 dark:border-zinc-800 transition-all"
                     title={`Call: ${profileData.phone}`}
                   >
                     <Phone className="w-4 h-4 stroke-[2]" />
@@ -156,7 +156,7 @@ export const Hero: React.FC = () => {
                   <a
                     href={`mailto:${profileData.email}`}
                     aria-label="Email Me"
-                    className="w-9 h-9 rounded-xl flex items-center justify-center text-zinc-700 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-900 hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-500/40 border border-zinc-200 dark:border-zinc-800 transition-all"
+                    className="w-9 h-9 rounded-xl flex items-center justify-center text-zinc-700 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-900 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black hover:border-black dark:hover:border-white border border-zinc-200 dark:border-zinc-800 transition-all"
                     title={`Gmail: ${profileData.email}`}
                   >
                     <GmailIcon className="w-4 h-4" />
@@ -233,9 +233,9 @@ export const Hero: React.FC = () => {
 
                   {/* Status & Live Metrics */}
                   <div className="grid grid-cols-2 gap-3 pt-3 border-t border-zinc-200 dark:border-zinc-800">
-                    <div className="p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-blue-500/40 transition-colors">
+                    <div className="p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-600 transition-colors">
                       <div className="flex items-center gap-1.5 text-xs text-zinc-500 dark:text-zinc-400 mb-1">
-                        <Zap className="w-3.5 h-3.5 text-blue-500 dark:text-blue-400" />
+                        <Zap className="w-3.5 h-3.5 text-zinc-900 dark:text-zinc-100 stroke-[2.2]" />
                         <span>Projects Delivered</span>
                       </div>
                       <div className="text-2xl font-black text-zinc-900 dark:text-white font-mono">
@@ -243,9 +243,9 @@ export const Hero: React.FC = () => {
                       </div>
                     </div>
 
-                    <div className="p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-blue-500/40 transition-colors">
+                    <div className="p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-600 transition-colors">
                       <div className="flex items-center gap-1.5 text-xs text-zinc-500 dark:text-zinc-400 mb-1">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-blue-500 dark:text-blue-400" />
+                        <CheckCircle2 className="w-3.5 h-3.5 text-zinc-900 dark:text-zinc-100 stroke-[2.2]" />
                         <span>Years Experience</span>
                       </div>
                       <div className="text-2xl font-black text-zinc-900 dark:text-white font-mono">
@@ -258,7 +258,7 @@ export const Hero: React.FC = () => {
 
                 {/* Floating Badge 1: Top Right — hidden on very small screens, shown sm+ */}
                 <div className="hidden sm:flex absolute -top-4 -right-4 px-3.5 py-2 rounded-xl bg-white/95 dark:bg-zinc-900/95 border border-zinc-200 dark:border-zinc-800 shadow-xl items-center gap-2.5 hover:scale-105 transition-transform backdrop-blur-md">
-                  <div className="w-7 h-7 rounded-lg bg-blue-500/10 dark:bg-blue-500/15 text-blue-600 dark:text-blue-400 border border-blue-500/25 flex items-center justify-center">
+                  <div className="w-7 h-7 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white border border-zinc-200 dark:border-zinc-700 flex items-center justify-center">
                     <Layers className="w-4 h-4 stroke-[2.2]" />
                   </div>
                   <div className="flex flex-col">
@@ -269,7 +269,7 @@ export const Hero: React.FC = () => {
 
                 {/* Floating Badge 2: Bottom Left — hidden on very small screens, shown sm+ */}
                 <div className="hidden sm:flex absolute -bottom-4 -left-4 px-3.5 py-2 rounded-xl bg-white/95 dark:bg-zinc-900/95 border border-zinc-200 dark:border-zinc-800 shadow-xl items-center gap-2.5 hover:scale-105 transition-transform backdrop-blur-md">
-                  <div className="w-7 h-7 rounded-lg bg-blue-500/10 dark:bg-blue-500/15 text-blue-600 dark:text-blue-400 border border-blue-500/25 flex items-center justify-center">
+                  <div className="w-7 h-7 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white border border-zinc-200 dark:border-zinc-700 flex items-center justify-center">
                     <CheckCircle2 className="w-4 h-4 stroke-[2.2]" />
                   </div>
                   <div className="flex flex-col">

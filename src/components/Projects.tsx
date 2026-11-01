@@ -97,7 +97,7 @@ export const Projects: React.FC = () => {
             return (
               <div
                 key={project.id}
-                className="group rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:border-blue-500/40 hover:shadow-[0_4px_20px_rgba(59,130,246,0.12)] hover:-translate-y-1 transition-all duration-200 flex flex-col overflow-hidden"
+                className="group rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:border-zinc-400 dark:hover:border-zinc-600 hover:shadow-xl dark:hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)] hover:-translate-y-1 transition-all duration-200 flex flex-col overflow-hidden"
               >
                 {/* Visual Header / Banner - Minimalist Technical Header */}
                 <div className="relative h-44 bg-zinc-100 dark:bg-zinc-950 p-6 flex flex-col justify-between border-b border-zinc-200 dark:border-zinc-800">
@@ -106,7 +106,7 @@ export const Projects: React.FC = () => {
                   
                   {/* Top Bar: Icon + Category Badge */}
                   <div className="relative z-10 flex items-center justify-between">
-                    <div className="w-11 h-11 rounded-xl bg-blue-500/10 dark:bg-blue-500/15 border border-blue-500/25 text-blue-600 dark:text-blue-400 flex items-center justify-center shadow-xs group-hover:scale-110 group-hover:bg-blue-500/20 transition-all">
+                    <div className="w-11 h-11 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700/80 text-zinc-900 dark:text-white flex items-center justify-center shadow-xs group-hover:scale-110 group-hover:bg-black group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black group-hover:border-transparent transition-all duration-300">
                       <IconComponent className="w-5 h-5 stroke-[2.2]" />
                     </div>
                     {project.featured && (
@@ -121,7 +121,7 @@ export const Projects: React.FC = () => {
                     <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-500">
                       {project.category}
                     </span>
-                    <h3 className="text-lg font-bold text-zinc-900 dark:text-white leading-snug line-clamp-1 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    <h3 className="text-lg font-bold text-zinc-900 dark:text-white leading-snug line-clamp-1 group-hover:text-black dark:group-hover:text-white transition-colors">
                       {project.title}
                     </h3>
                   </div>
@@ -137,7 +137,7 @@ export const Projects: React.FC = () => {
                     {/* Performance / Impact Pill */}
                     {project.metrics && (
                       <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-zinc-50 dark:bg-zinc-800/80 text-zinc-800 dark:text-zinc-200 text-xs font-mono mb-4 border border-zinc-200 dark:border-zinc-700/60">
-                        <Zap className="w-3.5 h-3.5 text-blue-500 dark:text-blue-400 shrink-0" />
+                        <Zap className="w-3.5 h-3.5 text-zinc-900 dark:text-zinc-100 shrink-0 stroke-[2.2]" />
                         <span className="line-clamp-1">{project.metrics}</span>
                       </div>
                     )}
