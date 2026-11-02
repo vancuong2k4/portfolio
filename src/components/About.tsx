@@ -200,7 +200,7 @@ export const About: React.FC = () => {
             {/* Bio Narrative */}
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-zinc-900 dark:text-white">
-                Software Engineer Passionate About Innovation & Optimization
+                Full-Stack Developer Passionate About Clean Code &amp; Intuitive UI
               </h3>
               {profileData.aboutParagraphs.map((p, idx) => (
                 <p key={idx} className="text-zinc-600 dark:text-zinc-400 leading-relaxed text-base">

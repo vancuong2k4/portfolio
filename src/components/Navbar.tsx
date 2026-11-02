@@ -124,7 +124,7 @@ export const Navbar: React.FC = () => {
             <div className="flex items-center gap-1.5 mt-1">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse shrink-0" />
               <span className="text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-zinc-500 dark:text-zinc-400 leading-none truncate">
-                Software Engineer
+                Full-Stack Developer
               </span>
             </div>
           </div>

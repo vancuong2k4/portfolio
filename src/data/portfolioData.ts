@@ -4,17 +4,16 @@ export const profileData: Profile = {
   name: "Trần Văn Cường",
   nickname: "vancuong2k4",
   avatarUrl: "/avatar.jpg",
-  role: "Software Engineer",
+  role: "Full-Stack Developer",
   titles: [
-    "Software Engineer",
-    "Full-Stack Web Architect",
-    "React & React Native Specialist",
-    "Node.js & Cloud Engineer",
-    "Cross-Platform Mobile Creator"
+    "Full-Stack Developer",
+    "Web & Mobile Creator",
+    "React & Node.js Developer",
+    "Modern API & Cloud Builder"
   ],
   shortBio: "Building high-performance web applications and fluid mobile experiences from concept to scalable architectures.",
   aboutParagraphs: [
-    "I am a Software Engineer with hands-on experience designing, developing, and optimizing modern web and mobile applications.",
+    "I am a Full-Stack Developer with hands-on experience designing, developing, and optimizing modern web and mobile applications.",
     "My core strength lies in combining solid backend architecture (Node.js, PostgreSQL, Docker) with pixel-perfect frontend and mobile craftsmanship (React, Next.js, React Native, Tailwind CSS, TypeScript).",
     "I adhere strictly to the engineering ethos: Clean code, scalable design patterns, and maximizing performance and value for end users."
   ],
@@ -123,7 +122,7 @@ export const projectsData: Project[] = [
   },
   {
     id: "portfolio-website",
-    title: "Developer Portfolio - Online Software Engineer Profile",
+    title: "Developer Portfolio - Online Developer Profile",
     category: "frontend",
     subtitle: "High-performance monochrome developer portfolio built with React 19",
     description: "Modern developer portfolio website crafted with React 19, TypeScript, and Tailwind CSS v4, achieving top Lighthouse scores with custom domain integration.",
@@ -229,7 +228,7 @@ export const experiencesData: Experience[] = [
   {
     id: "exp-1",
     period: "2024 - Present",
-    role: "Software Engineer Intern",
+    role: "Intern Full-Stack Developer",
     company: "HiAI Co., Ltd.",
     companyUrl: "https://hiai.com",
     location: "Ho Chi Minh City",
@@ -283,7 +282,7 @@ export const educationData: Education[] = [
     degree: "Information Technology (Computer Science)",
     institution: "Van Hien University (VHU)",
     location: "Ho Chi Minh City, Vietnam",
-    description: "Undergraduate Program (Class of 2022 - 2026). Specializing in Software Engineering, Data Structures & Algorithms, and Cloud-native Web/Mobile Architectures.",
+    description: "Undergraduate Program (Class of 2022 - 2026). Specializing in Web & Software Development, Data Structures & Algorithms, and Cloud-native Architectures.",
     achievements: [
       "GPA: 3.1 / 4.0",
       "Outstanding Student Scholarship 2022-2023",
@@ -326,7 +325,7 @@ export const testimonialsData: Testimonial[] = [
     role: "Senior Engineering Lead",
     company: "TechNova Solutions",
     avatarGradient: "from-blue-500 to-indigo-600",
-    content: "Trần Văn Cường is a proactive software engineer who combines solid architectural thinking with exceptional user experience intuition. His technical solutions are always robust, clean, and well-documented."
+    content: "Trần Văn Cường is a proactive full-stack developer who combines solid architectural thinking with exceptional user experience intuition. His technical solutions are always robust, clean, and well-documented."
   },
   {
     id: "test-2",
