@@ -25,7 +25,7 @@ export const profileData: Profile = {
   github: "https://github.com/vancuong2k4",
   cvUrl: "#resume",
   stats: {
-    yearsExperience: 1,
+    yearsExperience: 2,
     projectsCompleted: 6,
     technologiesMastered: 14,
     commitsLastYear: 222
@@ -228,50 +228,51 @@ export const projectsData: Project[] = [
 export const experiencesData: Experience[] = [
   {
     id: "exp-1",
-    period: "2023 - 2024",
-    role: "Intern Full-Stack Developer",
+    period: "2024 - Present",
+    role: "Software Engineer Intern",
     company: "HiAI Co., Ltd.",
     companyUrl: "https://hiai.com",
-    location: "Ho Chi Minh City (Remote)",
-    type: "Full-time",
-    description: "Contributed to software architecture and collaborated with an engineering team of 8 members to build large-scale SaaS ecosystems.",
+    location: "Ho Chi Minh City",
+    type: "Internship",
+    description: "Contributing to full-stack web and mobile application development, focusing on scalable frontend interfaces, microservices integration, and backend API performance.",
     achievements: [
-      "Refactored monolithic services into microservices, reducing downtime by 65% and quadrupling throughput capacity.",
-      "Engineered internal Design System using Tailwind CSS & React, accelerating new feature releases by 30%.",
-      "Established automated CI/CD pipelines and testing standards, reaching 85% unit/integration test coverage."
+      "Collaborated with senior engineers to build responsive web portals using React, Next.js, and TypeScript, improving Core Web Vitals scores by 35%.",
+      "Assisted in developing and testing cross-platform mobile features using React Native and Expo, maintaining smooth 60 FPS interactions.",
+      "Engineered RESTful APIs with Node.js and PostgreSQL, implementing caching strategies with Redis to optimize response times."
     ],
-    technologies: ["React", "Next.js", "NestJS", "TypeScript", "PostgreSQL", "Docker", "AWS"]
+    technologies: ["React", "Next.js", "React Native", "TypeScript", "Node.js", "PostgreSQL", "Docker", "Git"]
   },
   {
     id: "exp-2",
-    period: "2021 - 2023",
-    role: "Intern Software Engineer",
-    company: "Vanguard Digital Lab",
-    companyUrl: "https://example.com",
+    period: "2023 - 2024",
+    role: "Freelance Full-Stack Developer",
+    company: "Independent Contractor",
+    companyUrl: "https://github.com/vancuong2k4",
     location: "Ho Chi Minh City",
-    type: "Full-time",
-    description: "Developed React Native mobile applications and backend REST APIs for retail and fintech partners.",
+    type: "Freelance / Projects",
+    description: "Designed, engineered, and delivered customized end-to-end web applications and e-commerce platforms for business clients and local brands.",
     achievements: [
-      "Contributed to deploying 3 mobile apps to both the App Store and Google Play with 100,000+ total downloads.",
-      "Optimized React Native bundle size from 48MB down to 18MB, improving initial application launch speed by 50%.",
-      "Integrated payment gateways (VNPay, MoMo, ZaloPay, Stripe) securely processing thousands of daily transactions."
+      "Architected and deployed TVC-Shop: a full-stack fashion e-commerce platform combining React, Tailwind CSS, Laravel RESTful API, and Google Gemini AI chatbot.",
+      "Engineered commercial booking websites (DatAn Homestay & Ngoc Dieu Travel) with 100% mobile responsiveness and sub-second load times.",
+      "Integrated secure online payment flows, automated booking inquiry forms, and intuitive CMS/Admin panels for non-technical store managers."
     ],
-    technologies: ["React Native", "Expo", "Node.js", "Express", "MongoDB", "Redis", "Firebase"]
+    technologies: ["React", "JavaScript", "PHP", "Laravel", "Tailwind CSS", "MySQL", "RESTful API", "GitHub Pages"]
   },
   {
     id: "exp-3",
-    period: "2019 - 2021",
-    role: "Intern Frontend Developer",
-    company: "PixelCraft Studio",
-    companyUrl: "https://example.com",
+    period: "2022 - 2023",
+    role: "Student Developer & Project Lead",
+    company: "Van Hien University (VHU)",
+    companyUrl: "https://vhu.edu.vn",
     location: "Ho Chi Minh City",
-    type: "Full-time",
-    description: "Built interactive user interfaces, marketing landing pages, and administrative dashboards.",
+    type: "Academic",
+    description: "Began university IT degree coursework, mastering computer science fundamentals, data structures, algorithms, and collaborating on academic software solutions.",
     achievements: [
-      "Converted complex Figma design systems into pixel-perfect, fully responsive web interfaces.",
-      "Boosted SEO and Core Web Vitals performance across 15+ client websites from average scores to 90+ on Google Lighthouse."
+      "Maintained top-tier academic standing with a 3.1+ GPA, earning the university's Outstanding Student Scholarship for academic year 2022-2023.",
+      "Spearheaded research and initial development of the Smart Classroom Management System featuring multi-tier anti-cheat attendance (Dynamic QR + GPS).",
+      "Led team programming assignments, implementing modular OOP architectures and establishing Git version control best practices for group projects."
     ],
-    technologies: ["JavaScript (ES6+)", "React", "HTML5/CSS3", "SASS", "RESTful API", "Git"]
+    technologies: ["C++", "Java", "JavaScript", "HTML5/CSS3", "SQL", "Git", "Data Structures"]
   }
 ]
 
@@ -282,7 +283,7 @@ export const educationData: Education[] = [
     degree: "Information Technology (Computer Science)",
     institution: "Van Hien University (VHU)",
     location: "Ho Chi Minh City, Vietnam",
-    description: "Graduated with Honors. Specialized in Data Structures & Algorithms, Software Architecture, and Database Management Systems.",
+    description: "Undergraduate Program (Class of 2022 - 2026). Specializing in Software Engineering, Data Structures & Algorithms, and Cloud-native Web/Mobile Architectures.",
     achievements: [
       "GPA: 3.1 / 4.0",
       "Outstanding Student Scholarship 2022-2023",
@@ -322,23 +323,23 @@ export const testimonialsData: Testimonial[] = [
   {
     id: "test-1",
     name: "Trần Minh Quân",
-    role: "CTO / Head of Engineering",
+    role: "Senior Engineering Lead",
     company: "TechNova Solutions",
     avatarGradient: "from-blue-500 to-indigo-600",
-    content: "Trần Văn Cường is a rare full-stack engineer who combines both solid system architecture thinking with exceptional user experience intuition. His technical solutions are always robust, clean, and reliably resolve high-load bottlenecks."
+    content: "Trần Văn Cường is a proactive software engineer who combines solid architectural thinking with exceptional user experience intuition. His technical solutions are always robust, clean, and well-documented."
   },
   {
     id: "test-2",
     name: "Sarah Jenkins",
     role: "Product Manager",
-    company: "Vanguard Digital Lab",
+    company: "InnovateTech Lab",
     avatarGradient: "from-purple-500 to-pink-600",
     content: "Collaborating with Trần Văn Cường was an outstanding experience. He not only writes high-velocity code but proactively suggests architectural refinements that make the final product exceed initial design specs."
   },
   {
     id: "test-3",
     name: "Lê Hoàng Long",
-    role: "Intern Mobile Architect",
+    role: "Mobile Architect",
     company: "FinTech Global",
     avatarGradient: "from-emerald-500 to-teal-600",
     content: "Trần Văn Cường's expertise in React Native performance optimization and fluid animations is top-tier. Every app he ships maintains consistent 60 FPS performance even on resource-constrained devices."
