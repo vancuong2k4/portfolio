@@ -212,7 +212,7 @@ export const Hero: React.FC = () => {
                     </p>
                     <p className="pl-4">
                       <span className="text-zinc-500">role:</span>{' '}
-                      <span className="text-zinc-900 dark:text-zinc-100 font-medium">"Full-Stack &amp; Mobile"</span>,
+                      <span className="text-zinc-900 dark:text-zinc-100 font-medium">"Software Engineer"</span>,
                     </p>
                     <p className="pl-4">
                       <span className="text-zinc-500">exp:</span>{' '}

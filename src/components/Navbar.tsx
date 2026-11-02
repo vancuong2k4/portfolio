@@ -77,7 +77,7 @@ export const Navbar: React.FC = () => {
               vancuong2k4
             </span>
             <span className="text-[10px] uppercase font-mono tracking-wider text-zinc-500 dark:text-zinc-400">
-              Full-Stack & Mobile
+              Software Engineer
             </span>
           </div>
         </a>

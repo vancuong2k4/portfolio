@@ -4,17 +4,17 @@ export const profileData: Profile = {
   name: "Trần Văn Cường",
   nickname: "vancuong2k4",
   avatarUrl: "/avatar.jpg",
-  role: "Full-Stack & Mobile Developer",
+  role: "Software Engineer",
   titles: [
+    "Software Engineer",
     "Full-Stack Web Architect",
     "React & React Native Specialist",
     "Node.js & Cloud Engineer",
-    "Cross-Platform Mobile Creator",
-    "Clean Code & UI/UX Enthusiast"
+    "Cross-Platform Mobile Creator"
   ],
   shortBio: "Building high-performance web applications and fluid mobile experiences from concept to scalable architectures.",
   aboutParagraphs: [
-    "I am a Full-Stack & Mobile Developer with hands-on experience designing, developing, and optimizing modern web and mobile applications.",
+    "I am a Software Engineer with hands-on experience designing, developing, and optimizing modern web and mobile applications.",
     "My core strength lies in combining solid backend architecture (Node.js, PostgreSQL, Docker) with pixel-perfect frontend and mobile craftsmanship (React, Next.js, React Native, Tailwind CSS, TypeScript).",
     "I adhere strictly to the engineering ethos: Clean code, scalable design patterns, and maximizing performance and value for end users."
   ],
@@ -245,7 +245,7 @@ export const experiencesData: Experience[] = [
   {
     id: "exp-2",
     period: "2021 - 2023",
-    role: "Intern Full-Stack & Mobile Developer",
+    role: "Intern Software Engineer",
     company: "Vanguard Digital Lab",
     companyUrl: "https://example.com",
     location: "Ho Chi Minh City",
