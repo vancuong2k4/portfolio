@@ -88,7 +88,10 @@ export const About: React.FC = () => {
             <div className="p-5 sm:p-6 rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col items-center text-center">
               
               {/* Avatar Frame - Responsive sizing */}
-              <div className="relative w-48 h-48 sm:w-60 sm:h-60 rounded-2xl overflow-hidden border-2 border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-950 mb-5 shadow-inner">
+              <div 
+                className="relative w-48 h-48 sm:w-60 sm:h-60 rounded-2xl overflow-hidden border-2 border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-950 mb-5 shadow-inner select-none"
+                onContextMenu={(e) => e.preventDefault()}
+              >
                 {!imageError && profileData.avatarUrl ? (
                   <img
                     src={profileData.avatarUrl}
@@ -96,7 +99,15 @@ export const About: React.FC = () => {
                     loading="lazy"
                     decoding="async"
                     onError={() => setImageError(true)}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover select-none pointer-events-none"
+                    draggable={false}
+                    onDragStart={(e) => e.preventDefault()}
+                    onContextMenu={(e) => e.preventDefault()}
+                    style={{
+                      WebkitTouchCallout: 'none',
+                      WebkitUserSelect: 'none',
+                      userSelect: 'none',
+                    }}
                   />
                 ) : (
                   <div className="w-full h-full flex flex-col items-center justify-center bg-zinc-100 dark:bg-zinc-950 text-zinc-400">

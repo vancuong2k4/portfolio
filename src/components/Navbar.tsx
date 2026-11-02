@@ -64,17 +64,33 @@ export const Navbar: React.FC = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Brand Logo - Custom Image Avatar */}
+        {/* Brand Logo - Protected Non-Interactive Avatar */}
         <a
           href="#home"
           className="flex items-center gap-2.5 group cursor-pointer"
         >
-          <div className="w-9 h-9 rounded-xl overflow-hidden shadow-sm group-hover:scale-105 transition-transform duration-200 border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900 shrink-0">
+          <div 
+            className="relative w-9 h-9 rounded-xl overflow-hidden shadow-sm group-hover:scale-105 transition-transform duration-200 border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900 shrink-0 select-none"
+            onContextMenu={(e) => e.preventDefault()}
+          >
             <img
               src="/logo.png"
               alt="vancuong2k4 logo"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover select-none pointer-events-none"
               loading="eager"
+              draggable={false}
+              onDragStart={(e) => e.preventDefault()}
+              onContextMenu={(e) => e.preventDefault()}
+              style={{
+                WebkitTouchCallout: 'none',
+                WebkitUserSelect: 'none',
+                userSelect: 'none',
+              }}
+            />
+            {/* Transparent protection shield */}
+            <div 
+              className="absolute inset-0 select-none"
+              onContextMenu={(e) => e.preventDefault()} 
             />
           </div>
           <div className="flex flex-col">
