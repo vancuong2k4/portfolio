@@ -191,9 +191,9 @@ export const Hero: React.FC = () => {
                   {/* Window Header */}
                   <div className="flex items-center justify-between pb-4 mb-4 border-b border-zinc-200 dark:border-zinc-800">
                     <div className="flex items-center gap-2">
-                      <span className="w-3 h-3 rounded-full bg-zinc-300 dark:bg-zinc-700" />
-                      <span className="w-3 h-3 rounded-full bg-zinc-300 dark:bg-zinc-700" />
-                      <span className="w-3 h-3 rounded-full bg-zinc-300 dark:bg-zinc-700" />
+                      <span className="w-3 h-3 rounded-full bg-[#ff5f56] shadow-2xs" />
+                      <span className="w-3 h-3 rounded-full bg-[#ffbd2e] shadow-2xs" />
+                      <span className="w-3 h-3 rounded-full bg-[#27c93f] shadow-2xs" />
                       <span className="text-xs font-mono text-zinc-500 dark:text-zinc-400 ml-2">
                         developer.config.ts
                       </span>
@@ -202,7 +202,6 @@ export const Hero: React.FC = () => {
 
                   {/* Code Snippet - High Contrast Technical Typography */}
                   <div className="font-mono text-xs sm:text-sm leading-relaxed text-zinc-800 dark:text-zinc-200 space-y-1.5 mb-6">
-                    <p className="text-zinc-400 dark:text-zinc-500">// Initialize Software Engineer</p>
                     <p>
                       <span className="text-zinc-500 dark:text-zinc-400 font-bold">const</span>{' '}
                       <span className="text-zinc-900 dark:text-white font-semibold">developer</span> = &#123;
