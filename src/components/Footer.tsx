@@ -75,18 +75,18 @@ export const Footer: React.FC = () => {
             </p>
 
             {/* Live local time indicator */}
-            <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-xs font-mono text-zinc-600 dark:text-zinc-400">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+            <div className="inline-flex flex-wrap items-center gap-1.5 sm:gap-2 px-2.5 py-1 rounded-lg bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-xs font-mono text-zinc-600 dark:text-zinc-400 max-w-full">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse shrink-0" />
               <Clock className="w-3.5 h-3.5 text-zinc-500 shrink-0" />
               <span>Ho Chi Minh City:</span>
-              <span className="font-semibold text-zinc-900 dark:text-white">
+              <span className="font-semibold text-zinc-900 dark:text-white shrink-0">
                 {timeString ? `${timeString} (GMT+7)` : 'GMT+7'}
               </span>
             </div>
           </div>
 
           {/* Quick links */}
-          <div className="flex flex-wrap items-center justify-center gap-6 text-xs font-mono font-medium text-zinc-500">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs font-mono font-medium text-zinc-500">
             <a href="#home" className="hover:text-black dark:hover:text-white transition-colors">Home</a>
             <a href="#about" className="hover:text-black dark:hover:text-white transition-colors">About</a>
             <a href="#skills" className="hover:text-black dark:hover:text-white transition-colors">Skills</a>
