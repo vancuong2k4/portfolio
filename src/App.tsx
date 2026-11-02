@@ -9,6 +9,7 @@ import { Projects } from './components/Projects'
 import { Experience } from './components/Experience'
 import { Contact } from './components/Contact'
 import { Footer } from './components/Footer'
+import { Analytics } from '@vercel/analytics/react'
 
 export const App: React.FC = () => {
   return (
@@ -32,6 +33,9 @@ export const App: React.FC = () => {
 
         {/* Footer */}
         <Footer />
+
+        {/* Vercel Web Analytics */}
+        <Analytics />
       </div>
     </ThemeProvider>
   )
