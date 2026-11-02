@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { profileData } from '../data/portfolioData'
-import { ArrowUp, Terminal, Phone, Clock } from 'lucide-react'
+import { ArrowUp, Phone, Clock } from 'lucide-react'
 import { GithubIcon, GmailIcon } from './SocialIcons'
 
 export const Footer: React.FC = () => {
@@ -41,9 +41,30 @@ export const Footer: React.FC = () => {
           
           {/* Brand & Live Local Time */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <div className="flex items-center gap-2 mb-2">
-              <div className="w-8 h-8 rounded-lg bg-black dark:bg-white text-white dark:text-black flex items-center justify-center font-bold">
-                <Terminal className="w-4 h-4 stroke-[2.5]" />
+            <div className="flex items-center gap-2.5 mb-2">
+              <div 
+                className="relative w-8 h-8 rounded-lg overflow-hidden shadow-sm border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900 shrink-0 select-none"
+                onContextMenu={(e) => e.preventDefault()}
+              >
+                <img
+                  src="/logo.png"
+                  alt="vancuong2k4 logo"
+                  className="w-full h-full object-cover select-none pointer-events-none"
+                  loading="lazy"
+                  draggable={false}
+                  onDragStart={(e) => e.preventDefault()}
+                  onContextMenu={(e) => e.preventDefault()}
+                  style={{
+                    WebkitTouchCallout: 'none',
+                    WebkitUserSelect: 'none',
+                    userSelect: 'none',
+                  }}
+                />
+                {/* Transparent protection shield */}
+                <div 
+                  className="absolute inset-0 select-none"
+                  onContextMenu={(e) => e.preventDefault()} 
+                />
               </div>
               <span className="font-bold text-base text-zinc-900 dark:text-white">
                 {profileData.name}
