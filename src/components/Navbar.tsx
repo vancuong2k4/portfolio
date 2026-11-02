@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useTheme } from '../context/ThemeContext'
-import { Sun, Moon, Menu, X, FileDown, Terminal } from 'lucide-react'
+import { Sun, Moon, Menu, X, FileDown } from 'lucide-react'
 import confetti from 'canvas-confetti'
 
 interface NavItem {
@@ -64,13 +64,18 @@ export const Navbar: React.FC = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Brand Logo - Monochrome Black & White */}
+        {/* Brand Logo - Custom Image Avatar */}
         <a
           href="#home"
           className="flex items-center gap-2.5 group cursor-pointer"
         >
-          <div className="w-9 h-9 rounded-xl bg-black dark:bg-white text-white dark:text-black flex items-center justify-center font-bold shadow-sm group-hover:scale-105 transition-transform duration-200 border border-zinc-800 dark:border-transparent">
-            <Terminal className="w-4 h-4 stroke-[2.5]" />
+          <div className="w-9 h-9 rounded-xl overflow-hidden shadow-sm group-hover:scale-105 transition-transform duration-200 border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900 shrink-0">
+            <img
+              src="/logo.png"
+              alt="vancuong2k4 logo"
+              className="w-full h-full object-cover"
+              loading="eager"
+            />
           </div>
           <div className="flex flex-col">
             <span className="font-bold text-base tracking-tight text-zinc-900 dark:text-white font-mono">
