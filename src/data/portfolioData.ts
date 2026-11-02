@@ -25,7 +25,7 @@ export const profileData: Profile = {
   github: "https://github.com/vancuong2k4",
   cvUrl: "#resume",
   stats: {
-    yearsExperience: 2,
+    yearsExperience: 1,
     projectsCompleted: 6,
     technologiesMastered: 14,
     commitsLastYear: 222

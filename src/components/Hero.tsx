@@ -131,7 +131,8 @@ export const Hero: React.FC = () => {
             {/* Social Links & Highlights */}
             <div className="pt-6 border-t border-zinc-200 dark:border-zinc-800/80 w-full flex flex-wrap items-center justify-between gap-4">
               <div className="flex items-center gap-3">
-                <span className="text-xs font-mono uppercase tracking-wider text-zinc-500">
+                <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-zinc-900 dark:text-white">
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                   Connect:
                 </span>
                 <div className="flex items-center gap-2">
@@ -249,7 +250,7 @@ export const Hero: React.FC = () => {
                         <span>Years Experience</span>
                       </div>
                       <div className="text-2xl font-black text-zinc-900 dark:text-white font-mono">
-                        {profileData.stats.yearsExperience}+ Years
+                        {profileData.stats.yearsExperience} Year
                       </div>
                     </div>
                   </div>

@@ -45,7 +45,7 @@ export const About: React.FC = () => {
   const statsList = [
     { 
       label: "Years Experience", 
-      value: `${profileData.stats.yearsExperience}+`, 
+      value: `${profileData.stats.yearsExperience} Year`, 
       icon: Briefcase
     },
     { 
@@ -128,7 +128,7 @@ export const About: React.FC = () => {
                   📍 Ho Chi Minh City
                 </span>
                 <span className="px-2.5 py-1 rounded-lg text-xs font-mono bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700/60">
-                  ⚡ 1+ Years Exp
+                  ⚡ 1 Year Exp
                 </span>
               </div>
 
