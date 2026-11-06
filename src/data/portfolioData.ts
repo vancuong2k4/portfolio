@@ -150,26 +150,27 @@ export const projectsData: Project[] = [
     id: "edurag-ai",
     title: "eduRAG - Automated Quiz Generation with AI & RAG",
     category: "backend",
-    subtitle: "Next-gen RAG system generating quizzes from digital learning materials",
-    description: "Advanced AI system utilizing Retrieval-Augmented Generation (RAG) to analyze educational textbooks and lecture documents to automatically generate accurate multiple-choice and conceptual quizzes.",
-    fullDescription: "eduRAG addresses the time-consuming process of exam creation and revision. The system parses learning materials (PDF, DOCX), performs semantic document chunking, generates vector embeddings, and leverages LLMs to produce multi-tiered multiple-choice quizzes (Recall, Comprehension, Application) accompanied by comprehensive step-by-step explanations.",
-    tags: ["Python", "FastAPI", "RAG", "LangChain", "Vector DB", "LLM", "OpenAI / Gemini"],
-    metrics: "100% automated quiz generation pipeline from digital courseware",
-    liveUrl: "https://github.com/vancuong2k4/eduRAG#readme",
-    githubUrl: "https://github.com/vancuong2k4/eduRAG",
+    subtitle: "Collaborative 4-member team project • Automated assessment question generator using RAG & AI",
+    description: "Collaborative AI system built by a 4-member engineering team using Retrieval-Augmented Generation (RAG) to analyze educational materials and automatically generate standardized assessment questions.",
+    fullDescription: "Developed collaboratively by an agile team of 4 members, where I served as a core developer contributing to both system foundation and feature modules. eduRAG streamlines exam creation and assessment workflows: parsing learning materials (PDF, DOCX), performing semantic document chunking, computing vector embeddings, and leveraging LLMs to produce multi-level multiple-choice quizzes with detailed rationales.",
+    tags: ["Python", "FastAPI", "React", "TypeScript", "RAG", "LangChain", "Vector DB", "Team Project (4 Members)"],
+    metrics: "4-Member Team Project • End-to-end RAG question generation pipeline",
+    liveUrl: "https://github.com/chplay2020/edu-rag-assessment-question-generator",
+    githubUrl: "https://github.com/chplay2020/edu-rag-assessment-question-generator",
     featured: true,
     gradient: "from-purple-600 via-violet-600 to-indigo-700",
     iconName: "MessageSquare",
     features: [
-      "Automated text extraction from PDF, Word documents, and lecture slide decks",
+      "Automated text extraction & semantic document chunking from PDF and DOCX files",
       "Semantic search powered by Vector Embeddings and vector similarity search",
-      "Automated 4-option multiple choice questions with detailed rationale explanations",
-      "Customizable difficulty grading tailored to standard exam specification matrices"
+      "Automated multi-tiered multiple choice questions with detailed explanation rationales",
+      "Collaborative engineering workflow: Sprint planning, modular architecture, and GitHub PR reviews"
     ],
     architecture: [
-      "AI Pipeline: LangChain, ChromaDB / FAISS Vector Store, Prompt Engineering",
-      "Backend API: High-performance asynchronous Python FastAPI server",
-      "LLMs: Integrated OpenAI GPT-4o and Google Gemini API"
+      "Team Collaboration: 4-member team utilizing branch-based GitHub PR review workflow",
+      "Backend & AI: Python FastAPI, LangChain, Semantic Chunking, Vector Embeddings",
+      "Frontend: React, TypeScript, Vite, Modern Glassmorphism UI",
+      "Architecture & Config: Pydantic Settings, Centralized Error Handling, PostgreSQL ready"
     ]
   },
   {
