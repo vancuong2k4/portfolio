@@ -227,13 +227,45 @@ const TECH_STYLES: Record<string, TechStyle> = {
     border: 'border-teal-500/50 dark:border-teal-400/50',
     dot: 'bg-[#14b8a6]',
   },
+
+  // Student & Academic Foundation Skills
+  'C++': {
+    bg: 'bg-blue-600/20 dark:bg-blue-600/25',
+    text: 'text-blue-800 dark:text-blue-200',
+    border: 'border-blue-600/50 dark:border-blue-500/50',
+    dot: 'bg-[#00599c]',
+  },
+  'Java': {
+    bg: 'bg-amber-600/20 dark:bg-amber-600/25',
+    text: 'text-amber-900 dark:text-amber-200',
+    border: 'border-amber-600/50 dark:border-amber-500/50',
+    dot: 'bg-[#ed8b00]',
+  },
+  'HTML5/CSS3': {
+    bg: 'bg-orange-500/20 dark:bg-orange-500/25',
+    text: 'text-orange-900 dark:text-orange-200',
+    border: 'border-orange-500/50 dark:border-orange-400/50',
+    dot: 'bg-[#e34f26]',
+  },
+  'SQL': {
+    bg: 'bg-cyan-600/20 dark:bg-cyan-600/25',
+    text: 'text-cyan-800 dark:text-cyan-200',
+    border: 'border-cyan-600/50 dark:border-cyan-500/50',
+    dot: 'bg-[#00758f]',
+  },
+  'Data Structures': {
+    bg: 'bg-purple-600/20 dark:bg-purple-600/25',
+    text: 'text-purple-800 dark:text-purple-200',
+    border: 'border-purple-600/50 dark:border-purple-500/50',
+    dot: 'bg-[#8b5cf6]',
+  },
 }
 
 const defaultStyle: TechStyle = {
-  bg: 'bg-zinc-200/60 dark:bg-zinc-800',
-  text: 'text-zinc-900 dark:text-zinc-100',
-  border: 'border-zinc-300 dark:border-zinc-700',
-  dot: 'bg-zinc-400 dark:bg-zinc-500',
+  bg: 'bg-indigo-500/15 dark:bg-indigo-500/20',
+  text: 'text-indigo-800 dark:text-indigo-200',
+  border: 'border-indigo-400/40 dark:border-indigo-500/40',
+  dot: 'bg-indigo-500',
 }
 
 interface TechBadgeProps {
