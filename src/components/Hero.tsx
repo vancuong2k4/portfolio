@@ -6,7 +6,8 @@ import {
   Phone, 
   Layers, 
   Zap,
-  CheckCircle2
+  CheckCircle2,
+  ShieldCheck
 } from 'lucide-react'
 import { GithubIcon, GmailIcon } from './SocialIcons'
 import confetti from 'canvas-confetti'
@@ -74,33 +75,95 @@ export const Hero: React.FC = () => {
           {/* Left Column: Text & CTAs */}
           <div className="lg:col-span-7 flex flex-col items-start text-left z-10">
             
-            {/* Status Pill - Minimalist Monochrome */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-zinc-100 dark:bg-zinc-900/90 text-zinc-800 dark:text-zinc-300 border border-zinc-300 dark:border-zinc-800 shadow-sm mb-6">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 ring-2 ring-emerald-500/20" />
-              <span>{profileData.status}</span>
+            {/* Status & Identity Pills */}
+            <div className="flex flex-wrap items-center gap-2 sm:gap-2.5 mb-5">
+              {/* Status Pill */}
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-zinc-100 dark:bg-zinc-900/90 text-zinc-800 dark:text-zinc-300 border border-zinc-300 dark:border-zinc-800 shadow-xs">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 ring-2 ring-emerald-500/20" />
+                <span>{profileData.status}</span>
+              </div>
+
+              {/* Location Pill */}
+              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-mono font-medium bg-zinc-100/80 dark:bg-zinc-900/60 text-zinc-600 dark:text-zinc-400 border border-zinc-200 dark:border-zinc-800/80">
+                <span className="text-xs">🇻🇳</span>
+                <span>Ho Chi Minh City, VN</span>
+              </div>
             </div>
 
-            {/* Greeting & Name - High Contrast Monochrome */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-zinc-900 dark:text-white leading-[1.12] mb-4">
-              Hi, I'm{' '}
-              <span className="text-zinc-900 dark:text-white underline decoration-zinc-400 dark:decoration-zinc-600 underline-offset-8">
-                {profileData.name}
-              </span>
-            </h1>
+            {/* Headline / Engineering Authority Name */}
+            <div className="relative mb-3.5 w-full">
+              {/* Subtle ambient backlight glow */}
+              <div 
+                aria-hidden="true" 
+                className="absolute -top-4 -left-6 w-72 sm:w-96 h-28 bg-gradient-to-r from-zinc-400/10 via-zinc-200/15 to-zinc-400/10 dark:from-white/5 dark:via-zinc-300/10 dark:to-white/5 blur-3xl rounded-full pointer-events-none -z-10" 
+              />
 
-            {/* Animated Typewriter Subheading */}
-            <div className="h-10 sm:h-12 flex items-center mb-6 min-w-0 w-full">
-              <span className="text-lg sm:text-2xl font-mono font-medium text-zinc-700 dark:text-zinc-300 flex items-center min-w-0">
-                <span className="text-zinc-400 dark:text-zinc-500 shrink-0">&gt; </span>
-                <span className="text-black dark:text-white font-semibold ml-2 truncate">{displayText}</span>
-                <span className="w-2 h-5 sm:h-6 bg-black dark:bg-white ml-1 inline-block animate-pulse shrink-0" />
-              </span>
+              {/* Eyebrow Label */}
+              <div className="flex items-center gap-2 text-xs sm:text-sm font-mono font-bold tracking-wider uppercase text-zinc-500 dark:text-zinc-400 mb-2">
+                <span className="w-5 h-px bg-zinc-400 dark:bg-zinc-600" />
+                <span>Full-Stack Developer</span>
+              </div>
+
+              {/* Main Name with Metallic Titanium Gradient and Verified Badge */}
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.08] text-zinc-950 dark:text-white flex flex-wrap items-center gap-x-3 gap-y-2">
+                <span className="bg-gradient-to-b from-zinc-950 via-zinc-900 to-zinc-700 dark:from-white dark:via-zinc-100 dark:to-zinc-400 bg-clip-text text-transparent drop-shadow-xs dark:drop-shadow-[0_4px_24px_rgba(255,255,255,0.06)]">
+                  {profileData.name}
+                </span>
+
+                {/* Verified Developer Badge */}
+                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-zinc-100 dark:bg-zinc-800/90 text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700 shadow-xs align-middle">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 stroke-[2.5]" />
+                  <span className="text-[11px] font-semibold">Verified</span>
+                </span>
+              </h1>
             </div>
 
-            {/* Short Bio */}
-            <p className="text-base sm:text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl leading-relaxed mb-8 font-normal">
+            {/* Animated Typewriter Subheading with Command Prompt Box */}
+            <div className="h-10 sm:h-12 flex items-center mb-5 min-w-0 w-full">
+              <div className="inline-flex items-center px-3.5 py-1.5 rounded-xl bg-zinc-100/90 dark:bg-zinc-900/80 border border-zinc-200/80 dark:border-zinc-800 shadow-2xs font-mono text-sm sm:text-base text-zinc-700 dark:text-zinc-300 max-w-full">
+                <span className="text-zinc-400 dark:text-zinc-500 mr-2 shrink-0 font-bold">&gt;</span>
+                <span className="text-black dark:text-white font-semibold truncate">{displayText}</span>
+                <span className="w-1.5 h-4 sm:h-5 bg-black dark:bg-white ml-1 inline-block animate-pulse shrink-0" />
+              </div>
+            </div>
+
+            {/* Short Bio / Value Proposition */}
+            <p className="text-base sm:text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl leading-relaxed mb-6 font-normal">
               {profileData.shortBio}
             </p>
+
+            {/* 3 Trust Badges (Proof of Reliability & Craftsmanship) */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-2.5 w-full mb-8">
+              <div className="p-2.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-zinc-800/80 flex items-center gap-2.5">
+                <div className="w-7 h-7 rounded-lg bg-zinc-200/60 dark:bg-zinc-800 flex items-center justify-center shrink-0">
+                  <Zap className="w-3.5 h-3.5 text-zinc-800 dark:text-zinc-200 stroke-[2.2]" />
+                </div>
+                <div className="min-w-0">
+                  <div className="text-xs font-bold text-zinc-900 dark:text-zinc-100 truncate">Performance First</div>
+                  <div className="text-[11px] font-mono text-zinc-500 truncate">Sub-second load & 60 FPS</div>
+                </div>
+              </div>
+
+              <div className="p-2.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-zinc-800/80 flex items-center gap-2.5">
+                <div className="w-7 h-7 rounded-lg bg-zinc-200/60 dark:bg-zinc-800 flex items-center justify-center shrink-0">
+                  <ShieldCheck className="w-3.5 h-3.5 text-zinc-800 dark:text-zinc-200 stroke-[2.2]" />
+                </div>
+                <div className="min-w-0">
+                  <div className="text-xs font-bold text-zinc-900 dark:text-zinc-100 truncate">Clean Architecture</div>
+                  <div className="text-[11px] font-mono text-zinc-500 truncate">Strict TypeScript & Modular</div>
+                </div>
+              </div>
+
+              <div className="p-2.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-zinc-800/80 flex items-center gap-2.5">
+                <div className="w-7 h-7 rounded-lg bg-zinc-200/60 dark:bg-zinc-800 flex items-center justify-center shrink-0">
+                  <Layers className="w-3.5 h-3.5 text-zinc-800 dark:text-zinc-200 stroke-[2.2]" />
+                </div>
+                <div className="min-w-0">
+                  <div className="text-xs font-bold text-zinc-900 dark:text-zinc-100 truncate">End-to-End Delivery</div>
+                  <div className="text-[11px] font-mono text-zinc-500 truncate">Web, Mobile & Cloud APIs</div>
+                </div>
+              </div>
+            </div>
 
             {/* Action Buttons - High Contrast Black & White */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mb-10 w-full sm:w-auto">
