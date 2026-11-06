@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { experiencesData, educationData } from '../data/portfolioData'
 import { SectionHeader } from './SectionHeader'
+import { TechBadge } from './TechBadge'
 import { 
   Briefcase, 
   GraduationCap, 
@@ -110,14 +111,9 @@ export const Experience: React.FC = () => {
                   </div>
 
                   {/* Tech stack */}
-                  <div className="flex flex-wrap gap-1.5 pt-3 border-t border-zinc-200/80 dark:border-zinc-800">
+                  <div className="flex flex-wrap gap-2 pt-3 border-t border-zinc-200/80 dark:border-zinc-800">
                     {exp.technologies.map(tech => (
-                      <span
-                        key={tech}
-                        className="px-2 py-0.5 text-xs font-mono font-semibold rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700/60"
-                      >
-                        {tech}
-                      </span>
+                      <TechBadge key={tech} name={tech} />
                     ))}
                   </div>
 

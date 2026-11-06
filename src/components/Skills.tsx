@@ -65,6 +65,9 @@ export const Skills: React.FC = () => {
             const meta = techMap[skill.iconName] || {
               Icon: Code,
               badgeBg: "bg-zinc-100 dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700",
+              barGradient: "from-zinc-900 to-zinc-600 dark:from-white dark:to-zinc-400",
+              glowClass: "",
+              hoverBorder: "hover:border-zinc-400 dark:hover:border-zinc-600",
               accentColor: "#FFFFFF"
             }
             const SkillIcon = meta.Icon
@@ -72,13 +75,13 @@ export const Skills: React.FC = () => {
             return (
               <div
                 key={idx}
-                className="group relative p-4 sm:p-5 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-xs transition-all duration-300 flex flex-col justify-between hover:-translate-y-1 hover:border-zinc-400 dark:hover:border-zinc-600 hover:shadow-lg dark:hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)]"
+                className={`group relative p-4 sm:p-5 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-xs transition-all duration-300 flex flex-col justify-between hover:-translate-y-1 ${meta.hoverBorder || 'hover:border-zinc-400 dark:hover:border-zinc-600'} ${meta.glowClass || ''} hover:shadow-lg`}
               >
                 <div>
                   <div className="flex items-start justify-between mb-3.5">
                     <div className="flex items-center gap-3">
                       {/* Brand Icon Badge */}
-                      <div className="w-11 h-11 rounded-xl flex items-center justify-center p-2 border border-zinc-200 dark:border-zinc-700/80 bg-zinc-100 dark:bg-zinc-800 shadow-xs transition-all duration-300 group-hover:scale-110 group-hover:bg-zinc-200 dark:group-hover:bg-zinc-700">
+                      <div className={`w-11 h-11 rounded-xl flex items-center justify-center p-2 border shadow-xs transition-all duration-300 group-hover:scale-110 ${meta.badgeBg}`}>
                         <SkillIcon className="w-6 h-6 shrink-0" />
                       </div>
                       <div>
@@ -115,7 +118,7 @@ export const Skills: React.FC = () => {
                   </div>
                   <div className="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                     <div
-                      className="h-full rounded-full bg-black dark:bg-white transition-all duration-700 ease-out"
+                      className={`h-full rounded-full bg-gradient-to-r ${meta.barGradient || 'from-zinc-900 to-zinc-600 dark:from-white dark:to-zinc-400'} transition-all duration-700 ease-out`}
                       style={{ width: `${skill.level}%` }}
                     />
                   </div>

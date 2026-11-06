@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import type { Project } from '../types'
+import { TechBadge } from './TechBadge'
 import { 
   X, 
   ExternalLink, 
@@ -79,12 +80,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           {/* Tech Tags */}
           <div className="flex flex-wrap gap-2">
             {project.tags.map(tag => (
-              <span
-                key={tag}
-                className="px-2.5 py-1 rounded-md text-xs font-mono font-medium bg-zinc-100 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-800"
-              >
-                {tag}
-              </span>
+              <TechBadge key={tag} name={tag} />
             ))}
           </div>
 

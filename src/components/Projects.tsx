@@ -3,6 +3,7 @@ import { projectsData } from '../data/portfolioData'
 import type { Project, ProjectCategory } from '../types'
 import { ProjectModal } from './ProjectModal'
 import { SectionHeader } from './SectionHeader'
+import { TechBadge } from './TechBadge'
 import { 
   ExternalLink, 
   ArrowUpRight, 
@@ -141,15 +142,10 @@ export const Projects: React.FC = () => {
                     {/* Tech Stack Tags */}
                     <div className="flex flex-wrap gap-1.5 pt-1">
                       {project.tags.slice(0, 4).map(tag => (
-                        <span
-                          key={tag}
-                          className="px-2 py-0.5 text-xs font-mono rounded bg-zinc-100/90 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-300 border border-zinc-200/90 dark:border-zinc-700/60 font-semibold"
-                        >
-                          {tag}
-                        </span>
+                        <TechBadge key={tag} name={tag} size="xs" />
                       ))}
                       {project.tags.length > 4 && (
-                        <span className="px-2 py-0.5 text-xs font-mono rounded bg-zinc-100/90 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 border border-zinc-200/90 dark:border-zinc-700/60 font-semibold">
+                        <span className="px-2 py-0.5 text-[11px] font-mono rounded bg-zinc-100/90 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 border border-zinc-200/90 dark:border-zinc-700/60 font-semibold">
                           +{project.tags.length - 4}
                         </span>
                       )}
