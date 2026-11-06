@@ -139,16 +139,17 @@ export const Projects: React.FC = () => {
                       </div>
                     )}
 
-                    {/* Tech Stack Tags */}
-                    <div className="flex flex-wrap gap-1.5 pt-1">
-                      {project.tags.slice(0, 4).map(tag => (
-                        <TechBadge key={tag} name={tag} size="xs" />
-                      ))}
-                      {project.tags.length > 4 && (
-                        <span className="px-2 py-0.5 text-[11px] font-mono rounded bg-zinc-100/90 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 border border-zinc-200/90 dark:border-zinc-700/60 font-semibold">
-                          +{project.tags.length - 4}
-                        </span>
-                      )}
+                    {/* Tech Stack Skills - Display ALL tech skills with prominent brand background colors */}
+                    <div className="pt-2">
+                      <div className="text-[10px] font-mono font-bold uppercase tracking-wider text-zinc-600 dark:text-zinc-400 mb-2 flex items-center gap-1.5">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                        <span>Core Tech Skills:</span>
+                      </div>
+                      <div className="flex flex-wrap gap-1.5">
+                        {project.tags.map(tag => (
+                          <TechBadge key={tag} name={tag} size="xs" />
+                        ))}
+                      </div>
                     </div>
                   </div>
 

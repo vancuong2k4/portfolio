@@ -78,10 +78,16 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
         <div className="p-5 sm:p-8 space-y-6">
           
           {/* Tech Tags */}
-          <div className="flex flex-wrap gap-2">
-            {project.tags.map(tag => (
-              <TechBadge key={tag} name={tag} />
-            ))}
+          <div>
+            <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-zinc-600 dark:text-zinc-400 mb-2.5 flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+              <span>Project Tech Stack:</span>
+            </h4>
+            <div className="flex flex-wrap gap-2">
+              {project.tags.map(tag => (
+                <TechBadge key={tag} name={tag} />
+              ))}
+            </div>
           </div>
 
           {/* Full description */}
