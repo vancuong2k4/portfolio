@@ -125,10 +125,10 @@ export const About: React.FC = () => {
               </div>
 
               {/* Name & Title */}
-              <h3 className="text-xl font-black text-zinc-900 dark:text-white mb-1">
+              <h3 className="text-xl font-black text-zinc-950 dark:text-white mb-1">
                 {profileData.name}
               </h3>
-              <p className="text-xs font-mono text-zinc-500 mb-4">
+              <p className="text-xs font-mono font-semibold text-zinc-600 dark:text-zinc-400 mb-4">
                 {profileData.role}
               </p>
 
@@ -198,11 +198,11 @@ export const About: React.FC = () => {
             
             {/* Bio Narrative */}
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-zinc-900 dark:text-white">
+              <h3 className="text-2xl font-bold text-zinc-950 dark:text-white">
                 Full-Stack Developer Passionate About Clean Code &amp; Intuitive UI
               </h3>
               {profileData.aboutParagraphs.map((p, idx) => (
-                <p key={idx} className="text-zinc-600 dark:text-zinc-400 leading-relaxed text-base">
+                <p key={idx} className="text-zinc-700 dark:text-zinc-300 leading-relaxed text-base font-normal">
                   {p}
                 </p>
               ))}
@@ -257,7 +257,7 @@ export const About: React.FC = () => {
                     <div className="text-xl sm:text-2xl font-black text-zinc-900 dark:text-white mb-0.5 font-mono">
                       {stat.value}
                     </div>
-                    <div className="text-[10px] sm:text-[11px] font-medium text-zinc-500 dark:text-zinc-400">
+                    <div className="text-[10px] sm:text-[11px] font-semibold text-zinc-600 dark:text-zinc-400">
                       {stat.label}
                     </div>
                   </div>
@@ -271,7 +271,7 @@ export const About: React.FC = () => {
 
         {/* Bottom: 4 Value Pillars */}
         <div>
-          <h3 className="text-xl font-bold text-zinc-900 dark:text-white text-center mb-8">
+          <h3 className="text-xl font-bold text-zinc-950 dark:text-white text-center mb-8">
             Core Values Delivered To Every Project
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -285,10 +285,10 @@ export const About: React.FC = () => {
                   <div className="w-12 h-12 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700/80 text-zinc-900 dark:text-white flex items-center justify-center mb-4 shadow-xs transition-all duration-300 group-hover:scale-110 group-hover:bg-black group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black group-hover:border-transparent">
                     <Icon className="w-6 h-6 stroke-[2.2]" />
                   </div>
-                  <h4 className="text-base font-bold text-zinc-900 dark:text-white mb-2 group-hover:text-black dark:group-hover:text-white transition-colors">
+                  <h4 className="text-base font-bold text-zinc-950 dark:text-white mb-2 group-hover:text-black dark:group-hover:text-white transition-colors">
                     {pillar.title}
                   </h4>
-                  <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed flex-1">
+                  <p className="text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed flex-1">
                     {pillar.description}
                   </p>
                 </div>

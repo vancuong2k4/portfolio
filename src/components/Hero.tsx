@@ -45,16 +45,21 @@ export const Hero: React.FC = () => {
     return () => clearTimeout(timer)
   }, [displayText, isDeleting, titleIndex])
 
-  // Mouse tilt for 3D card — disabled on touch devices to prevent stutter
+  // Mouse tilt for 3D card — throttled with requestAnimationFrame, disabled on touch devices
+  const animFrameId = useRef<number | null>(null)
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (isTouchDevice.current) return
     const rect = e.currentTarget.getBoundingClientRect()
     const x = (e.clientX - rect.left) / rect.width - 0.5
     const y = (e.clientY - rect.top) / rect.height - 0.5
-    setMouseOffset({ x: x * 14, y: -y * 14 })
+    if (animFrameId.current) cancelAnimationFrame(animFrameId.current)
+    animFrameId.current = requestAnimationFrame(() => {
+      setMouseOffset({ x: x * 12, y: -y * 12 })
+    })
   }
 
   const handleMouseLeave = () => {
+    if (animFrameId.current) cancelAnimationFrame(animFrameId.current)
     setMouseOffset({ x: 0, y: 0 })
   }
 
@@ -78,13 +83,13 @@ export const Hero: React.FC = () => {
             {/* Status & Identity Pills */}
             <div className="flex flex-wrap items-center gap-2 sm:gap-2.5 mb-5">
               {/* Status Pill */}
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-zinc-100 dark:bg-zinc-900/90 text-zinc-800 dark:text-zinc-300 border border-zinc-300 dark:border-zinc-800 shadow-xs">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-white dark:bg-zinc-900/90 text-zinc-900 dark:text-zinc-200 border border-zinc-300 dark:border-zinc-800 shadow-xs">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 ring-2 ring-emerald-500/20" />
                 <span>{profileData.status}</span>
               </div>
 
               {/* Location Pill */}
-              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-mono font-medium bg-zinc-100/80 dark:bg-zinc-900/60 text-zinc-600 dark:text-zinc-400 border border-zinc-200 dark:border-zinc-800/80">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-mono font-medium bg-white/90 dark:bg-zinc-900/60 text-zinc-700 dark:text-zinc-400 border border-zinc-300/80 dark:border-zinc-800/80 shadow-2xs">
                 <span className="text-xs">🇻🇳</span>
                 <span>Ho Chi Minh City, VN</span>
               </div>
@@ -95,72 +100,72 @@ export const Hero: React.FC = () => {
               {/* Subtle ambient backlight glow */}
               <div 
                 aria-hidden="true" 
-                className="absolute -top-4 -left-6 w-72 sm:w-96 h-28 bg-gradient-to-r from-zinc-400/10 via-zinc-200/15 to-zinc-400/10 dark:from-white/5 dark:via-zinc-300/10 dark:to-white/5 blur-3xl rounded-full pointer-events-none -z-10" 
+                className="absolute -top-4 -left-6 w-72 sm:w-96 max-w-[90vw] h-28 bg-gradient-to-r from-zinc-200/40 via-zinc-300/30 to-zinc-200/40 dark:from-white/5 dark:via-zinc-300/10 dark:to-white/5 blur-3xl rounded-full pointer-events-none -z-10" 
               />
 
               {/* Eyebrow Label */}
-              <div className="flex items-center gap-2 text-xs sm:text-sm font-mono font-bold tracking-wider uppercase text-zinc-500 dark:text-zinc-400 mb-2">
+              <div className="flex items-center gap-2 text-xs sm:text-sm font-mono font-bold tracking-wider uppercase text-zinc-600 dark:text-zinc-400 mb-2">
                 <span className="w-5 h-px bg-zinc-400 dark:bg-zinc-600" />
                 <span>Full-Stack Developer</span>
               </div>
 
-              {/* Main Name with Metallic Titanium Gradient and Verified Badge */}
+              {/* Main Name: Deep Ink Black in Light Mode, Titanium Metallic Gradient in Dark Mode */}
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.08] text-zinc-950 dark:text-white flex flex-wrap items-center gap-x-3 gap-y-2">
-                <span className="bg-gradient-to-b from-zinc-950 via-zinc-900 to-zinc-700 dark:from-white dark:via-zinc-100 dark:to-zinc-400 bg-clip-text text-transparent drop-shadow-xs dark:drop-shadow-[0_4px_24px_rgba(255,255,255,0.06)]">
+                <span className="text-zinc-950 dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-b dark:from-white dark:via-zinc-100 dark:to-zinc-400 drop-shadow-xs dark:drop-shadow-[0_4px_24px_rgba(255,255,255,0.06)]">
                   {profileData.name}
                 </span>
 
                 {/* Verified Developer Badge */}
-                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-zinc-100 dark:bg-zinc-800/90 text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700 shadow-xs align-middle">
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-white dark:bg-zinc-800/90 text-zinc-900 dark:text-zinc-200 border border-zinc-300 dark:border-zinc-700 shadow-xs align-middle">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 stroke-[2.5]" />
-                  <span className="text-[11px] font-semibold">Verified</span>
+                  <span className="text-[11px] font-bold">Verified</span>
                 </span>
               </h1>
             </div>
 
             {/* Animated Typewriter Subheading with Command Prompt Box */}
             <div className="h-10 sm:h-12 flex items-center mb-5 min-w-0 w-full">
-              <div className="inline-flex items-center px-3.5 py-1.5 rounded-xl bg-zinc-100/90 dark:bg-zinc-900/80 border border-zinc-200/80 dark:border-zinc-800 shadow-2xs font-mono text-sm sm:text-base text-zinc-700 dark:text-zinc-300 max-w-full">
-                <span className="text-zinc-400 dark:text-zinc-500 mr-2 shrink-0 font-bold">&gt;</span>
-                <span className="text-black dark:text-white font-semibold truncate">{displayText}</span>
+              <div className="inline-flex items-center px-3.5 py-1.5 rounded-xl bg-white dark:bg-zinc-900/80 border border-zinc-300 dark:border-zinc-800 shadow-2xs font-mono text-sm sm:text-base text-zinc-800 dark:text-zinc-300 max-w-full">
+                <span className="text-zinc-500 dark:text-zinc-500 mr-2 shrink-0 font-bold">&gt;</span>
+                <span className="text-zinc-950 dark:text-white font-bold truncate">{displayText}</span>
                 <span className="w-1.5 h-4 sm:h-5 bg-black dark:bg-white ml-1 inline-block animate-pulse shrink-0" />
               </div>
             </div>
 
-            {/* Short Bio / Value Proposition */}
-            <p className="text-base sm:text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl leading-relaxed mb-6 font-normal">
+            {/* Short Bio / Value Proposition with High Contrast */}
+            <p className="text-base sm:text-lg text-zinc-700 dark:text-zinc-300 max-w-2xl leading-relaxed mb-6 font-normal">
               {profileData.shortBio}
             </p>
 
             {/* 3 Trust Badges (Proof of Reliability & Craftsmanship) */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-2.5 w-full mb-8">
-              <div className="p-2.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-zinc-800/80 flex items-center gap-2.5">
-                <div className="w-7 h-7 rounded-lg bg-zinc-200/60 dark:bg-zinc-800 flex items-center justify-center shrink-0">
-                  <Zap className="w-3.5 h-3.5 text-zinc-800 dark:text-zinc-200 stroke-[2.2]" />
+              <div className="p-2.5 rounded-xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800/80 shadow-xs flex items-center gap-2.5">
+                <div className="w-7 h-7 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 flex items-center justify-center shrink-0">
+                  <Zap className="w-3.5 h-3.5 stroke-[2.2]" />
                 </div>
                 <div className="min-w-0">
-                  <div className="text-xs font-bold text-zinc-900 dark:text-zinc-100 truncate">Performance First</div>
-                  <div className="text-[11px] font-mono text-zinc-500 truncate">Sub-second load & 60 FPS</div>
+                  <div className="text-xs font-bold text-zinc-950 dark:text-zinc-100 truncate">Performance First</div>
+                  <div className="text-[11px] font-mono text-zinc-600 dark:text-zinc-400 truncate">Sub-second load & 60 FPS</div>
                 </div>
               </div>
 
-              <div className="p-2.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-zinc-800/80 flex items-center gap-2.5">
-                <div className="w-7 h-7 rounded-lg bg-zinc-200/60 dark:bg-zinc-800 flex items-center justify-center shrink-0">
-                  <ShieldCheck className="w-3.5 h-3.5 text-zinc-800 dark:text-zinc-200 stroke-[2.2]" />
+              <div className="p-2.5 rounded-xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800/80 shadow-xs flex items-center gap-2.5">
+                <div className="w-7 h-7 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 flex items-center justify-center shrink-0">
+                  <ShieldCheck className="w-3.5 h-3.5 stroke-[2.2]" />
                 </div>
                 <div className="min-w-0">
-                  <div className="text-xs font-bold text-zinc-900 dark:text-zinc-100 truncate">Clean Architecture</div>
-                  <div className="text-[11px] font-mono text-zinc-500 truncate">Strict TypeScript & Modular</div>
+                  <div className="text-xs font-bold text-zinc-950 dark:text-zinc-100 truncate">Clean Architecture</div>
+                  <div className="text-[11px] font-mono text-zinc-600 dark:text-zinc-400 truncate">Strict TypeScript & Modular</div>
                 </div>
               </div>
 
-              <div className="p-2.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-zinc-800/80 flex items-center gap-2.5">
-                <div className="w-7 h-7 rounded-lg bg-zinc-200/60 dark:bg-zinc-800 flex items-center justify-center shrink-0">
-                  <Layers className="w-3.5 h-3.5 text-zinc-800 dark:text-zinc-200 stroke-[2.2]" />
+              <div className="p-2.5 rounded-xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800/80 shadow-xs flex items-center gap-2.5">
+                <div className="w-7 h-7 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 flex items-center justify-center shrink-0">
+                  <Layers className="w-3.5 h-3.5 stroke-[2.2]" />
                 </div>
                 <div className="min-w-0">
-                  <div className="text-xs font-bold text-zinc-900 dark:text-zinc-100 truncate">End-to-End Delivery</div>
-                  <div className="text-[11px] font-mono text-zinc-500 truncate">Web, Mobile & Cloud APIs</div>
+                  <div className="text-xs font-bold text-zinc-950 dark:text-zinc-100 truncate">End-to-End Delivery</div>
+                  <div className="text-[11px] font-mono text-zinc-600 dark:text-zinc-400 truncate">Web, Mobile & Cloud APIs</div>
                 </div>
               </div>
             </div>
@@ -257,61 +262,61 @@ export const Hero: React.FC = () => {
                       <span className="w-3 h-3 rounded-full bg-[#ff5f56] shadow-2xs" />
                       <span className="w-3 h-3 rounded-full bg-[#ffbd2e] shadow-2xs" />
                       <span className="w-3 h-3 rounded-full bg-[#27c93f] shadow-2xs" />
-                      <span className="text-xs font-mono text-zinc-500 dark:text-zinc-400 ml-2">
+                      <span className="text-xs font-mono text-zinc-700 dark:text-zinc-400 font-semibold ml-2">
                         developer.config.ts
                       </span>
                     </div>
                   </div>
 
                   {/* Code Snippet - High Contrast Technical Typography */}
-                  <div className="font-mono text-xs sm:text-sm leading-relaxed text-zinc-800 dark:text-zinc-200 space-y-1.5 mb-6">
+                  <div className="font-mono text-xs sm:text-sm leading-relaxed text-zinc-900 dark:text-zinc-200 space-y-1.5 mb-6">
                     <p>
-                      <span className="text-zinc-500 dark:text-zinc-400 font-bold">const</span>{' '}
-                      <span className="text-zinc-900 dark:text-white font-semibold">developer</span> = &#123;
+                      <span className="text-zinc-600 dark:text-zinc-400 font-bold">const</span>{' '}
+                      <span className="text-zinc-950 dark:text-white font-bold">developer</span> = &#123;
                     </p>
                     <p className="pl-4">
-                      <span className="text-zinc-500">name:</span>{' '}
-                      <span className="text-zinc-900 dark:text-zinc-100 font-medium">"{profileData.name}"</span>,
+                      <span className="text-zinc-600 dark:text-zinc-400 font-semibold">name:</span>{' '}
+                      <span className="text-zinc-950 dark:text-zinc-100 font-semibold">"{profileData.name}"</span>,
                     </p>
                     <p className="pl-4">
-                      <span className="text-zinc-500">role:</span>{' '}
-                      <span className="text-zinc-900 dark:text-zinc-100 font-medium">"Full-Stack Developer"</span>,
+                      <span className="text-zinc-600 dark:text-zinc-400 font-semibold">role:</span>{' '}
+                      <span className="text-zinc-950 dark:text-zinc-100 font-semibold">"Full-Stack Developer"</span>,
                     </p>
                     <p className="pl-4">
-                      <span className="text-zinc-500">exp:</span>{' '}
-                      <span className="text-zinc-900 dark:text-white font-bold">{profileData.stats.yearsExperience}</span>,
+                      <span className="text-zinc-600 dark:text-zinc-400 font-semibold">exp:</span>{' '}
+                      <span className="text-zinc-950 dark:text-white font-bold">{profileData.stats.yearsExperience}</span>,
                     </p>
                     <p className="pl-4">
-                      <span className="text-zinc-500">loves:</span> [
-                      <span className="text-zinc-700 dark:text-zinc-300">"Clean Code"</span>,{' '}
-                      <span className="text-zinc-700 dark:text-zinc-300">"Speed"</span>,{' '}
-                      <span className="text-zinc-700 dark:text-zinc-300">"UX"</span>],
+                      <span className="text-zinc-600 dark:text-zinc-400 font-semibold">loves:</span> [
+                      <span className="text-zinc-800 dark:text-zinc-300 font-medium">"Clean Code"</span>,{' '}
+                      <span className="text-zinc-800 dark:text-zinc-300 font-medium">"Speed"</span>,{' '}
+                      <span className="text-zinc-800 dark:text-zinc-300 font-medium">"UX"</span>],
                     </p>
                     <p className="pl-4">
-                      <span className="text-zinc-500">readyToWork:</span>{' '}
-                      <span className="text-emerald-500 font-semibold">true</span>
+                      <span className="text-zinc-600 dark:text-zinc-400 font-semibold">readyToWork:</span>{' '}
+                      <span className="text-emerald-600 dark:text-emerald-400 font-bold">true</span>
                     </p>
                     <p>&#125;;</p>
                   </div>
 
                   {/* Status & Live Metrics */}
                   <div className="grid grid-cols-2 gap-3 pt-3 border-t border-zinc-200 dark:border-zinc-800">
-                    <div className="p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-600 transition-colors">
-                      <div className="flex items-center gap-1.5 text-xs text-zinc-500 dark:text-zinc-400 mb-1">
-                        <Zap className="w-3.5 h-3.5 text-zinc-900 dark:text-zinc-100 stroke-[2.2]" />
+                    <div className="p-3.5 rounded-xl bg-zinc-100/70 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-600 transition-colors">
+                      <div className="flex items-center gap-1.5 text-xs text-zinc-600 dark:text-zinc-400 font-medium mb-1">
+                        <Zap className="w-3.5 h-3.5 text-zinc-950 dark:text-zinc-100 stroke-[2.2]" />
                         <span>Projects Delivered</span>
                       </div>
-                      <div className="text-2xl font-black text-zinc-900 dark:text-white font-mono">
+                      <div className="text-2xl font-black text-zinc-950 dark:text-white font-mono">
                         {profileData.stats.projectsCompleted}+
                       </div>
                     </div>
 
-                    <div className="p-3.5 rounded-xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-600 transition-colors">
-                      <div className="flex items-center gap-1.5 text-xs text-zinc-500 dark:text-zinc-400 mb-1">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-zinc-900 dark:text-zinc-100 stroke-[2.2]" />
+                    <div className="p-3.5 rounded-xl bg-zinc-100/70 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-600 transition-colors">
+                      <div className="flex items-center gap-1.5 text-xs text-zinc-600 dark:text-zinc-400 font-medium mb-1">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-zinc-950 dark:text-zinc-100 stroke-[2.2]" />
                         <span>Years Experience</span>
                       </div>
-                      <div className="text-2xl font-black text-zinc-900 dark:text-white font-mono">
+                      <div className="text-2xl font-black text-zinc-950 dark:text-white font-mono">
                         {profileData.stats.yearsExperience} Year
                       </div>
                     </div>

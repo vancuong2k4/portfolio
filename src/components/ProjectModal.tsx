@@ -90,22 +90,22 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
           {/* Full description */}
           <div>
-            <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-zinc-400 mb-2">
+            <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-zinc-600 dark:text-zinc-400 mb-2">
               Project Overview
             </h4>
-            <p className="text-zinc-700 dark:text-zinc-300 text-base leading-relaxed">
+            <p className="text-zinc-800 dark:text-zinc-200 text-base leading-relaxed">
               {project.fullDescription}
             </p>
           </div>
 
           {/* Key Features */}
           <div>
-            <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-zinc-400 mb-3 flex items-center gap-1.5">
+            <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-zinc-600 dark:text-zinc-400 mb-3 flex items-center gap-1.5">
               <span>Key Features</span>
             </h4>
             <ul className="space-y-2">
               {project.features.map((feat, idx) => (
-                <li key={idx} className="flex items-start gap-2.5 text-sm text-zinc-700 dark:text-zinc-300">
+                <li key={idx} className="flex items-start gap-2.5 text-sm text-zinc-800 dark:text-zinc-200">
                   <CheckCircle2 className="w-4 h-4 text-zinc-900 dark:text-zinc-100 shrink-0 mt-0.5 stroke-[2.2]" />
                   <span>{feat}</span>
                 </li>
@@ -120,10 +120,10 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                 <Layers className="w-4 h-4 text-zinc-900 dark:text-zinc-100 stroke-[2]" />
                 <span>Architecture &amp; Engineering Highlights</span>
               </h4>
-              <ul className="space-y-2 text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 font-mono">
+              <ul className="space-y-2 text-xs sm:text-sm text-zinc-700 dark:text-zinc-300 font-mono">
                 {project.architecture.map((arch, idx) => (
                   <li key={idx} className="flex items-start gap-2">
-                    <span className="text-zinc-400 font-bold">•</span>
+                    <span className="text-zinc-500 dark:text-zinc-400 font-bold">•</span>
                     <span>{arch}</span>
                   </li>
                 ))}
@@ -138,7 +138,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                 href={project.githubUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-xs text-zinc-800 dark:text-zinc-200 bg-zinc-100 dark:bg-zinc-900 hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-colors border border-zinc-200 dark:border-zinc-800"
+                className="flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-xs text-zinc-900 dark:text-zinc-200 bg-white dark:bg-zinc-900 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors border border-zinc-300 dark:border-zinc-800 shadow-xs"
               >
                 <GithubIcon className="w-4 h-4" />
                 <span>Source Code</span>

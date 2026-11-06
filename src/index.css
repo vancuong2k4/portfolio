@@ -11,13 +11,18 @@
   }
 
   body {
-    background-color: #09090b;
-    color: #f4f4f5;
+    background-color: #fafafa;
+    color: #18181b;
     /* Ensure content never causes horizontal scroll */
     overflow-x: hidden;
     /* Improve text rendering on mobile */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  .dark body, body:where(.dark, .dark *) {
+    background-color: #09090b;
+    color: #f4f4f5;
   }
 
   /* Custom minimal monochrome scrollbar */
@@ -31,11 +36,19 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(0, 0, 0, 0.2);
     border-radius: 9999px;
   }
 
+  .dark ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
   ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.35);
+  }
+
+  .dark ::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.3);
   }
 

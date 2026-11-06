@@ -49,8 +49,8 @@ export const Skills: React.FC = () => {
                 onClick={() => setActiveCategory(cat.key)}
                 className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl text-xs font-bold transition-all duration-200 cursor-pointer active:scale-95 ${
                   isActive
-                    ? 'text-white bg-black dark:text-black dark:bg-white shadow-sm'
-                    : 'text-zinc-600 dark:text-zinc-400 bg-zinc-100 dark:bg-zinc-900 hover:text-black dark:hover:text-white border border-zinc-200 dark:border-zinc-800'
+                    ? 'text-white bg-black dark:text-black dark:bg-white shadow-xs'
+                    : 'text-zinc-700 dark:text-zinc-400 bg-white dark:bg-zinc-900 hover:text-black dark:hover:text-white border border-zinc-300 dark:border-zinc-800 shadow-2xs'
                 }`}
               >
                 {cat.label}
@@ -72,7 +72,7 @@ export const Skills: React.FC = () => {
             return (
               <div
                 key={idx}
-                className="group relative p-4 sm:p-5 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm transition-all duration-300 flex flex-col justify-between hover:-translate-y-1 hover:border-zinc-400 dark:hover:border-zinc-600 hover:shadow-lg dark:hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)]"
+                className="group relative p-4 sm:p-5 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-xs transition-all duration-300 flex flex-col justify-between hover:-translate-y-1 hover:border-zinc-400 dark:hover:border-zinc-600 hover:shadow-lg dark:hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)]"
               >
                 <div>
                   <div className="flex items-start justify-between mb-3.5">
@@ -82,10 +82,10 @@ export const Skills: React.FC = () => {
                         <SkillIcon className="w-6 h-6 shrink-0" />
                       </div>
                       <div>
-                        <h3 className="font-bold text-zinc-900 dark:text-white text-sm group-hover:text-black dark:group-hover:text-white transition-colors">
+                        <h3 className="font-bold text-zinc-950 dark:text-white text-sm group-hover:text-black dark:group-hover:text-white transition-colors">
                           {skill.name}
                         </h3>
-                        <span className="text-[11px] font-mono text-zinc-500 uppercase tracking-wider">
+                        <span className="text-[11px] font-mono text-zinc-600 dark:text-zinc-400 font-semibold uppercase tracking-wider">
                           {skill.category}
                         </span>
                       </div>
@@ -99,7 +99,7 @@ export const Skills: React.FC = () => {
                   </div>
 
                   {skill.description && (
-                    <p className="text-xs text-zinc-600 dark:text-zinc-400 line-clamp-2 mb-4 leading-relaxed">
+                    <p className="text-xs text-zinc-700 dark:text-zinc-300 line-clamp-2 mb-4 leading-relaxed font-normal">
                       {skill.description}
                     </p>
                   )}
@@ -108,12 +108,12 @@ export const Skills: React.FC = () => {
                 {/* Progress Level Bar - High Contrast Monochrome */}
                 <div className="pt-2">
                   <div className="flex items-center justify-between text-xs mb-1.5 font-mono">
-                    <span className="text-zinc-500">Proficiency</span>
-                    <span className="font-bold text-zinc-900 dark:text-white">
+                    <span className="text-zinc-600 dark:text-zinc-400 font-semibold">Proficiency</span>
+                    <span className="font-black text-zinc-950 dark:text-white">
                       {skill.level}%
                     </span>
                   </div>
-                  <div className="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                  <div className="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                     <div
                       className="h-full rounded-full bg-black dark:bg-white transition-all duration-700 ease-out"
                       style={{ width: `${skill.level}%` }}

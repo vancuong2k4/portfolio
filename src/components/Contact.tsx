@@ -119,10 +119,10 @@ export const Contact: React.FC = () => {
                     <GmailIcon className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="text-[11px] font-mono font-bold uppercase tracking-wider text-zinc-500">
+                    <h4 className="text-[11px] font-mono font-bold uppercase tracking-wider text-zinc-600 dark:text-zinc-400">
                       Email
                     </h4>
-                    <p className="text-sm sm:text-base font-bold text-zinc-900 dark:text-white break-all">
+                    <p className="text-sm sm:text-base font-bold text-zinc-950 dark:text-white break-all">
                       {profileData.email}
                     </p>
                   </div>
@@ -131,7 +131,7 @@ export const Contact: React.FC = () => {
                 <button
                   onClick={() => handleCopy(profileData.email, 'email')}
                   aria-label="Copy email address"
-                  className="p-2 rounded-lg text-zinc-500 hover:text-black dark:hover:text-white bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors cursor-pointer"
+                  className="p-2 rounded-lg text-zinc-600 hover:text-black dark:text-zinc-400 dark:hover:text-white bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors cursor-pointer"
                   title="Copy email"
                 >
                   {copiedField === 'email' ? <Check className="w-4 h-4 text-emerald-500" /> : <Copy className="w-4 h-4" />}
@@ -152,10 +152,10 @@ export const Contact: React.FC = () => {
                     <Phone className="w-5 h-5 stroke-[2.2]" />
                   </div>
                   <div>
-                    <h4 className="text-[11px] font-mono font-bold uppercase tracking-wider text-zinc-500">
+                    <h4 className="text-[11px] font-mono font-bold uppercase tracking-wider text-zinc-600 dark:text-zinc-400">
                       Phone / WhatsApp
                     </h4>
-                    <p className="text-sm sm:text-base font-bold text-zinc-900 dark:text-white">
+                    <p className="text-sm sm:text-base font-bold text-zinc-950 dark:text-white">
                       {profileData.phone}
                     </p>
                   </div>
@@ -164,7 +164,7 @@ export const Contact: React.FC = () => {
                 <button
                   onClick={() => handleCopy(profileData.phone, 'phone')}
                   aria-label="Copy phone number"
-                  className="p-2 rounded-lg text-zinc-500 hover:text-black dark:hover:text-white bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors cursor-pointer"
+                  className="p-2 rounded-lg text-zinc-600 hover:text-black dark:text-zinc-400 dark:hover:text-white bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors cursor-pointer"
                   title="Copy phone number"
                 >
                   {copiedField === 'phone' ? <Check className="w-4 h-4 text-emerald-500" /> : <Copy className="w-4 h-4" />}
@@ -192,13 +192,13 @@ export const Contact: React.FC = () => {
                   </div>
                   <div className="min-w-0 flex-1">
                     <div className="flex items-center gap-1.5">
-                      <h4 className="text-[11px] font-mono font-bold uppercase tracking-wider text-zinc-500">
+                      <h4 className="text-[11px] font-mono font-bold uppercase tracking-wider text-zinc-600 dark:text-zinc-400">
                         GitHub Profile
                       </h4>
-                      <ExternalLink className="w-3 h-3 text-zinc-400 group-hover/link:text-black dark:group-hover/link:text-white transition-colors" />
+                      <ExternalLink className="w-3 h-3 text-zinc-500 group-hover/link:text-black dark:group-hover/link:text-white transition-colors" />
                     </div>
-                    <p className="text-sm sm:text-base font-bold text-zinc-900 dark:text-white truncate group-hover/link:underline">
-                      github.com/vancuong2k4
+                    <p className="text-sm sm:text-base font-bold text-zinc-950 dark:text-white truncate group-hover/link:underline">
+                      github.com/{profileData.nickname}
                     </p>
                   </div>
                 </a>
@@ -206,7 +206,7 @@ export const Contact: React.FC = () => {
                 <button
                   onClick={() => handleCopy(profileData.github, 'github')}
                   aria-label="Copy GitHub profile link"
-                  className="p-2 rounded-lg text-zinc-500 hover:text-black dark:hover:text-white bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors cursor-pointer shrink-0 ml-2"
+                  className="p-2 rounded-lg text-zinc-600 hover:text-black dark:text-zinc-400 dark:hover:text-white bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors cursor-pointer shrink-0 ml-2"
                   title="Copy GitHub link"
                 >
                   {copiedField === 'github' ? <Check className="w-4 h-4 text-emerald-500" /> : <Copy className="w-4 h-4" />}
@@ -226,36 +226,34 @@ export const Contact: React.FC = () => {
                   <MapPin className="w-4 h-4 stroke-[2.2]" />
                 </div>
                 <div>
-                  <h4 className="text-[11px] font-mono font-bold uppercase tracking-wider text-zinc-500">Location</h4>
-                  <p className="text-sm font-semibold text-zinc-900 dark:text-zinc-200">{profileData.location}</p>
+                  <h4 className="text-[11px] font-mono font-bold uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Location</h4>
+                  <p className="text-sm font-semibold text-zinc-950 dark:text-zinc-200">{profileData.location}</p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 pt-3 border-t border-zinc-100 dark:border-zinc-800">
+              <div className="flex items-center gap-3 pt-3 border-t border-zinc-200/80 dark:border-zinc-800">
                 <div className="w-9 h-9 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700/80 text-zinc-900 dark:text-zinc-100 flex items-center justify-center">
                   <Clock className="w-4 h-4 stroke-[2.2]" />
                 </div>
                 <div>
-                  <h4 className="text-[11px] font-mono font-bold uppercase tracking-wider text-zinc-500">Response Time</h4>
-                  <p className="text-sm font-semibold text-zinc-900 dark:text-zinc-200">Usually responds within 2 - 4 hours</p>
+                  <h4 className="text-[11px] font-mono font-bold uppercase tracking-wider text-zinc-600 dark:text-zinc-400">Response Time</h4>
+                  <p className="text-sm font-semibold text-zinc-950 dark:text-zinc-200">Usually responds within 2 - 4 hours</p>
                 </div>
               </div>
             </div>
-
-
 
           </div>
 
           {/* Right Column: High Contrast Contact Form */}
           <div className="lg:col-span-7">
             <div className="p-5 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-xl">
-              <h3 className="text-2xl font-black text-zinc-900 dark:text-white mb-2 flex items-center gap-3">
+              <h3 className="text-2xl font-black text-zinc-950 dark:text-white mb-2 flex items-center gap-3">
                 <span className="w-8 h-8 rounded-lg bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-900 dark:text-white flex items-center justify-center shrink-0">
                   <MessageSquare className="w-4 h-4 stroke-[2.2]" />
                 </span>
                 <span>Send a Quick Message</span>
               </h3>
-              <p className="text-sm text-zinc-500 mb-8">
+              <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-8 font-normal">
                 Fill in your details below and I will get back to you as soon as possible.
               </p>
 
@@ -278,7 +276,7 @@ export const Contact: React.FC = () => {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-mono font-bold uppercase tracking-wider text-zinc-700 dark:text-zinc-300 mb-2">
+                    <label className="block text-xs font-mono font-bold uppercase tracking-wider text-zinc-900 dark:text-zinc-300 mb-2">
                       Full Name *
                     </label>
                     <input
@@ -287,12 +285,12 @@ export const Contact: React.FC = () => {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       required
-                      className="w-full px-4 py-3 rounded-xl bg-zinc-50 dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-800 text-zinc-900 dark:text-white text-base sm:text-sm focus:outline-none focus:border-black dark:focus:border-white transition-all font-mono"
+                      className="w-full px-4 py-3 rounded-xl bg-white dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-800 text-zinc-950 dark:text-white placeholder:text-zinc-400 dark:placeholder:text-zinc-600 text-base sm:text-sm focus:outline-none focus:border-black dark:focus:border-white focus:ring-1 focus:ring-black dark:focus:ring-white transition-all font-mono shadow-2xs"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-mono font-bold uppercase tracking-wider text-zinc-700 dark:text-zinc-300 mb-2">
+                    <label className="block text-xs font-mono font-bold uppercase tracking-wider text-zinc-900 dark:text-zinc-300 mb-2">
                       Email Address *
                     </label>
                     <input
@@ -301,13 +299,13 @@ export const Contact: React.FC = () => {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       required
-                      className="w-full px-4 py-3 rounded-xl bg-zinc-50 dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-800 text-zinc-900 dark:text-white text-base sm:text-sm focus:outline-none focus:border-black dark:focus:border-white transition-all font-mono"
+                      className="w-full px-4 py-3 rounded-xl bg-white dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-800 text-zinc-950 dark:text-white placeholder:text-zinc-400 dark:placeholder:text-zinc-600 text-base sm:text-sm focus:outline-none focus:border-black dark:focus:border-white focus:ring-1 focus:ring-black dark:focus:ring-white transition-all font-mono shadow-2xs"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-mono font-bold uppercase tracking-wider text-zinc-700 dark:text-zinc-300 mb-2">
+                  <label className="block text-xs font-mono font-bold uppercase tracking-wider text-zinc-900 dark:text-zinc-300 mb-2">
                     Subject
                   </label>
                   <input
@@ -315,12 +313,12 @@ export const Contact: React.FC = () => {
                     placeholder="Project collaboration, Mobile app development..."
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-zinc-50 dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-800 text-zinc-900 dark:text-white text-base sm:text-sm focus:outline-none focus:border-black dark:focus:border-white transition-all font-mono"
+                    className="w-full px-4 py-3 rounded-xl bg-white dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-800 text-zinc-950 dark:text-white placeholder:text-zinc-400 dark:placeholder:text-zinc-600 text-base sm:text-sm focus:outline-none focus:border-black dark:focus:border-white focus:ring-1 focus:ring-black dark:focus:ring-white transition-all font-mono shadow-2xs"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-mono font-bold uppercase tracking-wider text-zinc-700 dark:text-zinc-300 mb-2">
+                  <label className="block text-xs font-mono font-bold uppercase tracking-wider text-zinc-900 dark:text-zinc-300 mb-2">
                     Your Message *
                   </label>
                   <textarea
@@ -329,7 +327,7 @@ export const Contact: React.FC = () => {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     required
-                    className="w-full px-4 py-3 rounded-xl bg-zinc-50 dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-800 text-zinc-900 dark:text-white text-base sm:text-sm focus:outline-none focus:border-black dark:focus:border-white transition-all resize-none font-mono"
+                    className="w-full px-4 py-3 rounded-xl bg-white dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-800 text-zinc-950 dark:text-white placeholder:text-zinc-400 dark:placeholder:text-zinc-600 text-base sm:text-sm focus:outline-none focus:border-black dark:focus:border-white focus:ring-1 focus:ring-black dark:focus:ring-white transition-all resize-none font-mono shadow-2xs"
                   />
                 </div>
 

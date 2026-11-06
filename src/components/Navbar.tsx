@@ -25,7 +25,9 @@ export const Navbar: React.FC = () => {
   
   // Track mobile menu state inside ref for clean scroll handler access
   const isMenuOpenRef = useRef(false)
-  isMenuOpenRef.current = isMobileMenuOpen
+  useEffect(() => {
+    isMenuOpenRef.current = isMobileMenuOpen
+  }, [isMobileMenuOpen])
 
   useEffect(() => {
     let ticking = false
@@ -131,7 +133,7 @@ export const Navbar: React.FC = () => {
         </a>
 
         {/* Desktop Navigation - Fluid Glass Pills */}
-        <nav className="hidden lg:flex items-center gap-1 p-1 rounded-full bg-zinc-100/60 dark:bg-white/[0.04] border border-zinc-200/50 dark:border-white/[0.06] backdrop-blur-md">
+        <nav className="hidden lg:flex items-center gap-1 p-1 rounded-full bg-zinc-100/90 dark:bg-white/[0.04] border border-zinc-300/80 dark:border-white/[0.06] backdrop-blur-md shadow-2xs">
           {navItems.map(item => {
             const sectionId = item.href.substring(1)
             const isActive = activeSection === sectionId
@@ -142,7 +144,7 @@ export const Navbar: React.FC = () => {
                 className={`relative px-4 py-1.5 text-xs font-medium rounded-full transition-all duration-300 ${
                   isActive
                     ? 'text-zinc-950 dark:text-white font-bold bg-white dark:bg-white/[0.12] shadow-xs'
-                    : 'text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white hover:bg-zinc-200/50 dark:hover:bg-white/[0.06]'
+                    : 'text-zinc-700 dark:text-zinc-400 hover:text-black dark:hover:text-white hover:bg-zinc-200/60 dark:hover:bg-white/[0.06]'
                 }`}
               >
                 {item.name}
@@ -160,19 +162,19 @@ export const Navbar: React.FC = () => {
           <button
             onClick={toggleTheme}
             aria-label="Toggle Theme"
-            className="w-9 h-9 rounded-full flex items-center justify-center text-zinc-600 dark:text-zinc-300 bg-zinc-100/80 dark:bg-white/[0.06] hover:bg-zinc-200 dark:hover:bg-white/[0.12] border border-zinc-200/80 dark:border-white/[0.08] transition-all duration-300 cursor-pointer shadow-xs active:scale-95"
+            className="w-9 h-9 rounded-full flex items-center justify-center text-zinc-700 dark:text-zinc-300 bg-white dark:bg-white/[0.06] hover:bg-zinc-100 dark:hover:bg-white/[0.12] border border-zinc-300 dark:border-white/[0.08] transition-all duration-300 cursor-pointer shadow-xs active:scale-95"
           >
             {theme === 'dark' ? (
               <Sun className="w-4 h-4 text-zinc-200 transition-transform duration-300 hover:rotate-90" />
             ) : (
-              <Moon className="w-4 h-4 text-zinc-700 transition-transform duration-300 hover:-rotate-12" />
+              <Moon className="w-4 h-4 text-zinc-800 transition-transform duration-300 hover:-rotate-12" />
             )}
           </button>
 
           {/* Resume Download Button - Sleek Liquid Pill */}
           <button
             onClick={handleDownloadCV}
-            className="group flex items-center gap-2 px-4 py-2 text-xs font-mono font-bold rounded-full text-white dark:text-zinc-950 bg-zinc-900 dark:bg-white hover:bg-black dark:hover:bg-zinc-100 shadow-sm transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] active:scale-95 cursor-pointer"
+            className="group flex items-center gap-2 px-4 py-2 text-xs font-mono font-bold rounded-full text-white dark:text-zinc-950 bg-black dark:bg-white hover:bg-zinc-800 dark:hover:bg-zinc-100 shadow-sm transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] active:scale-95 cursor-pointer"
           >
             <FileDown className="w-3.5 h-3.5 stroke-[2.5] group-hover:-translate-y-0.5 transition-transform" />
             <span>Download CV</span>
@@ -184,19 +186,19 @@ export const Navbar: React.FC = () => {
           <button
             onClick={toggleTheme}
             aria-label="Toggle Theme"
-            className="w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center text-zinc-600 dark:text-zinc-300 bg-zinc-100/80 dark:bg-white/[0.06] border border-zinc-200/80 dark:border-white/[0.08] cursor-pointer active:scale-95 transition-transform"
+            className="w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center text-zinc-700 dark:text-zinc-300 bg-white dark:bg-white/[0.06] border border-zinc-300 dark:border-white/[0.08] cursor-pointer active:scale-95 transition-transform shadow-2xs"
           >
             {theme === 'dark' ? (
               <Sun className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-zinc-200" />
             ) : (
-              <Moon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-zinc-700" />
+              <Moon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-zinc-800" />
             )}
           </button>
 
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Open Navigation Menu"
-            className="w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center text-zinc-900 dark:text-white bg-zinc-100/80 dark:bg-white/[0.06] border border-zinc-200/80 dark:border-white/[0.08] cursor-pointer active:scale-95 transition-transform"
+            className="w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center text-zinc-950 dark:text-white bg-white dark:bg-white/[0.06] border border-zinc-300 dark:border-white/[0.08] cursor-pointer active:scale-95 transition-transform shadow-2xs"
           >
             {isMobileMenuOpen ? <X className="w-4 h-4 sm:w-5 sm:h-5" /> : <Menu className="w-4 h-4 sm:w-5 sm:h-5" />}
           </button>
