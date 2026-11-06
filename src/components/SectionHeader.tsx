@@ -30,7 +30,6 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
           <span className="relative inline-flex rounded-full h-2 w-2 bg-black dark:bg-white" />
         </span>
         <span className="text-zinc-600 dark:text-zinc-400 font-bold">{badgeNumber}</span>
-        <span className="w-1 h-1 rounded-full bg-zinc-400 dark:bg-zinc-600" />
         <span className="text-zinc-950 dark:text-zinc-200 font-bold">{badgeLabel}</span>
       </div>
 
