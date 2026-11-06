@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { profileData } from '../data/portfolioData'
+import { SectionHeader } from './SectionHeader'
 import { 
   Phone, 
   MapPin, 
@@ -97,18 +98,13 @@ export const Contact: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-zinc-100 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-800 mb-3">
-            <span>05. GET IN TOUCH</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-black text-zinc-900 dark:text-white tracking-tight">
-            Let's Connect & Collaborate
-          </h2>
-          <p className="mt-3 text-zinc-600 dark:text-zinc-400 text-base max-w-xl mx-auto">
-            Have a project in mind, looking for engineering consultation, or considering full-time roles? Feel free to reach out anytime!
-          </p>
-          <div className="w-12 h-1 bg-zinc-400 dark:bg-zinc-700 mx-auto mt-4 rounded-full" />
-        </div>
+        <SectionHeader
+          badgeNumber="05."
+          badgeLabel="GET IN TOUCH"
+          title="Let's Connect & Collaborate"
+          subtitle="Have a project in mind, looking for engineering consultation, or considering full-time roles? Feel free to reach out anytime!"
+          className="mb-14 sm:mb-16"
+        />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           

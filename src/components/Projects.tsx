@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { projectsData } from '../data/portfolioData'
 import type { Project, ProjectCategory } from '../types'
 import { ProjectModal } from './ProjectModal'
+import { SectionHeader } from './SectionHeader'
 import { 
   ExternalLink, 
   ArrowUpRight, 
@@ -56,18 +57,13 @@ export const Projects: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-zinc-100 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-800 mb-3">
-            <span>03. FEATURED PROJECTS</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-black text-zinc-900 dark:text-white tracking-tight">
-            Featured Systems & Products
-          </h2>
-          <p className="mt-3 text-zinc-600 dark:text-zinc-400 text-base max-w-xl mx-auto">
-            Full-cycle software engineering solutions emphasizing seamless user experiences, lightning performance, and scalable architecture.
-          </p>
-          <div className="w-12 h-1 bg-zinc-400 dark:bg-zinc-700 mx-auto mt-4 rounded-full" />
-        </div>
+        <SectionHeader
+          badgeNumber="03."
+          badgeLabel="FEATURED PROJECTS"
+          title="Featured Systems & Products"
+          subtitle="Full-cycle software engineering solutions emphasizing seamless user experiences, lightning performance, and scalable architecture."
+          className="mb-12 sm:mb-14"
+        />
 
         {/* Filter Tabs - Monochrome */}
         <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mb-12 sm:mb-14">

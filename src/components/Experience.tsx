@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { experiencesData, educationData } from '../data/portfolioData'
+import { SectionHeader } from './SectionHeader'
 import { 
   Briefcase, 
   GraduationCap, 
@@ -17,15 +18,13 @@ export const Experience: React.FC = () => {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-zinc-100 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-800 mb-3">
-            <span>04. EXPERIENCE & EDUCATION</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-black text-zinc-900 dark:text-white tracking-tight">
-            Professional Experience & Education
-          </h2>
-          <div className="w-12 h-1 bg-zinc-400 dark:bg-zinc-700 mx-auto mt-4 rounded-full" />
-        </div>
+        <SectionHeader
+          badgeNumber="04."
+          badgeLabel="EXPERIENCE & EDUCATION"
+          title="Professional Experience & Education"
+          subtitle="My professional journey, commercial projects, hands-on internships, and academic foundation."
+          className="mb-12 sm:mb-14"
+        />
 
         {/* Tab switchers */}
         <div className="flex justify-center mb-12">
